@@ -1,0 +1,134 @@
+{
+  "HD only": {
+    "kde_dir": "data_sources/NANOGrav15yr_KDE-FreeSpectra/30f_fs{hd}_ceffyl",
+    "frequency_count": 30,
+    "samples_per_model": 60000,
+    "comparison": {
+      "smbhb_pl": {
+        "delta_logz_vs_smbhb_pl": 0.0,
+        "error": 0.022006714631876343,
+        "bayes_factor_vs_smbhb_pl": 1.0
+      },
+      "smbhb_env": {
+        "delta_logz_vs_smbhb_pl": 3.895976996786537,
+        "error": 0.04736951047318524,
+        "bayes_factor_vs_smbhb_pl": 49.204102136785046
+      },
+      "cosmic_strings": {
+        "delta_logz_vs_smbhb_pl": 0.4186974334467095,
+        "error": 0.033032165212082173,
+        "bayes_factor_vs_smbhb_pl": 1.519980389981056
+      },
+      "phase_transition": {
+        "delta_logz_vs_smbhb_pl": 4.8959652267475136,
+        "error": 0.04219449066163021,
+        "bayes_factor_vs_smbhb_pl": 133.74904248335187
+      },
+      "curved_family_equal_weight": {
+        "delta_logz_vs_smbhb_pl": 4.118891500300656,
+        "bayes_factor_vs_smbhb_pl": 61.491041670039294,
+        "members": [
+          "smbhb_env",
+          "cosmic_strings",
+          "phase_transition"
+        ]
+      },
+      "env_plus_phase_transition_equal_weight": {
+        "delta_logz_vs_smbhb_pl": 4.516082899170435,
+        "bayes_factor_vs_smbhb_pl": 91.47657231006852,
+        "members": [
+          "smbhb_env",
+          "phase_transition"
+        ]
+      }
+    }
+  },
+  "HD+MP+DP, HD component": {
+    "kde_dir": "data_sources/NANOGrav15yr_KDE-FreeSpectra/30f_fs{hd+mp+dp}_ceffyl_hd-only",
+    "frequency_count": 30,
+    "samples_per_model": 60000,
+    "comparison": {
+      "smbhb_pl": {
+        "delta_logz_vs_smbhb_pl": 0.0,
+        "error": 0.015779285652435443,
+        "bayes_factor_vs_smbhb_pl": 1.0
+      },
+      "smbhb_env": {
+        "delta_logz_vs_smbhb_pl": 2.386365300924041,
+        "error": 0.03032660737094833,
+        "bayes_factor_vs_smbhb_pl": 10.873898678718238
+      },
+      "cosmic_strings": {
+        "delta_logz_vs_smbhb_pl": -0.1864498627059703,
+        "error": 0.025343011267916257,
+        "bayes_factor_vs_smbhb_pl": 0.8299001698571147
+      },
+      "phase_transition": {
+        "delta_logz_vs_smbhb_pl": 4.141315520929439,
+        "error": 0.03911065566282515,
+        "bayes_factor_vs_smbhb_pl": 62.885494242217895
+      },
+      "curved_family_equal_weight": {
+        "delta_logz_vs_smbhb_pl": 3.213384683988913,
+        "bayes_factor_vs_smbhb_pl": 24.86309769693108,
+        "members": [
+          "smbhb_env",
+          "cosmic_strings",
+          "phase_transition"
+        ]
+      },
+      "env_plus_phase_transition_equal_weight": {
+        "delta_logz_vs_smbhb_pl": 3.607661168189992,
+        "bayes_factor_vs_smbhb_pl": 36.87969646046811,
+        "members": [
+          "smbhb_env",
+          "phase_transition"
+        ]
+      }
+    }
+  },
+  "HD+MP+DP+CP, HD component": {
+    "kde_dir": "data_sources/NANOGrav15yr_KDE-FreeSpectra/30f_fs{hd+mp+dp+cp}_ceffyl_hd-only",
+    "frequency_count": 30,
+    "samples_per_model": 60000,
+    "comparison": {
+      "smbhb_pl": {
+        "delta_logz_vs_smbhb_pl": 0.0,
+        "error": 0.020863199503841464,
+        "bayes_factor_vs_smbhb_pl": 1.0
+      },
+      "smbhb_env": {
+        "delta_logz_vs_smbhb_pl": 1.7190724157349209,
+        "error": 0.02221438682989886,
+        "bayes_factor_vs_smbhb_pl": 5.579350745301278
+      },
+      "cosmic_strings": {
+        "delta_logz_vs_smbhb_pl": -0.1234607096159479,
+        "error": 0.026661126400299814,
+        "bayes_factor_vs_smbhb_pl": 0.8838563676179982
+      },
+      "phase_transition": {
+        "delta_logz_vs_smbhb_pl": 0.9348315392100162,
+        "error": 0.028034097996698204,
+        "bayes_factor_vs_smbhb_pl": 2.5467843882893635
+      },
+      "curved_family_equal_weight": {
+        "delta_logz_vs_smbhb_pl": 1.0997218396896145,
+        "bayes_factor_vs_smbhb_pl": 3.003330500402894,
+        "members": [
+          "smbhb_env",
+          "cosmic_strings",
+          "phase_transition"
+        ]
+      },
+      "env_plus_phase_transition_equal_weight": {
+        "delta_logz_vs_smbhb_pl": 1.4019382466471129,
+        "bayes_factor_vs_smbhb_pl": 4.063067566795313,
+        "members": [
+          "smbhb_env",
+          "phase_transition"
+        ]
+      }
+    }
+  }
+}

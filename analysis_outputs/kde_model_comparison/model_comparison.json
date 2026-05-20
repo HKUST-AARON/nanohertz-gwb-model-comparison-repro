@@ -18,5 +18,22 @@
     "delta_logz_vs_smbhb_pl": 4.900234519551887,
     "error": 0.03191228779438726,
     "bayes_factor_vs_smbhb_pl": 134.32127695710892
+  },
+  "curved_family_equal_weight": {
+    "delta_logz_vs_smbhb_pl": 4.124439653854246,
+    "bayes_factor_vs_smbhb_pl": 61.83315157296302,
+    "members": [
+      "smbhb_env",
+      "cosmic_strings",
+      "phase_transition"
+    ]
+  },
+  "env_plus_phase_transition_equal_weight": {
+    "delta_logz_vs_smbhb_pl": 4.52146630142947,
+    "bayes_factor_vs_smbhb_pl": 91.97035542011879,
+    "members": [
+      "smbhb_env",
+      "phase_transition"
+    ]
   }
 }

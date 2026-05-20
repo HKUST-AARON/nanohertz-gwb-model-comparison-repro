@@ -11,6 +11,9 @@
   "reported_outputs": [
     "analysis_outputs/kde_model_comparison/model_comparison.json",
     "analysis_outputs/kde_model_comparison/prior_sensitivity.json",
+    "analysis_outputs/kde_model_comparison/kde_product_robustness.json",
+    "analysis_outputs/kde_model_comparison/leave_one_frequency_out.json",
+    "analysis_outputs/kde_model_comparison/low_bin_ablation.json",
     "analysis_outputs/hd_check/hd_summary.json",
     "analysis_outputs/smbhb_env/sbpl_density_summary.json"
   ],

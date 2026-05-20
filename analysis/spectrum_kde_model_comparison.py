@@ -36,14 +36,19 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--samples", type=int, default=250_000)
     parser.add_argument("--posterior-samples", type=int, default=40_000)
+    parser.add_argument("--robustness-samples", type=int, default=60_000)
+    parser.add_argument("--leave-one-out-samples", type=int, default=40_000)
     parser.add_argument("--seed", type=int, default=20260521)
     return parser.parse_args()
 
 
-def load_kde(kde_dir: Path) -> Dict[str, np.ndarray]:
+def load_kde(kde_dir: Path, mask: np.ndarray | None = None) -> Dict[str, np.ndarray]:
     freqs = np.load(kde_dir / "freqs.npy")
     grid = np.load(kde_dir / "log10rhogrid.npy")
     log_density = np.load(kde_dir / "density.npy")[0]
+    if mask is not None:
+        freqs = freqs[mask]
+        log_density = log_density[mask]
     floor = float(np.nanmin(log_density))
     return {
         "freqs": freqs,
@@ -128,6 +133,57 @@ def block_logz_error(values: np.ndarray, blocks: int = 20) -> float:
     if estimates.size <= 1:
         return float("nan")
     return float(np.std(estimates, ddof=1) / math.sqrt(estimates.size))
+
+
+def sample_logz(
+    rng: np.random.Generator,
+    kde: Dict[str, np.ndarray],
+    prior: Callable[[np.random.Generator, int], Tuple[np.ndarray, Tuple[str, ...]]],
+    model: Callable[[np.ndarray, np.ndarray], np.ndarray],
+    nsamples: int,
+) -> Dict[str, float]:
+    params, _ = prior(rng, nsamples)
+    log10rho = model(kde["freqs"], params)
+    loglike = evaluate_loglike(kde, log10rho)
+    return {"logz": logmeanexp(loglike), "logzerr": block_logz_error(loglike)}
+
+
+def comparison_rows(evidences: Dict[str, Dict[str, float]]) -> Dict[str, Dict[str, float]]:
+    base = evidences["smbhb_pl"]["logz"]
+    base_err = evidences["smbhb_pl"]["logzerr"]
+    rows = {}
+    for label, ev in evidences.items():
+        delta = ev["logz"] - base
+        err = math.sqrt(ev["logzerr"] ** 2 + base_err**2)
+        rows[label] = {
+            "delta_logz_vs_smbhb_pl": float(delta),
+            "error": float(err),
+            "bayes_factor_vs_smbhb_pl": float(math.exp(delta)) if delta < 700 else float("inf"),
+        }
+    curved_logz = logsumexp(
+        evidences[label]["logz"]
+        for label in ("smbhb_env", "cosmic_strings", "phase_transition")
+    ) - math.log(3.0)
+    env_pt_logz = logsumexp(
+        evidences[label]["logz"] for label in ("smbhb_env", "phase_transition")
+    ) - math.log(2.0)
+    rows["curved_family_equal_weight"] = {
+        "delta_logz_vs_smbhb_pl": float(curved_logz - base),
+        "bayes_factor_vs_smbhb_pl": float(math.exp(curved_logz - base)),
+        "members": ["smbhb_env", "cosmic_strings", "phase_transition"],
+    }
+    rows["env_plus_phase_transition_equal_weight"] = {
+        "delta_logz_vs_smbhb_pl": float(env_pt_logz - base),
+        "bayes_factor_vs_smbhb_pl": float(math.exp(env_pt_logz - base)),
+        "members": ["smbhb_env", "phase_transition"],
+    }
+    return rows
+
+
+def logsumexp(values: Iterable[float]) -> float:
+    vals = np.array(list(values), dtype=float)
+    vmax = float(np.max(vals))
+    return vmax + math.log(float(np.sum(np.exp(vals - vmax))))
 
 
 def weighted_resample(
@@ -248,17 +304,7 @@ def models_from_priors(priors):
 
 
 def write_comparisons(outdir: Path, evidences: Dict[str, Dict[str, float]]) -> None:
-    base = evidences["smbhb_pl"]["logz"]
-    base_err = evidences["smbhb_pl"]["logzerr"]
-    rows = {}
-    for label, ev in evidences.items():
-        delta = ev["logz"] - base
-        err = math.sqrt(ev["logzerr"] ** 2 + base_err**2)
-        rows[label] = {
-            "delta_logz_vs_smbhb_pl": float(delta),
-            "error": float(err),
-            "bayes_factor_vs_smbhb_pl": float(math.exp(delta)) if delta < 700 else float("inf"),
-        }
+    rows = comparison_rows(evidences)
     (outdir / "model_comparison.json").write_text(json.dumps(rows, indent=2))
 
 
@@ -301,6 +347,104 @@ def run_prior_sensitivity(args: argparse.Namespace, kde: Dict[str, np.ndarray], 
     (outdir / "prior_sensitivity.json").write_text(json.dumps(results, indent=2))
 
 
+def run_kde_product_robustness(args: argparse.Namespace, outdir: Path) -> None:
+    product_dirs = {
+        "HD only": Path("data_sources/NANOGrav15yr_KDE-FreeSpectra/30f_fs{hd}_ceffyl"),
+        "HD+MP+DP, HD component": Path(
+            "data_sources/NANOGrav15yr_KDE-FreeSpectra/30f_fs{hd+mp+dp}_ceffyl_hd-only"
+        ),
+        "HD+MP+DP+CP, HD component": Path(
+            "data_sources/NANOGrav15yr_KDE-FreeSpectra/30f_fs{hd+mp+dp+cp}_ceffyl_hd-only"
+        ),
+    }
+    results = {}
+    for idx, (label, kde_dir) in enumerate(product_dirs.items()):
+        kde = load_kde(kde_dir)
+        rng = np.random.default_rng(args.seed + 2000 + idx)
+        evidences = {}
+        for model_label, (prior, model) in models_from_priors(make_priors()).items():
+            evidences[model_label] = sample_logz(
+                rng, kde, prior, model, args.robustness_samples
+            )
+        results[label] = {
+            "kde_dir": str(kde_dir),
+            "frequency_count": int(kde["freqs"].size),
+            "samples_per_model": int(args.robustness_samples),
+            "comparison": comparison_rows(evidences),
+        }
+    (outdir / "kde_product_robustness.json").write_text(json.dumps(results, indent=2))
+
+
+def run_leave_one_out(args: argparse.Namespace, full_kde: Dict[str, np.ndarray], outdir: Path) -> None:
+    full_freqs = np.array(full_kde["freqs"])
+    rows = []
+    for drop_idx, freq in enumerate(full_freqs):
+        mask = np.ones(full_freqs.size, dtype=bool)
+        mask[drop_idx] = False
+        kde = load_kde(args.kde_dir, mask=mask)
+        rng = np.random.default_rng(args.seed + 3000 + drop_idx)
+        evidences = {}
+        for model_label, (prior, model) in models_from_priors(make_priors()).items():
+            evidences[model_label] = sample_logz(
+                rng, kde, prior, model, args.leave_one_out_samples
+            )
+        rows.append(
+            {
+                "dropped_bin": int(drop_idx + 1),
+                "dropped_frequency_hz": float(freq),
+                "samples_per_model": int(args.leave_one_out_samples),
+                "comparison": comparison_rows(evidences),
+            }
+        )
+    summary = {
+        "rows": rows,
+        "minimum_delta_logz": {
+            label: float(
+                min(row["comparison"][label]["delta_logz_vs_smbhb_pl"] for row in rows)
+            )
+            for label in ("smbhb_env", "cosmic_strings", "phase_transition")
+        },
+        "median_delta_logz": {
+            label: float(
+                np.median(
+                    [row["comparison"][label]["delta_logz_vs_smbhb_pl"] for row in rows]
+                )
+            )
+            for label in ("smbhb_env", "cosmic_strings", "phase_transition")
+        },
+    }
+    (outdir / "leave_one_frequency_out.json").write_text(json.dumps(summary, indent=2))
+
+
+def run_low_bin_ablation(args: argparse.Namespace, full_kde: Dict[str, np.ndarray], outdir: Path) -> None:
+    full_freqs = np.array(full_kde["freqs"])
+    cases = {
+        "drop_bin_1": [0],
+        "drop_bin_2": [1],
+        "drop_bins_1_2": [0, 1],
+        "drop_bins_1_3": [0, 1, 2],
+    }
+    results = {}
+    for idx, (label, drops) in enumerate(cases.items()):
+        mask = np.ones(full_freqs.size, dtype=bool)
+        mask[drops] = False
+        kde = load_kde(args.kde_dir, mask=mask)
+        rng = np.random.default_rng(args.seed + 4000 + idx)
+        evidences = {}
+        for model_label, (prior, model) in models_from_priors(make_priors()).items():
+            evidences[model_label] = sample_logz(
+                rng, kde, prior, model, args.leave_one_out_samples
+            )
+        results[label] = {
+            "dropped_bins": [int(d + 1) for d in drops],
+            "dropped_frequencies_hz": [float(full_freqs[d]) for d in drops],
+            "remaining_frequency_count": int(kde["freqs"].size),
+            "samples_per_model": int(args.leave_one_out_samples),
+            "comparison": comparison_rows(evidences),
+        }
+    (outdir / "low_bin_ablation.json").write_text(json.dumps(results, indent=2))
+
+
 def main() -> None:
     args = parse_args()
     args.outdir.mkdir(parents=True, exist_ok=True)
@@ -320,11 +464,16 @@ def main() -> None:
         )
     write_comparisons(args.outdir, evidences)
     run_prior_sensitivity(args, kde, args.outdir)
+    run_kde_product_robustness(args, args.outdir)
+    run_leave_one_out(args, kde, args.outdir)
+    run_low_bin_ablation(args, kde, args.outdir)
     manifest = {
         "kde_dir": str(args.kde_dir),
         "seed": args.seed,
         "samples": args.samples,
         "posterior_samples": args.posterior_samples,
+        "robustness_samples": args.robustness_samples,
+        "leave_one_out_samples": args.leave_one_out_samples,
         "frequency_count": int(kde["freqs"].size),
         "grid_min": float(kde["grid"].min()),
         "grid_max": float(kde["grid"].max()),
