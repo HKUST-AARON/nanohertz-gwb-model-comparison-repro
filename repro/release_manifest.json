@@ -21,5 +21,5 @@
   },
   "github_repository": "https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro",
   "github_release": "https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/releases/tag/v1.0.0-submission",
-  "public_archive_status": "GitHub repository and v1.0.0-submission release created; Zenodo DOI still needs to be minted and inserted before journal submission."
+  "public_archive_status": "GitHub repository and v1.0.0-submission release created. A Zenodo DOI can be added in a later manuscript update after repository archiving."
 }
