@@ -4,43 +4,58 @@
 {Hellings}, R.W.; {Downs}, G.S.
 \newblock {Upper limits on the isotropic gravitational radiation background
   from pulsar timing analysis}.
-\newblock {\em Astrophys. J. Lett.} {\bf 1983}, {\em 265},~L39.
+\newblock {\em Astrophys. J. Lett.} {\bf 1983}, {\em 265},~L39--L42.
+\newblock {\url{https://doi.org/10.1086/183954}}.
 
-\bibitem[{Pol} et~al.(2021){Pol}, {McLaughlin}, {Lorimer}, {Baker}, {Blumer},
-  {Fonseca}, {Kerr}, and {Pennucci}]{Pol2021}
-{Pol}, N.S.; {McLaughlin}, M.A.; {Lorimer}, D.R.; {Baker}, P.T.; {Blumer}, H.;
-  {Fonseca}, E.; {Kerr}, M.; {Pennucci}, T.T.
-\newblock {Astrophysics Milestones for Pulsar Timing Array Gravitational-Wave
-  Detection}.
-\newblock {\em Astrophys. J. Lett.} {\bf 2021}, {\em 911},~L34.
+\bibitem[{Burke-Spolaor} et~al.(2019){Burke-Spolaor}, {Taylor}, {Charisi},
+  {Dolch}, {Hazboun}, {Holgado}, {Kelley}, {Lazio}, {Madison}, {McMann},
+  et~al.]{BurkeSpolaor2019}
+{Burke-Spolaor}, S.; {Taylor}, S.R.; {Charisi}, M.; {Dolch}, T.; {Hazboun},
+  J.S.; {Holgado}, A.M.; {Kelley}, L.Z.; {Lazio}, T.J.W.; {Madison}, D.R.;
+  {McMann}, N.;  et~al.
+\newblock {The astrophysics of nanohertz gravitational waves}.
+\newblock {\em Astron. Astrophys. Rev.} {\bf 2019}, {\em 27},~5.
+\newblock {\url{https://doi.org/10.1007/s00159-019-0115-7}}.
+
+\bibitem[{Arzoumanian} et~al.(2020){Arzoumanian}, {Baker}, {Blumer}, {Becsy},
+  {Brazier}, {Brook}, {Burke-Spolaor}, {Chamberlin}, {Chatterjee}, {Chen},
+  et~al.]{NANOGrav12p5}
+{Arzoumanian}, Z.; {Baker}, P.T.; {Blumer}, H.; {Becsy}, B.; {Brazier}, A.;
+  {Brook}, P.R.; {Burke-Spolaor}, S.; {Chamberlin}, S.J.; {Chatterjee}, S.;
+  {Chen}, S.;  et~al.
+\newblock {The NANOGrav 12.5 yr Data Set: Search for an Isotropic Stochastic
+  Gravitational-Wave Background}.
+\newblock {\em Astrophys. J. Lett.} {\bf 2020}, {\em 905},~L34.
 \newblock {\url{https://doi.org/10.3847/2041-8213/abd401}}.
 
-\bibitem[{Chen} et~al.(2021){Chen}, {Caballero}, {Guo}, {Lee}, {Sesana},
-  {Shaifullah}, {Simon}, {Antoniadis}, {Bassa}, and {Babak}]{Chen2021}
-{Chen}, S.; {Caballero}, R.N.; {Guo}, Y.J.; {Lee}, K.J.; {Sesana}, A.;
-  {Shaifullah}, G.; {Simon}, J.; {Antoniadis}, J.; {Bassa}, C.G.; {Babak},
-  S.e.a.
+\bibitem[{Chen} et~al.(2021){Chen}, {Caballero}, {Guo}, {Chalumeau}, {Liu},
+  {Shaifullah}, {Lee}, {Babak}, {Desvignes}, {Parthasarathy}, et~al.]{Chen2021}
+{Chen}, S.; {Caballero}, R.N.; {Guo}, Y.J.; {Chalumeau}, A.; {Liu}, K.;
+  {Shaifullah}, G.; {Lee}, K.J.; {Babak}, S.; {Desvignes}, G.; {Parthasarathy},
+  A.;  et~al.
 \newblock {Common-red-signal analysis with 24-yr high-precision timing of the
   European Pulsar Timing Array: Inferences in the stochastic gravitational-wave
   background search}.
-\newblock {\em Mon. Not. Roy. Astron. Soc.} {\bf 2021}, {\em 508},~4970.
+\newblock {\em Mon. Not. Roy. Astron. Soc.} {\bf 2021}, {\em 508},~4970--4993.
 \newblock {\url{https://doi.org/10.1093/mnras/stab2833}}.
 
 \bibitem[{Goncharov} et~al.(2021){Goncharov}, {Shannon}, {Reardon}, {Hobbs},
-  {Zhu}, {Russell}, {Spiewak}, {Dai}, {Kerr}, and {Manchester}]{Goncharov2021}
+  {Zhu}, {Russell}, {Spiewak}, {Dai}, {Kerr}, {Manchester},
+  et~al.]{Goncharov2021}
 {Goncharov}, B.; {Shannon}, R.M.; {Reardon}, D.J.; {Hobbs}, G.; {Zhu}, X.J.;
-  {Russell}, C.J.; {Spiewak}, R.; {Dai}, S.; {Kerr}, M.; {Manchester}, R.N.e.a.
+  {Russell}, C.J.; {Spiewak}, R.; {Dai}, S.; {Kerr}, M.; {Manchester}, R.N.;
+  et~al.
 \newblock {On the evidence for a common-spectrum process in the search for the
   nanohertz gravitational-wave background with the Parkes Pulsar Timing Array}.
 \newblock {\em Astrophys. J. Lett.} {\bf 2021}, {\em 917},~L19.
 \newblock {\url{https://doi.org/10.3847/2041-8213/ac17f4}}.
 
 \bibitem[{Agazie} et~al.(2023){Agazie}, {Anumarlapudi}, {Archibald},
-  {Arzoumanian}, {Baker}, {Becsy}, {Blecha}, {Brazier}, {Brook}, and
-  {Burke-Spolaor}]{NANOGrav15-Evidence}
+  {Arzoumanian}, {Baker}, {Becsy}, {Blecha}, {Brazier}, {Brook},
+  {Burke-Spolaor}, et~al.]{NANOGrav15-Evidence}
 {Agazie}, G.; {Anumarlapudi}, A.; {Archibald}, A.M.; {Arzoumanian}, Z.;
   {Baker}, P.T.; {Becsy}, B.; {Blecha}, L.; {Brazier}, A.; {Brook}, P.R.;
-  {Burke-Spolaor}, S.e.a.N.C.
+  {Burke-Spolaor}, S.;  et~al.
 \newblock {The NANOGrav 15-year Data Set: Evidence for a Gravitational-Wave
   Background}.
 \newblock {\em Astrophys. J. Lett.} {\bf 2023}, {\em 951},~L8.
@@ -57,17 +72,18 @@
   {Taylor}]{Kelley2017}
 {Kelley}, L.Z.; {Blecha}, L.; {Hernquist}, L.; {Sesana}, A.; {Taylor}, S.R.
 \newblock {The gravitational wave background from massive black hole binaries
-  in Illustris: spectral features and time to detection}.
-\newblock {\em Mon. Not. Roy. Astron. Soc.} {\bf 2017}, {\em 471},~4508.
-\newblock {\url{https://doi.org/10.1093/mnras/stx1753}}.
+  in Illustris: spectral features and time to detection with pulsar timing
+  arrays}.
+\newblock {\em Mon. Not. Roy. Astron. Soc.} {\bf 2017}, {\em 471},~4508--4526.
+\newblock {\url{https://doi.org/10.1093/mnras/stx1638}}.
 
 \bibitem[{Chen} et~al.(2026){Chen}, {Daniel}, {D'Orazio}, {Fan}, {Mitridate},
-  {Sagunski}, and {Xue}]{ChenTomography2024}
+  {Sagunski}, {Xue}, et~al.]{ChenTomography2024}
 {Chen}, Y.; {Daniel}, M.; {D'Orazio}, D.J.; {Fan}, X.; {Mitridate}, A.;
-  {Sagunski}, L.; {Xue}, X.e.a.N.C.
+  {Sagunski}, L.; {Xue}, X.;  et~al.
 \newblock {Inference on inner galaxy structure via gravitational waves from
   supermassive binaries}.
-\newblock {\em Nature Astronomy} {\bf 2026},
+\newblock {\em Nature Astronomy} {\bf 2026}, {\em 10},~554--563,
   \href{http://arxiv.org/abs/2411.05906}{{\normalfont
   [arXiv:astro-ph.HE/2411.05906]}}.
 \newblock {\url{https://doi.org/10.1038/s41550-026-02782-0}}.
@@ -90,68 +106,69 @@
   {Siemens}]{BlancoPillado2018}
 {Blanco-Pillado}, J.J.; {Olum}, K.D.; {Siemens}, X.
 \newblock New limits on cosmic strings from gravitational wave observation.
-\newblock {\em Phys. Lett. B} {\bf 2018}, {\em 778},~392.
+\newblock {\em Phys. Lett. B} {\bf 2018}, {\em 778},~392--396.
 \newblock {\url{https://doi.org/10.1016/j.physletb.2018.01.050}}.
 
 \bibitem[{Afzal} et~al.(2023){Afzal}, {Agazie}, {Anumarlapudi}, {Archibald},
-  {Arzoumanian}, {Becsy}, {Blanco-Pillado}, {Blecha}, {Boddy}, and
-  {Brazier}]{NANOGrav15-NewPhys}
+  {Arzoumanian}, {Becsy}, {Blanco-Pillado}, {Blecha}, {Boddy}, {Brazier},
+  et~al.]{NANOGrav15-NewPhys}
 {Afzal}, A.; {Agazie}, G.; {Anumarlapudi}, A.; {Archibald}, A.M.;
   {Arzoumanian}, Z.; {Becsy}, B.; {Blanco-Pillado}, J.J.; {Blecha}, L.;
-  {Boddy}, K.K.; {Brazier}, A.e.a.N.C.
+  {Boddy}, K.K.; {Brazier}, A.;  et~al.
 \newblock {The NANOGrav 15-year Data Set: Search for Signals from New Physics}.
 \newblock {\em Astrophys. J. Lett.} {\bf 2023}, {\em 951},~L11.
 \newblock {\url{https://doi.org/10.3847/2041-8213/acdc91}}.
 
 \bibitem[{Reardon} et~al.(2023){Reardon}, {Zic}, {Shannon}, {Di Marco},
-  {Hobbs}, {Kapur}, {Lower}, {Mandow}, {Middleton}, and {Miles}]{PPTA2023}
+  {Hobbs}, {Kapur}, {Lower}, {Mandow}, {Middleton}, {Miles}, et~al.]{PPTA2023}
 {Reardon}, D.J.; {Zic}, A.; {Shannon}, R.M.; {Di Marco}, V.; {Hobbs}, G.;
-  {Kapur}, A.; {Lower}, M.E.; {Mandow}, R.; {Middleton}, H.; {Miles}, M.T.e.a.
-\newblock {Search for an isotropic gravitational-wave background with the
+  {Kapur}, A.; {Lower}, M.E.; {Mandow}, R.; {Middleton}, H.; {Miles}, M.T.;
+  et~al.
+\newblock {Search for an Isotropic Gravitational-wave Background with the
   Parkes Pulsar Timing Array}.
-\newblock {\em Astrophys. J. Lett.} {\bf 2023}, {\em 951},~L7.
-\newblock {\url{https://doi.org/10.3847/2041-8213/acdd03}}.
+\newblock {\em Astrophys. J. Lett.} {\bf 2023}, {\em 951},~L6.
+\newblock {\url{https://doi.org/10.3847/2041-8213/acdd02}}.
 
 \bibitem[{Xu} et~al.(2023){Xu}, {Zhao}, {Wang}, {Liu}, {Zhu}, {Wang}, {Perera},
-  {Zhang}, {Luo}, and {Lee}]{CPTA2023}
+  {Zhang}, {Luo}, {Lee}, et~al.]{CPTA2023}
 {Xu}, H.; {Zhao}, W.; {Wang}, Y.; {Liu}, X.; {Zhu}, W.W.; {Wang}, P.; {Perera},
-  B.B.P.; {Zhang}, J.; {Luo}, J.; {Lee}, K.J.e.a.C.C.
+  B.B.P.; {Zhang}, J.; {Luo}, J.; {Lee}, K.J.;  et~al.
 \newblock {Searching for the nano-Hertz Stochastic Gravitational Wave
   Background with the Chinese Pulsar Timing Array Data Release I}.
 \newblock {\em Res. Astron. Astrophys.} {\bf 2023}, {\em 23},~075024.
 \newblock {\url{https://doi.org/10.1088/1674-4527/acdfa5}}.
 
 \bibitem[{Johnson} et~al.(2024){Johnson}, {Meyers}, {Baker}, {Cornish},
-  {Hazboun}, {Littenberg}, {Romano}, {Taylor}, {Vallisneri}, and
-  {Vigeland}]{NANOGrav15-Methods}
+  {Hazboun}, {Littenberg}, {Romano}, {Taylor}, {Vallisneri}, {Vigeland},
+  et~al.]{NANOGrav15-Methods}
 {Johnson}, A.D.; {Meyers}, P.M.; {Baker}, P.T.; {Cornish}, N.J.; {Hazboun},
   J.S.; {Littenberg}, T.B.; {Romano}, J.D.; {Taylor}, S.R.; {Vallisneri}, M.;
-  {Vigeland}, S.J.e.a.N.C.
+  {Vigeland}, S.J.;  et~al.
 \newblock {The NANOGrav 15-year Gravitational-Wave Background Methods}.
 \newblock {\em Phys. Rev. D} {\bf 2024}, {\em 109},~103012.
 \newblock {\url{https://doi.org/10.1103/PhysRevD.109.103012}}.
 
 \bibitem[{Agazie} et~al.(2023){Agazie}, {Anumarlapudi}, {Archibald},
-  {Arzoumanian}, {Baker}, {Becsy}, {Blecha}, {Brazier}, {Brook}, and
-  {Burke-Spolaor}]{Agazie2023Noise}
+  {Arzoumanian}, {Baker}, {Becsy}, {Blecha}, {Brazier}, {Brook},
+  {Burke-Spolaor}, et~al.]{Agazie2023Noise}
 {Agazie}, G.; {Anumarlapudi}, A.; {Archibald}, A.M.; {Arzoumanian}, Z.;
   {Baker}, P.T.; {Becsy}, B.; {Blecha}, L.; {Brazier}, A.; {Brook}, P.R.;
-  {Burke-Spolaor}, S.e.a.N.C.
+  {Burke-Spolaor}, S.;  et~al.
 \newblock {The NANOGrav 15 yr Data Set: Detector Characterization and Noise
   Budget}.
 \newblock {\em Astrophys. J. Lett.} {\bf 2023}, {\em 951},~L10.
 \newblock {\url{https://doi.org/10.3847/2041-8213/acda88}}.
 
 \bibitem[{Larsen} et~al.(2024){Larsen}, {Mingarelli}, {Hazboun}, {Chalumeau},
-  {Good}, {Simon}, {Agazie}, {Anumarlapudi}, {Archibald}, and
-  {Arzoumanian}]{Larsen2024}
+  {Good}, {Simon}, {Agazie}, {Anumarlapudi}, {Archibald}, {Arzoumanian},
+  et~al.]{Larsen2024}
 {Larsen}, B.; {Mingarelli}, C.M.F.; {Hazboun}, J.S.; {Chalumeau}, A.; {Good},
   D.C.; {Simon}, J.; {Agazie}, G.; {Anumarlapudi}, A.; {Archibald}, A.M.;
-  {Arzoumanian}, Z.e.a.N.C.
+  {Arzoumanian}, Z.;  et~al.
 \newblock {The NANOGrav 15 yr Data Set: Chromatic Gaussian Process Noise Models
   for Six Pulsars}.
-\newblock {\em Astrophys. J.} {\bf 2024}.
-\newblock arXiv:2405.14941, {\url{https://doi.org/10.48550/arXiv.2405.14941}}.
+\newblock {\em Astrophys. J.} {\bf 2024}, {\em 972},~49.
+\newblock {\url{https://doi.org/10.3847/1538-4357/ad5291}}.
 
 \bibitem[{Allen} and {Romano}(2023)]{AllenRomano2023HD}
 {Allen}, B.; {Romano}, J.D.
@@ -167,11 +184,22 @@
 \newblock {\em Class. Quantum Gravity} {\bf 2018}, {\em 35},~163001.
 \newblock {\url{https://doi.org/10.1088/1361-6382/aac608}}.
 
+\bibitem[{Agazie} et~al.(2023){Agazie}, {Alam}, {Anumarlapudi}, {Archibald},
+  {Arzoumanian}, {Baker}, {Blecha}, {Bonidie}, {Brazier}, {Brook},
+  et~al.]{NANOGrav15-Data}
+{Agazie}, G.; {Alam}, M.F.; {Anumarlapudi}, A.; {Archibald}, A.M.;
+  {Arzoumanian}, Z.; {Baker}, P.T.; {Blecha}, L.; {Bonidie}, V.; {Brazier}, A.;
+  {Brook}, P.R.;  et~al.
+\newblock {The NANOGrav 15 yr Data Set: Observations and Timing of 68
+  Millisecond Pulsars}.
+\newblock {\em Astrophys. J. Lett.} {\bf 2023}, {\em 951},~L9.
+\newblock {\url{https://doi.org/10.3847/2041-8213/acda9a}}.
+
 \bibitem[{Colpi}(2014)]{Colpi2014}
 {Colpi}, M.
-\newblock {Massive black hole binary evolution in gas-rich and gas-poor galaxy
-  mergers}.
-\newblock {\em Space Sci. Rev.} {\bf 2014}, {\em 183},~189.
+\newblock {Massive Binary Black Holes in Galactic Nuclei and Their Path to
+  Coalescence}.
+\newblock {\em Space Sci. Rev.} {\bf 2014}, {\em 183},~189--221.
 \newblock {\url{https://doi.org/10.1007/s11214-014-0067-1}}.
 
 \bibitem[{Khan} et~al.(2013){Khan}, {Holley-Bockelmann}, {Berczik}, and
@@ -182,39 +210,43 @@
 \newblock {\em Astrophys. J.} {\bf 2013}, {\em 773},~100.
 \newblock {\url{https://doi.org/10.1088/0004-637X/773/2/100}}.
 
-\bibitem[{Auclair} and {et~al.}(2024)]{Auclair2024}
-{Auclair}, P.; {et~al.}.
-\newblock {The LISA Template Databank for Stochastic Gravitational Wave
-  Backgrounds from Cosmic Strings}.
-\newblock {\em arXiv e-prints} {\bf 2024},
+\bibitem[{Blanco-Pillado} et~al.(2025){Blanco-Pillado}, {Cui}, {Kuroyanagi},
+  {Lewicki}, {Nardini}, {Pieroni}, {Rybak}, {Sousa}, and
+  {Wachter}]{BlancoPillado2025LISAStrings}
+{Blanco-Pillado}, J.J.; {Cui}, Y.; {Kuroyanagi}, S.; {Lewicki}, M.; {Nardini},
+  G.; {Pieroni}, M.; {Rybak}, I.Y.; {Sousa}, L.; {Wachter}, J.M.
+\newblock {Gravitational waves from cosmic strings in LISA: reconstruction
+  pipeline and physics interpretation}.
+\newblock {\em J. Cosmol. Astropart. Phys.} {\bf 2025}, {\em 2025},~006,
   \href{http://arxiv.org/abs/2405.03740}{{\normalfont
-  [arXiv:gr-qc/2405.03740]}}.
+  [arXiv:astro-ph.CO/2405.03740]}}.
+\newblock {\url{https://doi.org/10.1088/1475-7516/2025/05/006}}.
 
-\bibitem[{Carr} et~al.(2020){Carr}, {Clesse}, and
+\bibitem[{Carr} et~al.(2021){Carr}, {Clesse}, and
   {Garc{\'\i}a-Bellido}]{Carr2020}
 {Carr}, B.; {Clesse}, S.; {Garc{\'\i}a-Bellido}, J.
 \newblock {Primordial black holes from the QCD epoch: linking dark matter,
   baryogenesis, and anthropic selection}.
-\newblock {\em Phys. Dark Universe} {\bf 2020}, {\em 29},~100563.
-\newblock {\url{https://doi.org/10.1016/j.dark.2020.100563}}.
+\newblock {\em Mon. Not. Roy. Astron. Soc.} {\bf 2021}, {\em 501},~1426--1439.
+\newblock {\url{https://doi.org/10.1093/mnras/staa3726}}.
 
 \bibitem[{Janssen} et~al.(2015){Janssen}, {Hobbs}, {McLaughlin}, {Bassa},
-  {Deller}, {Kramer}, {Lee}, {Mingarelli}, {Rosado}, and
-  {Sanidas}]{Janssen2015}
+  {Deller}, {Kramer}, {Lee}, {Mingarelli}, {Rosado}, {Sanidas},
+  et~al.]{Janssen2015}
 {Janssen}, G.H.; {Hobbs}, G.; {McLaughlin}, M.; {Bassa}, C.G.; {Deller}, A.T.;
   {Kramer}, M.; {Lee}, K.J.; {Mingarelli}, C.M.F.; {Rosado}, P.A.; {Sanidas},
-  S.e.a.
+  S.;  et~al.
 \newblock {Gravitational wave astronomy with the SKA}.
 \newblock In Proceedings of the Advancing Astrophysics with the Square
-  Kilometre Array (AASKA14),  2015, p.~37.
+  Kilometre Array (AASKA14),  2015, p. 037.
 \newblock {\url{https://doi.org/10.22323/1.215.0037}}.
 
 \bibitem[{Colpi} et~al.(2024){Colpi}, {Danzmann}, {Hewitson},
   {Holley-Bockelmann}, {Jetzer}, {Nelemans}, {Petiteau}, {Shoemaker},
-  {Sopuerta}, and {Stebbins}]{Colpi2024}
+  {Sopuerta}, {Stebbins}, et~al.]{Colpi2024}
 {Colpi}, M.; {Danzmann}, K.; {Hewitson}, M.; {Holley-Bockelmann}, K.; {Jetzer},
   P.; {Nelemans}, G.; {Petiteau}, A.; {Shoemaker}, D.; {Sopuerta}, C.;
-  {Stebbins}, R.e.a.
+  {Stebbins}, R.;  et~al.
 \newblock {LISA Definition Study Report}.
 \newblock {\em arXiv e-prints} {\bf 2024},
   \href{http://arxiv.org/abs/2402.07571}{{\normalfont
@@ -222,11 +254,11 @@
 \newblock {\url{https://doi.org/10.48550/arXiv.2402.07571}}.
 
 \bibitem[{Agazie} et~al.(2023){Agazie}, {Anumarlapudi}, {Archibald},
-  {Arzoumanian}, {Baker}, {Becsy}, {Blecha}, {Brazier}, {Brook}, and
-  {Burke-Spolaor}]{Agazie2023Anisotropy}
+  {Arzoumanian}, {Baker}, {Becsy}, {Blecha}, {Brazier}, {Brook},
+  {Burke-Spolaor}, et~al.]{Agazie2023Anisotropy}
 {Agazie}, G.; {Anumarlapudi}, A.; {Archibald}, A.M.; {Arzoumanian}, Z.;
   {Baker}, P.T.; {Becsy}, B.; {Blecha}, L.; {Brazier}, A.; {Brook}, P.R.;
-  {Burke-Spolaor}, S.e.a.N.C.
+  {Burke-Spolaor}, S.;  et~al.
 \newblock {The NANOGrav 15 yr Data Set: Search for Anisotropy in the
   Gravitational-wave Background}.
 \newblock {\em Astrophys. J. Lett.} {\bf 2023}, {\em 956},~L3.
