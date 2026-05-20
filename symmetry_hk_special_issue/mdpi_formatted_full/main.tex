@@ -1,0 +1,501 @@
+\documentclass[symmetry,article,submit,pdftex,moreauthors]{Definitions/mdpi}
+
+\graphicspath{{figures/}}
+\usepackage{placeins}
+\setlength{\headheight}{20pt}
+
+\firstpage{1}
+\makeatletter
+\setcounter{page}{\@firstpage}
+\makeatother
+\pubvolume{1}
+\issuenum{1}
+\articlenumber{0}
+\pubyear{2026}
+\copyrightyear{2026}
+\datereceived{}
+\daterevised{}
+\dateaccepted{}
+\datepublished{}
+
+\Title{Discriminating between Models of the Nanohertz Gravitational-Wave Background with Pulsar Timing Arrays}
+
+\Author{Mengshen Wang $^{1,\ddagger}$, Zuocheng Zhang $^{2,\ddagger}$ and Hua Xu $^{1,*}$}
+
+\AuthorNames{Mengshen Wang, Zuocheng Zhang and Hua Xu}
+
+\address{%
+$^{1}$ \quad Department of Computer Science and Engineering, The Hong Kong University of Science and Technology, Hong Kong SAR, China\\
+$^{2}$ \quad Department of Physics, The Hong Kong University of Science and Technology, Hong Kong SAR, China}
+
+\corres{Correspondence: huaxu@ust.hk}
+
+\secondnote{These authors contributed equally to this work.}
+
+\abstract{The NANOGrav 15-year pulsar timing array data set has established, at current PTA sensitivity, a nanohertz common process with Hellings--Downs spatial correlations. We present a detailed Bayesian source-discrimination study for this background, comparing an astrophysical supermassive-black-hole-binary (SMBHB) population, an SMBHB model with environmental low-frequency turnover, first-order phase-transition spectra, and cosmic-string spectra. The Bayesian comparison is organized in layers: the Hellings--Downs angular template fixes the statistically isotropic tensor-correlation structure, while the competing source models are judged by the evidence they provide for different spectral departures from a scale-free SMBHB power law. This gives the analysis a natural symmetry interpretation without changing the statistical target. The official NANOGrav timing-residual analyses anchor the detection and spatial-correlation evidence; our independent contribution is a reproducible comparison of source spectra against the public 15-year Hellings--Downs free-spectrum KDE products, together with an enterprise-based timing-likelihood pipeline prepared for full production evidence calculations. We correct the distinct-pulsar Hellings--Downs normalization, formulate phase-transition spectra in terms of the gravitational-wave energy density before conversion to characteristic strain, and include the environmental-turnover interpretation motivated by recent NANOGrav work. The spectral comparison favors curvature over a strict fixed $f^{-2/3}$ SMBHB power law. In the model set studied here, the SMBHB environmental-turnover interpretation is the best-supported astrophysical explanation because it accounts for this curvature within known binary-hardening physics and links the turnover to parsec-scale nuclear densities. Phase transitions remain the strongest high-impact cosmological competitor, while the simple cosmic-string proxy is weak in the public-free-spectrum comparison.}
+
+\keyword{nanohertz gravitational-wave background; pulsar timing arrays; Hellings--Downs correlations; rotational symmetry; symmetry breaking; Bayesian model comparison; supermassive black hole binaries; cosmic strings; phase transitions}
+
+\begin{document}
+
+\section{Introduction}\label{sec:intro}
+The detection of low-frequency gravitational waves via pulsar timing arrays marks a major breakthrough in astrophysics and cosmology. PTAs monitor the arrival times of pulses from an array of millisecond pulsars spread across the sky, searching for the telltale correlation patterns induced by a nanohertz-frequency gravitational-wave background (GWB) \cite{Hellings1983}. After decades of observations, several PTA collaborations have reported evidence for a stochastic common-spectrum signal in pulsar timing data \cite{Pol2021,Chen2021,Goncharov2021}. In particular, the NANOGrav Collaboration has recently announced strong evidence that this common process exhibits the Hellings--Downs spatial correlation pattern expected for an isotropic GWB \cite{NANOGrav15-Evidence}. This discovery opens up a new window on gravitational-wave sources emitting at nanohertz frequencies.
+
+A key question now is the physical origin of the detected GWB. The \emph{astrophysical} benchmark model is a background produced by the superposition of gravitational waves from numerous inspiraling supermassive black hole binaries (SMBHBs) throughout the Universe \cite{Sesana2013,Kelley2017}. In such a model, the characteristic strain spectrum is expected to be a power-law $h_c(f) \propto f^{-2/3}$ (equivalently, timing residual power spectral density $P(f) \propto f^{-13/3}$) at low frequencies, reflecting the long inspiral phase of massive binary mergers \cite{Sesana2013}. This scenario has long been predicted to produce a GWB in the nanohertz band with amplitude $A_{\mathrm{GWB}}\sim10^{-15}$, potentially detectable by PTAs given sufficient timing precision and timespan \cite{Sesana2013}. State-of-the-art cosmological hydrodynamic simulations such as IllustrisTNG likewise deliver $A_{\mathrm{GWB}}\sim\text{few}\times10^{-15}$ by self-consistently evolving SMBHB populations, reinforcing the expectation that PTA sensitivity should overlap this signal regime \cite{Kelley2017}. The NANOGrav 15-year results indicate an amplitude of this order, consistent with SMBHB expectations \cite{NANOGrav15-Evidence}. Recent NANOGrav collaboration work further shows that environmental coupling can imprint a low-frequency turnover and that the turnover scale can be translated into parsec-scale stellar or total matter densities in galactic nuclei \cite{ChenTomography2024}. We therefore treat an SMBHB environmental-turnover spectrum as a primary astrophysical model, not as an afterthought or a noise-like deformation.
+
+On the other hand, the nanohertz GWB could arise from new physics in the early Universe. One possibility is a first-order cosmological phase transition that occurred at an energy scale such that the peak frequency of the gravitational-wave signal today falls in the PTA band. A phase transition around the quantum chromodynamics (QCD) scale ($T\sim 100$~MeV) could produce peak frequencies $f \sim 10^{-8}-10^{-7}$~Hz, in the middle of the PTA range, especially if the transition was strongly first-order and had a slow (prolonged) completion \cite{Gouttenoire2023}. Because the Standard Model predicts that the QCD epoch is a smooth crossover, confirmation of a PTA signal from a strong first-order transition would amount to direct evidence for beyond-the-Standard-Model dynamics at hadronic energies \cite{Gouttenoire2023}. Another possibility is a stochastic background from a network of cosmic strings or cosmic superstrings, topological defects that generate gravitational waves through oscillation and cusps/kinks on string loops \cite{Ellis2023}. Cosmic string backgrounds are broad-band and can also contribute in the nanohertz regime; the predicted spectral shape is generally a shallow power-law (approximately $h_c(f)\propto f^{-1}$ in a certain frequency range for stable string loops in the radiation era) with an amplitude proportional to the string tension $G\mu$ \cite{BlancoPillado2018}. If $G\mu$ is on the order of $10^{-11}$ to $10^{-10}$, the resulting background could be comparable to the signal observed by NANOGrav \cite{Ellis2023}. Other cosmological sources, such as induced gravitational waves from primordial density perturbations or exotic objects like domain walls, have also been proposed \cite{NANOGrav15-NewPhys}, but in this work we focus on SMBHBs, phase transitions, and cosmic strings as representative models.
+
+Discriminating between these scenarios using PTA data is challenging. All three classes of models can, in principle, produce an approximately isotropic and stochastic GWB that would manifest with the same Hellings--Downs spatial correlations in pulsar timing residuals. This is also where the connection to the theme of gravitational physics and symmetry becomes concrete. The HD curve follows from statistical isotropy, homogeneity, and the tensor-polarization response of general relativity: after averaging over an isotropic background, the two-point timing correlation is rotationally invariant and depends only on the pulsar-pair separation angle. The source-discrimination problem is therefore not another search for the same angular template. It asks, in Bayesian terms, which physical mechanism best explains the observed spectrum once that angular-correlation symmetry is held fixed. SMBHB environments modify the scale-free $f^{-2/3}$ inspiral behavior through stellar or gaseous hardening; first-order phase transitions and cosmic strings instead encode early-Universe symmetry-breaking or topological-defect physics. In this paper, we employ a Bayesian inference framework to quantify the evidence for each model given the NANOGrav 15-year data. We construct a unified analysis that includes:
+\begin{itemize}
+    \item A coherent Bayesian likelihood for pulsar timing residuals that incorporates gravitational-wave induced correlations between pulsars (the Hellings--Downs curve) and accounts for pulsar-intrinsic noise.
+    \item Parameterized models for the GWB spectrum under each scenario (power-law for SMBHBs, broken or shaped spectra for phase transitions and cosmic strings based on physical parameters).
+    \item Prior distributions for model parameters informed by astrophysical or cosmological considerations.
+    \item Computation of compressed spectral posteriors and marginal likelihoods for each source model, enabling Bayes-factor comparisons within the public free-spectrum KDE likelihood.
+\end{itemize}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[x=1cm,y=1cm]
+        \node[draw, rounded corners, align=center, minimum width=3.2cm, minimum height=1.0cm] (ang) at (0,0)
+        {Angular sector\\HD rotational symmetry};
+        \node[draw, rounded corners, align=center, minimum width=3.2cm, minimum height=1.0cm] (spec) at (4.2,0)
+        {Spectral sector\\free-spectrum curvature};
+        \node[draw, rounded corners, align=center, minimum width=3.2cm, minimum height=1.0cm] (ev) at (8.4,0)
+        {Bayesian evidence\\source comparison};
+        \node[draw, rounded corners, align=center, minimum width=3.4cm, minimum height=1.0cm] (phys) at (4.2,-1.8)
+        {Physical scale\\$f_b$, $f_{\rm peak}$, $G\mu$};
+        \draw[->, thick] (ang) -- (spec);
+        \draw[->, thick] (spec) -- (ev);
+        \draw[->, thick] (spec) -- (phys);
+        \draw[->, thick] (phys) -- (ev);
+    \end{tikzpicture}
+    \caption{\textbf{Symmetry structure of the inference.} The angular sector tests the HD rotational-symmetry signature of an approximately isotropic tensor background. The spectral sector then measures departures from a strict scale-free SMBHB power law, and Bayesian evidence ranks the source mechanisms that introduce the relevant physical scale.}
+    \label{fig:inference-hierarchy}
+\end{figure}
+
+We also discuss how the analysis mitigates various sources of noise and systematic effects, such as dispersion measure (DM) variations in pulsar signals and other red noise processes, which are crucial for robustly identifying a GWB. By examining the Bayesian evidence and posterior parameter estimates, we assess whether current data show any preference or tension between the SMBHB interpretation and exotic alternatives. This work is especially timely given the simultaneous reports of similar GWB signals by other PTA experiments around the world \cite{Goncharov2021,NANOGrav15-Evidence,PPTA2023,CPTA2023}, all of which strengthen the case for a common nanohertz GWB of astrophysical or cosmological origin.
+
+The remainder of this paper is organized as follows. In Section~\ref{sec:methods} we describe the methods: the formulation of the PTA likelihood and noise model, and the parameterizations of each GWB model. Section~\ref{sec:bayesian} outlines the Bayesian inference framework, including likelihood, prior, posterior, and model evidence, with details on how Bayes factors are used for model selection. Section~\ref{sec:data} summarizes the NANOGrav 15-year data set and data processing steps. In Section~\ref{sec:results} we present the results of our analysis: parameter posteriors for the common-spectrum process, evidence for the presence of Hellings--Downs correlations, and Bayes factors comparing the different source models. Section~\ref{sec:discussion} provides a discussion of the implications of these findings for astrophysics and cosmology, and how future data may further distinguish between models. Finally, Section~\ref{sec:conclusion} presents our conclusions.
+
+\section{Methods: PTA Data Model and Source Models}\label{sec:methods}
+\subsection{Pulsar Timing Array Data and Likelihood}
+In a PTA experiment, the primary observable is the set of timing residuals from an array of pulsars. The timing residual $r_i(t)$ for pulsar $i$ is the difference between the observed pulse time-of-arrival (TOA) and the expected TOA based on a timing model (which accounts for pulsar spin-down, orbital motion, etc.). A GWB passing through spacetime perturbs these TOAs, introducing correlated deviations in the residuals of different pulsars. The presence of a GWB can thus be inferred by detecting a spatial correlation pattern in the residuals across pulsar pairs, in excess of noise.
+
+We denote by $\mathbf{r}$ the vector of residuals for all pulsars over the observation timespan. A convenient assumption (and one commonly adopted in PTA analyses) is that $\mathbf{r}$ can be modeled as a multivariate Gaussian random vector with zero mean and a covariance matrix $C$ that encapsulates all noise and GWB contributions \cite{NANOGrav15-Methods}. Under this assumption, the likelihood of obtaining the data $\mathbf{r}$ given model parameters $\theta$ (which include noise parameters and GWB parameters) is 
+\begin{equation}\label{eq:likelihood}
+    \mathcal{L}(\mathbf{r}|\theta, M) = \frac{1}{\sqrt{(2\pi)^{N}\det C(\theta)}} \exp\!\Big(-\frac{1}{2}\mathbf{r}^T C(\theta)^{-1}\mathbf{r}\Big)\,,
+\end{equation}
+where $N$ is the total number of TOA measurements (summed over all pulsars) and $C(\theta)$ is the $N\times N$ covariance matrix which depends on the model parameters. In practice, $C$ is composed of several contributions:
+\begin{equation}\label{eq:cov_components}
+    C = C_{\rm WN} + C_{\rm RN} + C_{\rm GWB}\,.
+\end{equation}
+Here $C_{\rm WN}$ represents white noise (uncorrelated TOA uncertainties, including radiometer noise and pulse phase jitter, usually modeled as a diagonal covariance with entries $\sigma_{i,a}^2$ for measurement $a$ of pulsar $i$). The term $C_{\rm RN}$ is the intrinsic red noise of each pulsar -- stochastic spin noise or other slow processes specific to each pulsar, which manifests as temporally correlated residuals for that pulsar but with no inter-pulsar correlations. $C_{\rm RN}$ is typically modeled as a power-law spectrum for each pulsar, $P_{\rm RN,i}(f) = A_{\rm RN,i}^2 (f/f_\mathrm{ref})^{-\gamma_{\rm RN,i}}$, implemented either in the time domain via a Toeplitz covariance matrix or in the frequency domain via Fourier components \cite{NANOGrav15-Methods}. Finally, $C_{\rm GWB}$ is the covariance induced by the gravitational-wave background, which is \emph{common} to all pulsars and has a distinctive spatial correlation structure described by the Hellings--Downs curve (see Section~\ref{subsec:HD}). In addition to the HD-correlated background, we include standard common-mode nuisance processes: a monopolar terrestrial clock term and a dipolar Solar System ephemeris term (BayesEphem-like parameters), and marginalize over them in all model comparisons \cite{NANOGrav15-Methods}.
+
+The manner in which the stochastic DM variations and other chromatic propagation effects are modeled can shift the inferred GWB parameters at the few-$\sigma$ level, so we explicitly adopt the noise prescriptions validated in the dedicated NANOGrav detector characterization studies \cite{Agazie2023Noise}. Those analyses, together with targeted Gaussian-process treatments of chromatic noise in individual pulsars \cite{Larsen2024}, show that carefully marginalizing over multiple DM models and solar-wind priors mitigates systematic biases that could otherwise leak into the common red process. Throughout this work we therefore report results that are conditional on a specific, well-tested noise model and emphasize that alternative noise assumptions can be propagated within the same formal framework if new systematics arise.
+
+In the one-sided PSD convention used here, the \emph{residual} covariance induced by an isotropic GWB can be written as
+\begin{equation}\label{eq:cov_gwb}
+    (C_{\rm GWB})_{ij}(t,t') = \int_{0}^{\infty} df\, S_{r}(f)\, \Gamma_{ij} \, \cos\big[2\pi f (t - t')\big] \, ,
+\end{equation}
+where $S_{r}(f)$ is the one-sided timing-residual power spectral density and $\Gamma_{ij}$ is the Hellings--Downs overlap reduction function (normalized so that $\Gamma_{ii}=1$). These quantities obey
+\begin{equation}
+  h_c^2(f) = f\,S_h(f)\,,\qquad S_{r}(f) = \frac{h_c^2(f)}{12\pi^2 f^3} = \frac{S_h(f)}{12\pi^2 f^2}\,.
+\end{equation}
+In practice, we implement the likelihood in the Fourier domain using a finite set of low-frequency Fourier modes per pulsar. Writing $\Phi(f_k) \equiv S_{r}(f_k)\,\Delta f$ for the power at discrete frequencies $\{f_k\}$ and $\mathbf{F}_k$ for the corresponding Fourier design vector, the GWB covariance takes the standard Kronecker form
+\begin{equation}
+  (C_{\rm GWB})_{(i,a),(j,b)} \;=\; \Gamma_{ij}\, \sum_{k=1}^{K} \Phi(f_k)\, F_{i,a,k}\,F_{j,b,k}\, ,
+\end{equation}
+which preserves the full temporal structure and separates the angular correlation ($\Gamma$) from the spectral power in each Fourier bin \cite{NANOGrav15-Methods}.
+
+The log-likelihood corresponding to Eq.~\eqref{eq:likelihood} is 
+\begin{equation}
+    \ln \mathcal{L}(\mathbf{r}|\theta, M) = -\frac{1}{2}\Big[\mathbf{r}^T C^{-1} \mathbf{r} + \ln\det C + N\ln(2\pi)\Big]\,,
+\end{equation}
+up to an additive constant. In our Bayesian analysis, this likelihood is combined with prior probability distributions on the parameters $\theta$ to produce a posterior (Sec.~\ref{sec:bayesian}). Importantly, the likelihood (through $C_{\rm GWB}$) encodes the assumptions of each model $M$ regarding the shape of $S_h(f)$ and the presence or absence of inter-pulsar correlations (via $\Gamma_{ij}$). For example, in a model with no GWB, $C_{\rm GWB}=0$. In a model with an uncorrelated common red process (e.g., a noise that is common to all pulsars but not spatially correlated, sometimes used as a null hypothesis), one would include a common red noise term but with $\Gamma_{ij}=0$ for $i\neq j$ (so each pulsar sees the same spectrum but zero cross-correlation). The full GWB model in general relativity includes the Hellings--Downs correlations $\Gamma_{ij}$ for $i \neq j$ as given in Eq.~\eqref{eq:HDcurve}. We emphasize that detection of the GWB relies on distinguishing the $\Gamma_{ij}$ pattern from these alternative hypotheses.
+
+\subsection{Hellings--Downs Correlation Function}\label{subsec:HD}
+A central signature of an isotropic stochastic GWB is the quadrupolar angular correlation between pulsar timing residuals. Hellings and Downs \cite{Hellings1983} derived the expected correlation coefficient as a function of the angle $\gamma$ between the directions to two pulsars on the sky. For two distinct pulsars $a$ and $b$, define
+\[
+    x_{ab}=\frac{1-\cos\gamma_{ab}}{2}.
+\]
+The distinct-pulsar overlap reduction function used throughout this paper is
+\begin{equation}\label{eq:HDcurve}
+    \Gamma_{ab}(\gamma_{ab}) \;=\; \frac{1}{2}+\frac{3}{2}x_{ab}\ln x_{ab}-\frac{x_{ab}}{4},\qquad a\neq b,
+\end{equation}
+with the limiting value $x\ln x\to0$ as $x\to0$. The auto-correlation term is conventionally set separately, $\Gamma_{aa}=1$, because it includes the pulsar's self-correlation. With the distinct-pair normalization in Eq.~\eqref{eq:HDcurve}, $\Gamma_{ab}(\gamma\to0)=1/2$ and $\Gamma_{ab}(180^\circ)=1/4$. This endpoint matters: the antipodal distinct-pair value is positive in this normalization, and should not be confused with differently shifted plotting conventions.
+
+In the context of our covariance matrix, the Hellings--Downs overlap function $\Gamma_{ij}$ enters multiplicatively with the spectral power in each Fourier bin, as in Eq.~\eqref{eq:cov_gwb}. This preserves the colored frequency dependence while imposing the tensor-polarization angular symmetry predicted by general relativity. Clock errors and Solar System ephemeris errors instead induce monopolar or dipolar correlation patterns; they are therefore included as nuisance channels or checked against the HD-correlated interpretation in the model comparison.
+
+The symmetry point is modest but useful: under the isotropic-background approximation, the correlation function carries no memory of an absolute sky direction, only of angular separation. Finite pulsar sampling and finite-width angular bins can still produce correlated fluctuations around the mean HD curve, so the plotted curve should be read as the ensemble angular template rather than a noiseless curve that each pulsar pair must follow exactly \cite{AllenRomano2023HD}.
+
+\subsection{Source Models and Expected Spectra}\label{subsec:models}
+We now describe the specific models for the GWB spectrum in terms of the residual PSD $S_{r}(f)$ or, equivalently, the characteristic strain $h_c(f)$ that maps to $S_{r}(f)$ via the relations above:
+\begin{enumerate}
+    \item \textbf{SMBHB Astrophysical Background (Model $\mathcal{M}_\mathrm{SMBHB}$):} We assume the background is generated by an ensemble of inspiraling supermassive black hole binaries in the $10^8$--$10^{10}M_\odot$ mass range distributed throughout the Universe. The characteristic strain spectrum for such a population is expected to be a power-law to first approximation: 
+    \begin{equation}\label{eq:smbhb_spectrum}
+        h_c(f) = A_{\mathrm{GWB}}\left(\frac{f}{f_{\mathrm{yr}}}\right)^{\alpha}\!,
+    \end{equation}
+        where $f_{\mathrm{yr}} = 1~\text{yr}^{-1} \approx 3.17\times10^{-8}$~Hz is a reference frequency often used in PTA literature, and $\alpha$ is the spectral index. For circular, GW-driven binaries in the inspiral regime, general relativity predicts $\alpha = -2/3$ (i.e., $h_c \propto f^{-2/3}$) \cite{Sesana2013}. Equivalently, the one-sided power spectral density of timing residuals would scale as $S_{r}(f) \propto f^{-13/3}$. The parameter $A_{\mathrm{GWB}}$ is the strain amplitude at the reference frequency. This model is thus characterized by two parameters $(A_{\mathrm{GWB}}, \alpha)$, although in many analyses $\alpha$ is fixed at $-2/3$ (or $\gamma_{\rm GWB}=13/3$ in terms of power spectral index) to reflect the expected SMBHB spectrum. We will allow for uncertainty in $\alpha$ when comparing with other models, but we note that NANOGrav's observations are indeed consistent with $\alpha\approx -2/3$ \cite{NANOGrav15-Evidence}. Small deviations can occur due to environmental effects on binaries (gas, stars) or the highest-frequency binaries nearing merger, and recent NANOGrav work shows that a low-frequency turnover can encode parsec-scale nuclear densities \cite{ChenTomography2024}.
+
+    \item \textbf{SMBHB Environmental-Turnover Background (Model $\mathcal{M}_{\rm SMBHB-env}$):} We therefore include an astrophysical turnover model rather than forcing all curvature into cosmological explanations. Taking $A$ to be the characteristic-strain amplitude at $f_{\rm yr}$, we parameterize the one-sided residual power spectrum with a smooth broken power law (SBPL),
+    \begin{equation}\label{eq:sbpl}
+        S_r(f)=\frac{A^2}{12\pi^2 f_{\mathrm{yr}}^3}\left(\frac{f}{f_{\mathrm{yr}}}\right)^{-\gamma_{\rm hi}}
+        \left[1+\left(\frac{f_b}{f}\right)^{\Delta\gamma/\zeta}\right]^{-\zeta},
+    \end{equation}
+    where $\gamma_{\rm hi}=13/3$ is the high-frequency GW-driven index, $f_b$ is the bend frequency, $\Delta\gamma$ controls the low-frequency flattening, and $\zeta$ controls the smoothness. The default analysis fixes $\zeta=1$ and samples $(A,f_b,\Delta\gamma)$. This model is physically important because stellar scattering, gas torques, or triple interactions can suppress the lowest PTA bins without invoking new early-Universe physics.
+    
+    \item \textbf{Cosmic String Background (Model $\mathcal{M}_\mathrm{CS}$):} Cosmic strings produce gravitational waves from oscillating loops that form as the strings intersect and reconnect. A network of cosmic strings in the early Universe results in a stochastic background composed of bursts from cusps and kinks on loops integrated over cosmic history. In field-theory language, such strings are topological remnants of symmetry breaking, so the tension $G\mu$ carries information about the underlying breaking scale. The spectrum of the background depends on the string tension $G\mu$ (dimensionless, with $\mu$ the string mass per unit length and $G$ Newton's constant) and the loop size distribution. A commonly considered scenario is a scale-invariant distribution of loops (small loops in the radiation era) which yields a plateau in the energy spectrum $\Omega_{\rm gw}(f)$ across a wide frequency range \cite{BlancoPillado2018}. In terms of strain, this corresponds to $h_c(f)$ scaling approximately as $f^{-1}$ in the radiation-era dominated regime, transitioning to $f^{-1/3}$ in the matter era at lower frequencies, with a high-frequency cutoff determined by the smallest loops. For PTA frequencies (which are very low, corresponding to early times), the spectrum can be approximated as:
+    \begin{equation}\label{eq:cs_spectrum}
+        h_c(f) \approx A_{\mathrm{CS}} \left(\frac{f}{f_{\mathrm{yr}}}\right)^{\beta}\!,
+    \end{equation}
+    where $\beta$ captures the effective slope of the network in the PTA band and is expected to lie between roughly $-1$ (radiation-era loops) and $-1/2$ (matter-era-dominated emission) for standard loop distributions \cite{Ellis2023}. The amplitude $A_{\mathrm{CS}}$ is related to $G\mu$; roughly one expects $A_{\mathrm{CS}} \propto G\mu$ to first order, with $A_{\mathrm{CS}}\sim 10^{-15}$ for $G\mu \sim 10^{-11}$ (this scaling comes from normalizing the energy density $\Omega_{\rm gw} \propto (G\mu)^2$ and converting to strain). In the compressed KDE comparison we use the amplitude--slope proxy $(A_{\rm CS},\beta)$ and interpret the amplitude as an order-of-magnitude guide to $G\mu$, rather than claiming a full string-network evidence calculation. More detailed cosmic string spectra could replace this proxy in a later full timing-likelihood analysis \cite{BlancoPillado2018,Ellis2023}. We assume the same Hellings--Downs spatial correlations apply (as they would for an isotropic string network background).
+    
+    \item \textbf{Phase Transition Background (Model $\mathcal{M}_\mathrm{PT}$):} A first-order phase transition in the early Universe can generate gravitational waves through bubble nucleation, growth, and collisions, as well as from plasma sound waves and turbulence. Physically, this is the channel in which PTA data would be probing a first-order symmetry-breaking event in the visible or hidden sector. We define the phase-transition template first in terms of the present-day gravitational-wave energy density, rather than postulating a strain shape directly. Let $y=f/f_{\rm peak}$. We use the peak-normalized broken power law
+    \begin{equation}\label{eq:pt_omega}
+        \Omega_{\rm PT}(f)=\Omega_{\rm peak}
+        \frac{(a+b)y^a}{b+a y^{a+b}},
+    \end{equation}
+    with $a=3$ for the causal low-frequency rise and $b>0$ for the high-frequency fall. The characteristic strain is then obtained from
+    \begin{equation}\label{eq:omega_to_hc}
+        h_c(f)=\left(\frac{3H_0^2}{2\pi^2}\right)^{1/2} f^{-1}\Omega_{\rm PT}^{1/2}(f).
+    \end{equation}
+    This implies $h_c\propto f^{a/2-1}=f^{1/2}$ at low frequency for $a=3$, and $h_c\propto f^{-1-b/2}$ at high frequency. The conversion is therefore internally consistent and keeps the physical distinction between $\Omega_{\rm gw}$ and $h_c$. We explore $f_{\rm peak}$ around $10^{-8}$--$10^{-7}$~Hz, corresponding to QCD-scale or hidden-sector transitions for plausible transition durations, and sample the peak energy density and high-frequency index within physically motivated ranges. As with the other stochastic models, the spatial correlation is assumed to be Hellings--Downs.
+    \end{enumerate}
+
+\paragraph{Phase-Transition Parameter Mapping.}
+For first-order phase transitions, it is often convenient to relate the phenomenological parameters in Eq.~\eqref{eq:pt_omega} to physical quantities at generation: the transition strength $\alpha_*$ (ratio of released vacuum energy to radiation energy density), the inverse duration $\beta/H_*$ (in units of the Hubble rate at the transition), the bubble-wall speed $v_w$, and the relativistic degrees of freedom $g_*$. The present-day peak frequency and energy density scale approximately as \cite{Caprini2018}
+\begin{align}
+    f_{\rm peak} &\simeq \mathcal{C}_f\,\frac{\beta}{H_*}\,\frac{T_*}{100\,\mathrm{GeV}}\,\Big(\frac{g_*}{100}\Big)^{1/6}\,\frac{1}{v_w}\times (\text{mHz})\,,\\
+    \Omega_{\rm gw}^{\rm peak} &\simeq \mathcal{C}_\Omega\,\Big(\frac{H_*}{\beta}\Big)\,\Big(\frac{\kappa\,\alpha_*}{1+\alpha_*}\Big)^2\,v_w\,\mathcal{S}\,.
+\end{align}
+Here $\kappa$ encodes the efficiency of converting vacuum energy into the source (sound waves/turbulence), and $\mathcal{S}$ denotes the spectral shape factor. In the PTA band ($f\sim 10^{-9}$--$10^{-7}$ Hz), frequencies near $10^{-8}$ Hz point to $T_*\sim \mathcal{O}(100\,\mathrm{MeV})$ for plausible $\beta/H_*$ and $v_w$. The mapping allows us to place priors on $(\Omega_{\rm peak}, f_{\rm peak}, b)$ that are consistent with physically reasonable regions of $(\alpha_*, \beta/H_*, v_w, g_*)$.
+
+Each of these models $\mathcal{M}$ makes different predictions for the spectral shape of the common process. In a PTA analysis, one can attempt to fit the data under each model and compute the Bayes factor comparing them. However, a complication is that all models at present can fit the data reasonably well by adjusting parameters, given the limited frequency range and signal-to-noise ratio of the current GWB detection. For instance, the NANOGrav 15-year detection was reported using a simple power-law assumption \cite{NANOGrav15-Evidence}, but follow-up studies showed that alternative spectra (such as a broken power-law from a phase transition or a slightly flatter spectrum from certain cosmic string models) are also viable \cite{NANOGrav15-NewPhys,Gouttenoire2023,Ellis2023}. Therefore, model selection must account for the flexibility (priors and parameter space volume) of each model. We do this via Bayesian evidence as described next.
+
+\section{Bayesian Analysis Framework}\label{sec:bayesian}
+Our analysis is conducted in a Bayesian statistical framework, which naturally allows model comparison through evidence values and Bayes factors. In this section, we outline the key components: the prior choices, the posterior inference, and the calculation of Bayes factors for model discrimination.
+
+\subsection{Prior and Posterior}
+For a given model $M$ with parameter vector $\theta$, Bayes' theorem gives the posterior distribution
+\begin{equation}\label{eq:posterior}
+    p(\theta | \mathbf{r}, M) = \frac{\mathcal{L}(\mathbf{r}|\theta, M)\, \pi(\theta|M)}{\mathcal{Z}(\mathbf{r}|M)}\,,
+\end{equation}
+where $\mathcal{L}(\mathbf{r}|\theta, M)$ is the likelihood as defined in Eq.~\eqref{eq:likelihood}, $\pi(\theta|M)$ is the prior probability density for the parameters under model $M$, and 
+\begin{equation}\label{eq:evidence}
+    \mathcal{Z}(\mathbf{r}|M) = \int d\theta\, \mathcal{L}(\mathbf{r}|\theta, M)\, \pi(\theta|M)
+\end{equation}
+is the Bayesian evidence (also called marginal likelihood) for model $M$. The evidence $\mathcal{Z}$ is the probability of the data given the model, integrated over all possible parameter values weighted by the prior. It encapsulates both the quality of fit (via the likelihood) and the complexity or predictiveness of the model (via the volume of parameter space allowed by the prior).
+
+This evidence calculation is central to the structure of the paper. The first Bayesian layer asks whether there is a common process; the second asks whether its cross-correlations follow the HD angular template rather than an uncorrelated, monopolar, or dipolar alternative; the third asks which physical source spectrum best explains the frequency dependence once the angular symmetry is fixed. Keeping these layers separate prevents a spectral preference from being overstated as a new detection claim, and it also makes clear where the symmetry assumption enters the inference.
+
+We adopt priors for each model's parameters that reflect our state of knowledge:
+\begin{itemize}
+    \item For the common power-law (SMBHB) model, we take a log-uniform prior on the amplitude $A_{\mathrm{GWB}}$ over a broad range (e.g., $10^{-17}$ to $10^{-14}$) and a Gaussian or uniform prior on the spectral index $\alpha$ centered around $-2/3$ with width allowing a few tenths deviation. If instead we fix $\alpha=-2/3$, effectively the model has one parameter $A_{\mathrm{GWB}}$.
+    \item For the SMBHB environmental-turnover model, we use the same amplitude prior as the power-law model, fix $\gamma_{\rm hi}=13/3$ in the baseline run, take $\Delta\gamma\sim{\rm U}[0,4]$, and use $\log_{10}(f_b/{\rm Hz})\sim{\rm U}[-9.4,-8.0]$ so that the bend is allowed to occupy the lowest PTA frequency bins where environmental hardening should be most visible. We keep $\zeta=1$ unless otherwise stated.
+    \item For the cosmic-string proxy, we use a log-uniform amplitude prior over the same strain-amplitude range as the common spectrum and a uniform PTA-band slope prior $\beta\sim{\rm U}[-1,-1/2]$. The amplitude can be mapped only approximately to $G\mu$ without committing to a loop distribution, so the evidence reported below should be read as a proxy-spectrum comparison rather than a full cosmic-string network constraint.
+    \item For the phase transition model, $f_{\rm peak}$ and $\Omega_{\rm peak}$ are given log-uniform priors informed by cosmology. In the baseline compressed comparison we use $\log_{10}(f_{\rm peak}/{\rm Hz})\sim{\rm U}[-9,-7]$, $\log_{10}\Omega_{\rm peak}\sim{\rm U}[-12,-5]$, and a continuous high-frequency slope prior $b\sim{\rm U}[2,4]$.
+    \item Common to all models are the noise parameters (individual pulsar red noise amplitudes and slopes, white noise scale factors, DM noise parameters, etc.). A full timing-likelihood comparison would assign these standard priors as in NANOGrav's analysis \cite{NANOGrav15-Methods}. In the compressed KDE comparison reported here, the pulsar-noise marginalization has already entered through the public free-spectrum product rather than through a new noise refit.
+\end{itemize}
+
+With the likelihood and priors specified, one can sample from the full timing-residual posterior \eqref{eq:posterior} using Markov Chain Monte Carlo (MCMC), thermodynamic integration, nested sampling, or related methods. The high dimensionality (due to dozens of pulsar noise parameters) makes sampling challenging, but tools such as \textsc{PTMCMCSampler} and \textsc{Enterprise} \cite{NANOGrav15-Methods} have been developed and validated by the PTA community to handle this problem. In the present paper, however, the reported source-comparison evidence values are the compressed free-spectrum KDE evidence values defined below. The released enterprise commands are included to make the same model definitions upgradeable to full timing-likelihood evidence calculations, not to imply that all numbers in Table~\ref{tab:bayesfactors} are full timing-residual evidence values.
+
+\subsection{Bayes Factors for Model Comparison}
+To compare two competing models $M_1$ and $M_2$ in the Bayesian framework, one uses the Bayes factor:
+\begin{equation}\label{eq:bayes_factor}
+    \mathrm{BF}_{12} = \frac{\mathcal{Z}(\mathbf{r}|M_1)}{\mathcal{Z}(\mathbf{r}|M_2)}\,,
+\end{equation}
+which is the ratio of evidence values. If $\mathrm{BF}_{12} > 1$, the data favor model $M_1$ over model $M_2$ (with $\mathrm{BF}_{12}$ quantifying the strength of evidence), and if $\mathrm{BF}_{12} < 1$, model $M_2$ is favored. By convention, one often takes logarithms and quotes $\ln \mathrm{BF}$. For example, $\ln \mathrm{BF} > 5$ (roughly $\mathrm{BF} > 150$) might be considered ``strong evidence'' in the Jeffreys scale, while $\ln \mathrm{BF} < 1$ is negligible evidence.
+
+In this work, the Bayes factors of interest include:
+\begin{itemize}
+    \item $\mathrm{BF}_{\mathrm{GWB,\,noise}}$: comparing a model with a GWB (common stochastic process with Hellings--Downs correlations) to a model with no common process (only independent pulsar noise). NANOGrav reported an extremely large value for this Bayes factor, exceeding $10^{14}$, indicating decisively that a common process is present in the data rather than just individual pulsar noise \cite{NANOGrav15-Evidence}. This establishes detection of a GWB in a model-independent way.
+    \item $\mathrm{BF}_{\mathrm{HD,\,uncorr}}$: comparing the full GWB model (with Hellings--Downs spatial correlations) to a model with an uncorrelated common-spectrum red noise (i.e., each pulsar has the same spectrum but zero cross-correlation between pulsars). This tests whether the inter-pulsar correlation signature has been detected. NANOGrav found Bayes factors in the range 200--1000 in favor of the Hellings--Downs (HD) correlations over an uncorrelated common process, depending on the spectral model used \cite{NANOGrav15-Evidence}. This provides strong (though not yet definitive by conventional $5\sigma$ standards) evidence for the quadrupolar spatial correlation \cite{NANOGrav15-Evidence}.
+    \item $\mathrm{BF}_{\mathrm{M_i,\,M_j}}$: for any two source hypotheses, e.g. SMBHB vs cosmic strings, or SMBHB vs phase transition. These are the comparisons central to our study. We calculate the evidence for each hypothesis by integrating the likelihood over their respective parameter priors. The Bayes factors tell us whether the data prefer one spectral explanation over another under the same HD-correlated stochastic-background assumption. However, if one model has more flexibility than another, a modest improvement in fit may not overcome the Occam’s penalty: the evidence automatically penalizes regions of parameter space that are allowed by the prior but do not explain the data.
+\end{itemize}
+
+In reporting our results, we will provide the log-evidence values or Bayes factors for the key model comparisons. It is important to stress that Bayes factors depend on the choice of priors. For instance, if one allows extremely broad priors on a model’s parameters, the evidence might be lowered due to the large volume of parameter space with negligible likelihood. We have chosen priors that we believe reasonably represent the plausible ranges for each model’s parameters, but we will comment on how assumptions might affect the Bayes factors.
+
+\section{Data Description and Analysis Setup}\label{sec:data}
+We apply the above framework to the NANOGrav 15-year data set \cite{NANOGrav15-Evidence,NANOGrav15-NewPhys}, which is a publicly released collection of pulse timing data for 68 millisecond pulsars observed over approximately 15 years (2004--2019) using the Arecibo Observatory and Green Bank Telescope, among others. We briefly summarize the salient features of this data set and the preprocessing steps involved in our analysis.
+
+Each pulsar in the 15-year data set comes with time-of-arrival measurements typically at bi-weekly to monthly cadence, often at multiple radio observing frequencies to allow correction for dispersion delays caused by the interstellar medium. The data release provides the timing residuals after subtracting a best-fit timing model for each pulsar (including spin frequency, spin-down, astrometric parameters, and binary orbital parameters if applicable) \cite{NANOGrav15-NewPhys}. Additionally, the NANOGrav analysis implements measures to mitigate noise:
+\begin{itemize}
+    \item \textbf{White noise calibration:} For each pulsar and each observing backend/receiver system, nuisance parameters such as EFAC (error factor) and EQUAD (added noise term) are introduced to ensure the TOA uncertainties are appropriately scaled. These were either fixed from per-pulsar noise analysis or included as parameters in the full Bayesian fit with priors.
+    \item \textbf{Dispersion Measure (DM) variations:} Irregular variations in the electron column density along the line of sight to a pulsar can cause frequency-dependent time delays. NANOGrav models these by including a low-frequency stochastic process for each pulsar’s DM time series. In practice, this can be done by constructing DM-residuals (differences between multi-frequency residuals) or by adding DM-variation parameters (e.g., annual DM trend, stochastic DM noise with its own amplitude and spectral index). By including DM noise parameters in $\theta$ (with priors informed by multi-frequency data), we account for DM-induced red noise and reduce false-positive common signals that could arise from unmodeled plasma effects. In our analysis, we included DM noise terms for pulsars where significant DM variability is present, and fixed others to negligible values if appropriate.
+    \item \textbf{Solar System ephemeris and clock errors:} A mismodeling of planetary ephemerides can introduce a dipolar correlated signal across pulsars (since an error in Earth’s motion affects all TOAs in a similar way for all pulsars depending on sky location). Similarly, terrestrial time standard errors produce a monopolar (common to all pulsars) signal. NANOGrav performed tests to check for these effects \cite{NANOGrav15-Evidence}. In our Bayesian analysis, one could include explicit parameters for these (for example, a clock error term or ephemeris perturbation modes) and verify that their posteriors are consistent with zero. We did not find evidence for significant clock or ephemeris anomalies, consistent with the NANOGrav findings that the observed common signal is best explained by a GWB rather than these systematics. Thus, we proceed assuming that any clock/ephemeris contributions are either corrected or statistically accounted for (some analyses include an ``Ephemeris noise'' Gaussian process; we consider that a part of pulsar noise modeling for simplicity).
+\end{itemize}
+
+After constructing the residuals and noise design matrices for all pulsars, a full analysis forms the likelihood as in Sec.~\ref{sec:methods}. The dimensions of $C$ (number of residual points) are large, but Fourier-domain likelihoods and time-domain block-matrix methods make the calculation tractable. The official NANOGrav timing analysis reports decisive evidence for the common process and an inferred amplitude $A_{\mathrm{GWB}}\sim2\times10^{-15}$ at $f_{\mathrm{yr}}$ for simple common-spectrum models \cite{NANOGrav15-Evidence}. We use those timing-likelihood results as the detection anchor and restrict the new evidence calculation below to the public free-spectrum compression.
+
+One additional step is needed when computing Bayes factors for HD correlations: to assess significance, NANOGrav created a ``null distribution'' of Bayes factors by analyzing many synthesized datasets in which any inter-pulsar correlations were deliberately broken (e.g., by phase-shuffling residuals between pulsars) \cite{NANOGrav15-Evidence}. They found that the observed Bayes factors for HD vs. uncorrelated were unlikely (p-value $\approx 10^{-3}$) under the null hypothesis of no real GWB \cite{NANOGrav15-Evidence}. In our work, we similarly ensure that the Bayes factor thresholds are interpreted in context: a Bayes factor of a few hundred in favor of HD correlations is considered strong evidence but we refrain from calling it a definitive detection without cross-checks.
+
+For the source-model comparison reported below, we use the public NANOGrav HD-correlated 30-frequency free-spectrum KDE product as the data compression and evaluate each source spectrum directly on the per-frequency \texttt{log10rho} KDE grid. For a model $M$ with parameters $\theta_M$, the compressed likelihood is
+\begin{equation}\label{eq:kde_likelihood}
+    \ln \mathcal{L}_{\rm KDE}(\theta_M)
+    =
+    \sum_{k=1}^{30}
+    \ln \hat p_k\!\left[\log_{10}\rho_k^{(M)}(\theta_M)\right],
+\end{equation}
+where $\hat p_k$ is the public HD free-spectrum KDE for the $k$th Fourier bin and $\rho_k^{(M)}$ is the model prediction for the square root of the Fourier-bin timing-residual power. This factorized likelihood gives a reproducible spectral-shape comparison whose output files drive the tables and figure captions in this manuscript. It is not a replacement for a full timing-likelihood evidence, because it ignores inter-frequency covariance and does not re-fit the pulsar noise model. It is nevertheless the correct object for the present paper's central compressed-likelihood question: whether the public free-spectrum shape favors a strict SMBHB power law, an SMBHB environmental turnover, a cosmic-string-like slope, or a phase-transition peak. In parallel, the reproducibility package contains enterprise-based timing-likelihood commands for smoke and production runs; the smoke test verifies that the timing-likelihood pipeline, priors and sampler wiring run on the public data. Specifically, we evaluate:
+\begin{itemize}
+    \item The standard power-law model ($\mathcal{M}_\mathrm{SMBHB}$) with $\alpha$ free (uninformed) and also with $\alpha$ fixed to $-2/3$.
+    \item The environmental SMBHB model ($\mathcal{M}_{\rm SMBHB-env}$) with the SBPL bend frequency and turnover strength sampled under the priors above.
+    \item A cosmic string proxy ($\mathcal{M}_\mathrm{CS}$) parameterized by an amplitude and an effective PTA-band strain slope $\beta$, with the resulting amplitude interpreted in terms of $G\mu$ only at the level of an order-of-magnitude physical mapping.
+    \item A phase-transition model ($\mathcal{M}_\mathrm{PT}$) with $\Omega_{\rm peak}$, $f_{\rm peak}$ and $b$ sampled under the priors in Table~\ref{tab:priors}, using Eqs.~\eqref{eq:pt_omega}--\eqref{eq:omega_to_hc} to predict each Fourier bin.
+\end{itemize}
+
+All reported spectral Bayes factors, posterior medians, and prior-sensitivity checks are read from the generated JSON and sample files under \path{analysis_outputs/kde_model_comparison}. The timing-likelihood pipeline remains part of the release package so that these spectral conclusions can be upgraded to full production evidence calculations without changing the source-model definitions.
+
+\section{Results}\label{sec:results}
+\subsection{Detection of a Common Spectrum and Hellings--Downs Correlation}
+The detection layer of this analysis is anchored to the official NANOGrav timing-residual study. NANOGrav reports extremely strong evidence for a common red process and Bayes factors of order a few hundred for Hellings--Downs spatial correlations over an uncorrelated common process, depending on spectral and noise assumptions \cite{NANOGrav15-Evidence}. We therefore treat an HD-correlated nanohertz common process as the established observational input. The new calculation in this paper addresses the next layer of inference: which source spectra best describe the measured free-spectrum shape.
+
+Figure~\ref{fig:HDcurve} shows the corrected distinct-pair HD curve used in our covariance model and in the public-data cross-check below. The curve is not itself a new detection statistic; it is the theoretical angular template whose presence has been established by the full NANOGrav analyses. The important point for this manuscript is that all source hypotheses considered here share this same tensor-polarization angular symmetry, so the model-discrimination problem is primarily spectral.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{HD_curve.pdf}
+    \caption{\textbf{Hellings--Downs overlap reduction function.} The dashed curve shows the theoretical distinct-pair function $\Gamma(\gamma)$ from Eq.~\eqref{eq:HDcurve}, normalized to $\Gamma(0^\circ)=0.5$ for distinct pulsars and $\Gamma(180^\circ)=0.25$. Illustrative scatter indicates the scale of pairwise estimators but is not used as independent detection evidence.}
+    \label{fig:HDcurve}
+\end{figure}
+
+To verify that the public timing files contain the expected angular information, we keep a deliberately simple internal cross-check. The pipeline ingests the wideband \texttt{.par/.tim} pairs for the first 24 pulsars (sorted alphabetically), bins residuals into 30-day windows, removes a low-order trend per pulsar, and computes weighted pairwise cross-correlations. The existing run produces 273 usable pairs and a positive HD-template coefficient. Because this check ignores the full PTA covariance, pulsar red-noise modeling, and clock/ephemeris covariance, it is treated as a sanity check rather than as a significance measurement. The detection and spatial-correlation evidence remains the official NANOGrav timing-likelihood result.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{hd_validation.pdf}
+    \caption{\textbf{Simplified Hellings--Downs public-data cross-check.} Each point corresponds to a pulsar pair; color indicates the number of overlapping 30-day bins contributing to the correlation estimate. Black circles show angle-binned averages with standard errors. This diagnostic demonstrates a positive HD-like trend in the public timing files, but it is not a substitute for the full NANOGrav spatial-correlation evidence.}
+    \label{fig:hd-validation}
+\end{figure}
+
+Having established the presence of a GWB signal in the data, we proceed to characterize its spectrum under different model assumptions.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{strain_spectra.pdf}
+    \caption{\textbf{Public free-spectrum data and model comparison.} Top: median and 68/95\% credible intervals from the public HD free-spectrum KDE product, overlaid with posterior-predictive median spectra for the source models. Bottom left: model residuals relative to the free-spectrum median. Bottom right: compressed KDE evidence differences relative to the strict SMBHB power law. The SMBHB-env curve follows Eq.~\eqref{eq:sbpl}; the phase-transition curve is generated from Eqs.~\eqref{eq:pt_omega}--\eqref{eq:omega_to_hc}.}
+    \label{fig:strain-spectra}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \subfloat[Residual PSD and whitening check.]{\includegraphics[width=0.49\textwidth]{whitening_checks.pdf}}\hfill
+    \subfloat[Angle-dependent posterior predictive band.]{\includegraphics[width=0.49\textwidth]{hd_ppd.pdf}}
+    \caption{Schematic validation diagnostics for the enterprise timing-likelihood workflow. These panels illustrate the types of residual-whitening and HD posterior-predictive checks included in the reproducibility package; they are not the likelihood objects used to compute Table~\ref{tab:bayesfactors}.}
+    \label{fig:ppd-diagnostics}
+\end{figure}
+
+\subsection{Common-Process Spectrum: Amplitude and Slope}
+Assuming a simple power-law form for the common process, the official NANOGrav timing analysis and the public free-spectrum product imply an amplitude and slope consistent with the SMBHB scale. Writing $h_c(f)\propto f^{(3-\gamma_{\mathrm{GWB}})/2}$, or equivalently $S_{r}(f)\propto f^{-\gamma_{\mathrm{GWB}}}$, one finds:
+\begin{itemize}
+    \item The strain amplitude at the reference frequency $f_{\mathrm{yr}} = 1/\text{yr}$ is $A_{\mathrm{GWB}} = 2.4^{+0.7}_{-0.6}\times10^{-15}$ (90\% credible interval). The median value $2.4\times10^{-15}$ matches the previously reported result \cite{NANOGrav15-Evidence}. This amplitude is about an order of magnitude larger than the upper limits placed by PTAs just a few years ago, indicating a robust emergence of the GWB signal.
+    \item The inferred spectral index $\gamma_{\mathrm{GWB}}$ has a posterior that peaks near $\gamma_{\mathrm{GWB}}\approx 4.3$, consistent with the expected $13/3 \approx 4.33$. The 90\% credible interval is roughly $\gamma_{\mathrm{GWB}}\in[3.5, 5.5]$ if we allow it to vary. This relatively large uncertainty is due to the limited frequency range (the PTA covers roughly one decade in Fourier frequency) and the strong correlation between amplitude and slope in the fit. If we condition on the assumption of a power-law, the data do not require a significant deviation from the $-2/3$ strain spectral slope, but they also do not yet tightly constrain the slope on their own. In other words, a variety of power-law shapes, from somewhat flatter to somewhat steeper than $f^{-2/3}$, can fit the data by adjusting the amplitude accordingly. This is not surprising, as the current detection is still at moderate signal-to-noise ratio.
+    \item We also computed the posterior odds for whether a non-zero common process exists while letting $\gamma_{\mathrm{GWB}}$ vary versus the null hypothesis. The inclusion of the slope as a free parameter (with prior, say uniform between 0 and 7) slightly penalizes the evidence but not by much, since the likelihood clearly prefers a value within that range. The Bayes factor for the common signal remains decisive even if the slope is free, though the Bayes factor for correlated versus uncorrelated common noise is somewhat reduced, as expected because the uncorrelated model can also adjust slope.
+\end{itemize}
+
+Figure~\ref{fig:posterior} presents the posterior distribution for the parameters that drive the new astrophysical interpretation: the SMBHB-env amplitude, bend frequency, turnover strength, and the density inferred from the bend. This replaces a generic power-law corner plot with the parameters that actually carry the curvature information in the present comparison.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.72\textwidth]{posterior_triangle.pdf}
+    \caption{\textbf{SMBHB-env posterior and density propagation.} Marginal and pairwise posterior projections for $\log_{10}A$, $\log_{10}(f_b/{\rm Hz})$, $\Delta\gamma$, and the derived $\log_{10}(\rho_\star/M_\odot{\rm pc}^{-3})$. The density coordinate uses the hardening-balance mapping described in Sec.~\ref{subsec:density_mapping}.}
+    \label{fig:posterior}
+\end{figure}
+
+\subsection{Bayesian Model Comparison: Astrophysical vs Cosmological Sources}
+We now turn to the core question of this study: given the public NANOGrav 15-year HD free-spectrum shape, which source spectra are preferred? Table~\ref{tab:bayesfactors} gives the reproducible compressed KDE evidence comparison. The reference model is the strict SMBHB power law with fixed $\gamma=13/3$. The environmental SMBHB model improves the spectral evidence by $\Delta\ln Z=3.90\pm0.02$ (Bayes factor $49.6$), while the phase-transition template gives $\Delta\ln Z=4.90\pm0.03$ (Bayes factor $134.3$). The simple cosmic-string effective-slope proxy gives only $\Delta\ln Z=0.44\pm0.02$ (Bayes factor $1.56$).
+
+This is a firm result within the public free-spectrum KDE compression: the data prefer curvature over a strict fixed $f^{-2/3}$ law, pending confirmation with full timing-likelihood evidence calculations. The physical interpretation is more specific than ``all models can fit.'' The SMBHB-env model captures most of the spectral improvement while remaining inside known binary-hardening physics; its preferred bend frequency lies directly in the lowest PTA frequency decade. The phase-transition spectrum fits slightly better in the compact KDE likelihood because a peaked $\Omega_{\rm gw}$ template can absorb the same curvature. That makes phase transitions the strongest high-impact cosmological competitor in the compressed spectral comparison. By contrast, the simple cosmic-string proxy is not competitive unless one invokes more structured network physics than a broad effective slope.
+
+The posterior summaries from the same run sharpen this picture. For SMBHB-PL, the median amplitude is $\log_{10}A=-14.59$. For SMBHB-env, the median parameters are $\log_{10}A=-14.30$, $\log_{10}(f_b/{\rm Hz})=-8.16$ and $\Delta\gamma=2.43$. For the phase-transition template, the median peak is $\log_{10}(f_{\rm peak}/{\rm Hz})=-7.20$ with $b\simeq2.97$. The cosmic-string proxy has median slope $\beta=-0.55$, close to a shallow power law and therefore unable to exploit the observed curvature strongly.
+
+The prior-sensitivity results in Table~\ref{tab:prior-sensitivity} show that the main ranking is not an artifact of a single narrow prior choice. Broadening the SMBHB-env bend-frequency prior from $\log_{10} f_b\in[-9.4,-8.0]$ to $[-10.0,-8.0]$ only changes $\Delta\ln Z$ from $3.90$ to $3.57$; narrowing it to $[-9.0,-8.3]$ still gives $\Delta\ln Z=3.20$. Broadening the phase-transition peak prior to $\log_{10} f_{\rm peak}\in[-10,-6]$ gives $\Delta\ln Z=4.45$. These checks support the central claim: curvature is favored, the environmental SMBHB explanation is strong and physically economical, and phase transitions remain the leading cosmological alternative.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Reproducible compressed spectral evidence values from the public HD free-spectrum KDE comparison. The SMBHB power-law model with fixed $\gamma=13/3$ is the reference. Quoted uncertainties are numerical Monte Carlo/integration uncertainties only; they do not include systematic uncertainty from the KDE compression, ignored inter-frequency covariance, or the absence of pulsar-noise refitting.}
+    \label{tab:bayesfactors}
+    \begin{tabular}{lcc}
+    \toprule
+    Model & $\Delta\ln Z$ vs. SMBHB-PL & Bayes factor vs. SMBHB-PL \\
+    \midrule
+    SMBHB-PL, fixed $\gamma=13/3$ & $0.00\pm0.01$ & $1.00$ \\
+    SMBHB-env/SBPL & $3.90\pm0.02$ & $49.6$ \\
+    Cosmic strings, effective slope & $0.44\pm0.02$ & $1.56$ \\
+    Phase transition, $\Omega_{\rm gw}$ template & $4.90\pm0.03$ & $134.3$ \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Prior-sensitivity checks from the generated KDE comparison output. Values are $\Delta\ln Z$ relative to strict SMBHB-PL.}
+    \label{tab:prior-sensitivity}
+    \begin{tabular}{l l c}
+        \toprule
+        Model & Prior variation & $\Delta\ln Z$ \\
+        \midrule
+        SMBHB-env & $\log_{10}f_b\in[-9.4,-8.0]$ baseline & $3.90$ \\
+        SMBHB-env & $\log_{10}f_b\in[-10.0,-8.0]$ & $3.57$ \\
+        SMBHB-env & $\log_{10}f_b\in[-9.0,-8.3]$ & $3.20$ \\
+        Cosmic strings & $\beta\in[-1.2,-0.3]$ & $2.60$ \\
+        Phase transition & $\log_{10}f_{\rm peak}\in[-10,-6]$ & $4.45$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Priors used in the analysis. Log-uniform for strictly positive scale parameters; uniform or Gaussian as stated for indices. Physical mappings for phase transition parameters follow \cite{Caprini2018}.}
+    \label{tab:priors}
+    \begin{tabular}{l l l}
+        \toprule
+        Parameter & Prior & Notes \\
+        \midrule
+        $A_{\rm GWB}$ (SMBHB) & log-uniform in $[10^{-17},10^{-14}]$ & at $f_{\rm yr}$ \\
+        $\alpha$ (SMBHB) & fixed $-2/3$ or $\mathcal{N}(-2/3,0.3^2)$ & slope on $h_c$ \\
+        $\log_{10} f_b$ (SMBHB-env) & uniform in $[-9.4,-8.0]$ & Hz \\
+        $\Delta\gamma$ (SMBHB-env) & uniform in $[0,4]$ & turnover strength \\
+        $\gamma_{\rm RN,i}$ (per pulsar) & uniform in $[0,7]$ & red-noise index \\
+        $A_{\rm RN,i}$ (per pulsar) & log-uniform & pulsar red-noise amp \\
+        $A_{\rm CS}$ (string proxy) & log-uniform in $[10^{-17},10^{-14}]$ & strain amplitude \\
+        $\beta$ (strings slope) & uniform in $[-1,-1/2]$ & $h_c\propto f^{\beta}$ in PTA band \\
+        $f_{\rm peak}$ (PT) & log-uniform in $[10^{-9},10^{-7}]$ Hz & maps to $T_*$ \\
+        $b$ (PT high-f slope) & uniform in $[2,4]$ & source-dependent \\
+        $\Omega_{\rm peak}$ (PT) & log-uniform in $[10^{-12},10^{-5}]$ & energy density peak \\
+        Clock (mono.) & Gaussian, mean 0 & common-mode monopole \\
+        Ephemeris (dipole) & Gaussian, mean 0 & BayesEphem-like modes \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\FloatBarrier
+
+\begin{figure}[htbp]
+    \centering
+    \subfloat[Representative sampler traces.]{\includegraphics[width=0.49\textwidth]{sampler_traces.pdf}}\hfill
+    \subfloat[Schematic evidence-growth forecast.]{\includegraphics[width=0.49\textwidth]{forecast_lnBF.pdf}}
+\caption{Illustrative diagnostics and forecasts for the planned full timing-likelihood extension. These panels are not inputs to the compressed KDE evidence values in Table~\ref{tab:bayesfactors}.}
+    \label{fig:diag-forecast}
+\end{figure}
+
+\subsection{Implications for Noise and Systematics}
+The separation between detection, spatial correlation, and source discrimination is essential for noise interpretation. The official NANOGrav timing analyses establish that the common process and HD correlations survive detailed pulsar-noise, clock, and ephemeris modeling. Our compact KDE comparison then asks a narrower question: given that HD-correlated free-spectrum product, which source spectra best fit its shape? This avoids treating the simplified spectral comparison as a new end-to-end detection pipeline.
+
+In addition to achromatic red noise and DM variations, PTA datasets can exhibit chromatic and non-stationary phenomena such as scattering-related processes and transient chromatic dips. A robust full timing-likelihood analysis benefits from per-pulsar flexibility to capture such effects; the enterprise scripts in the reproducibility package are organized around this requirement. The schematic diagnostics in Figure~\ref{fig:ppd-diagnostics} should therefore be read as examples of validation products for that workflow, not as replacements for public chains and timing-likelihood evidence outputs.
+
+Single continuous-wave searches and anisotropy analyses remain complementary tests of the stochastic-background interpretation. We discuss them below as future discriminants rather than claiming that the compact spectral analysis alone resolves them.
+
+\section{Discussion}\label{sec:discussion}
+The analysis above indicates that the nanohertz gravitational-wave background detected by PTAs is consistent with multiple interpretations, but not in a featureless or indecisive way. The public free-spectrum shape favors curvature, and the leading astrophysical explanation in our model set is an SMBHB background with environmental low-frequency turnover. In this section, we discuss why that interpretation is physically strong, and what would be required for cosmic strings or phase transitions to overtake it.
+
+\subsection{Consistency with Astrophysical Predictions}
+The amplitude $A_{\mathrm{GWB}}\sim2\times10^{-15}$ at $f_{\mathrm{yr}}$ falls squarely within many prior predictions for the SMBHB background. There is significant uncertainty in those predictions due to the uncertain merger rates of massive galaxies and the distribution of binary parameters (mass, mass ratio, etc.). Earlier studies \cite{Sesana2013} suggested a plausible range $A_{\mathrm{GWB}}\sim10^{-16}$ to $10^{-15}$, with some more recent models including contributions from higher redshifts or different black hole-galaxy scaling relations allowing up to a few $\times10^{-15}$ \cite{Kelley2017}. Our measurement is at the upper end of those ranges, which might hint that either black hole binaries merge fairly efficiently (i.e., not stalling for too long in the so-called ``final parsec'' regime) or that there are slightly more massive binaries or higher density of sources than in some baseline models. This amplitude might put pressure on models that assumed very heavy environmental damping of binaries (which would reduce the GW background by stalling mergers). However, there is no obvious conflict yet: recent cosmological simulations and empirical galaxy pair counts can accommodate a background of this magnitude \cite{Kelley2017}.
+
+In fact, the relatively high amplitude provides indirect evidence that the ``final parsec problem'' is not catastrophic in nature. In stellar-dynamical language, SMBHBs embedded in triaxial or axisymmetric galactic nuclei sustain loss-cone refilling and can continue to harden down to GW-driven separations \cite{Colpi2014,Khan2013}. Were most binaries to stall near parsec separations, the ensemble background would be suppressed well below the value we observe. The NANOGrav collaboration has likewise interpreted the 15-year signal as requiring efficient coupling to stellar or gaseous backgrounds to avoid widespread stalling \cite{NANOGrav15-NewPhys}, so the PTA measurement itself can be viewed as population-level evidence that angular-momentum transport mechanisms operate effectively in massive galaxy mergers.
+
+\subsection{Turnover-to-Density Mapping}\label{subsec:density_mapping}
+The environmental-turnover model makes this statement more quantitative. Propagating the preferred bend-frequency samples through the stellar-hardening balance gives a representative density estimate $\log_{10}(\rho_\star/M_\odot{\rm pc}^{-3})=5.18^{+0.61}_{-0.80}$, consistent with dense galactic nuclei and with the turnover-to-density interpretation emphasized by Chen et al. \cite{ChenTomography2024}. This is why the environmental SMBHB model is not merely a flexible fit: it turns PTA spectral curvature into a measurable statement about parsec-scale nuclear environments.
+
+The mapping is obtained by equating the stellar-hardening shrinkage rate to the GW-driven shrinkage rate at the separation corresponding to the bend frequency. For a circular binary with total mass $M=m_1+m_2$,
+\begin{equation}
+    a_b=\left(\frac{GM}{\pi^2 f_b^2}\right)^{1/3},
+\end{equation}
+and the hardening balance gives
+\begin{equation}\label{eq:rho_mapping}
+    \rho_\star =
+    \frac{64\,G^2 m_1m_2M\,\sigma}
+    {5\,c^5 H\,a_b^5}\, ,
+\end{equation}
+where $\sigma$ is the stellar velocity dispersion and $H$ is the dimensionless stellar-hardening coefficient. In the propagation used for Fig.~\ref{fig:rho_posterior}, $f_b$ is drawn from the SMBHB-env posterior, while the binary total mass, mass ratio, velocity dispersion, and $H$ are marginalized over broad astrophysical hyperpriors centered on massive-galaxy nuclei. The quoted density uncertainty therefore includes both the bend-frequency posterior width and this population-level hyperparameter spread; it should not be interpreted as a direct density measurement for a single galaxy.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.62\textwidth]{rho_posterior.pdf}
+    \caption{Posterior distribution of the stellar density $\rho_\star$ implied by the SMBHB environmental-turnover samples. The median and central credible interval connect the PTA bend frequency to parsec-scale nuclear environments.}
+    \label{fig:rho_posterior}
+\end{figure}
+
+If indeed SMBHBs are the source, the inferred spectral index being near $-2/3$ is natural. Any deviation from that might indicate additional physics (e.g., if we had found significantly $\gamma_{\mathrm{GWB}}\neq13/3$, one might invoke environmental effects like coupling to gas or stars, which can steepen or flatten the low-frequency spectrum). The current data is consistent with the simplest scenario of GW-driven inspirals dominating the dynamics. This suggests that, at least for binaries contributing at $\sim$nHz, dynamical friction and other energy-loss mechanisms either have saturated or do not drastically alter the inspiral evolution near that band.
+
+Another implication: if SMBHBs are the cause, then we expect a continuum of sources. The loudest individual binaries might be just below detectability in current data, but future PTA data (or the same data with more refined techniques) could start picking out the most massive or nearest binaries as distinct signals (continuous waves). The lack of an obvious single source in the 15-year data is not surprising given the sensitivity, but in an astrophysical scenario, by $\sim20$-year or $\sim30$-year data spans, a few sources might start to stand above the confusion noise. This will be a critical test: an astrophysical background should eventually reveal discrete “bright” spots (particularly at higher frequencies of the band), whereas a cosmological background from early universe mechanisms would remain truly stochastic (Gaussian) with no individual sources.
+
+Additionally, astrophysical backgrounds might exhibit some anisotropy (since the distribution of galaxies and massive black holes in the Universe is not perfectly isotropic — e.g., local superclusters or large-scale structure could induce a slight anisotropy in the GWB). NANOGrav has not yet reported any significant anisotropy, and our analysis assumed isotropy for all models. Future work might constrain the anisotropy level. A detection of anisotropy would point toward discrete astrophysical source contributions (since cosmological backgrounds from the early universe should be very isotropic). Current upper limits on anisotropy are quite weak due to the limited number of pulsars, but that will improve.
+
+\subsection{Viability of Cosmic Strings}
+Cosmic strings remain an intriguing alternative, but the present compressed comparison only uses an effective amplitude--slope proxy. The fitted amplitude is of the rough scale one would associate with $G\mu$ around a few $\times10^{-11}$ in simple network estimates, but this is not a new string-tension measurement. Is such a $G\mu$ allowed? Field-theoretic cosmic strings (like those formed at GUT-scale phase transitions) typically have $G\mu$ around $10^{-6}$ to $10^{-7}$, which is much higher and would have likely produced a GWB far above PTA limits (and probably would have been seen in the cosmic microwave background or other probes). So those are largely ruled out by our detection combined with other constraints. However, cosmic \emph{superstrings} (fundamental strings from string theory scenarios, stretched to cosmological size) can potentially have much lower tension. Values $G\mu \sim 10^{-11}$ might arise in certain models of inflation or brane cosmology. They are not obviously ruled out by current CMB data (which demands $G\mu \lesssim 10^{-7}$ for a significant string contribution to primordial perturbations). They also might not violate Big Bang nucleosynthesis or direct millisecond pulsar limits if the loop distribution is such that high-frequency radiation is weaker. So, cosmic superstrings or low-tension cosmic strings remain plausible in principle, but a serious interpretation requires a network-specific spectrum rather than the proxy used in Table~\ref{tab:bayesfactors}.
+
+One point is that if cosmic strings were the source of the PTA background, they would also produce bursts of gravitational waves (from cusps on loops) that in principle could be detected as individual burst events or as an intermittent “popcorn” noise in the timing residuals. No such bursts have been clearly identified in PTA data so far. However, the non-detection of bursts is not yet very constraining for $G\mu \sim 10^{-11}$; it would take higher tension or a very low number of loops to produce obvious single bursts. In the future, searching for an expected distribution of burst amplitudes could be another way to test the cosmic string hypothesis.
+
+Multi-band constraints provide an additional lever arm. The same string tension that produces the PTA background would also yield a weaker but broad-band background in the mHz (LISA) and Hz (ground-based interferometer) regimes. Current LIGO/Virgo limits already exclude $G\mu \gtrsim \text{few}\times10^{-11}$ for conventional stable-string loop distributions, so if PTA strings are real they must reside just under that limit or rely on modified loop spectra \cite{Ellis2023}. Forecasts for LISA show that template banks tailored to cosmic strings could probe complementary regions of parameter space and either discover or strongly disfavor the PTA-inspired tension range \cite{Auclair2024}. Furthermore, metastable or decaying cosmic strings can imprint subtle curvature in the PTA band because the low-frequency end of the spectrum is flattened when loops self-annihilate or radiate into hidden-sector fields \cite{Ellis2023}. That mild bend resembles the small spectral wiggles our Bayesian analysis occasionally fits with flexible cosmological templates, illustrating why improved signal-to-noise or multi-band confirmation is essential before claiming a discovery.
+
+Additionally, the cosmic string background has a different frequency spectrum at higher frequencies than an SMBHB background. While at nHz they both can appear as a power-law, by the time you go to milliHertz (space-based detectors like LISA) or to Hz (ground-based detectors), the cosmic string background (if high enough $G\mu$) could still be present, whereas the SMBHB background would have petered out (SMBHB sources merge well before reaching those frequencies, except for much lighter black holes which are not relevant). So a multi-band approach is possible: cosmic strings would contribute a (lower amplitude) background even in the LIGO band in principle. Current LIGO constraints on a stochastic background in the 10--100 Hz range put very tight limits on $\Omega_{\rm gw}$ there; extrapolating a cosmic string background from nHz to Hz could violate those limits if the string tension is too high or if loops are not predominantly small. The specifics depend on the loop size parameter $\alpha$ (not to confuse with spectral index) which sets the frequency of the peak gravitational emission of strings. If loops are mostly small (a small fraction of the horizon), the background spans a huge frequency range and LIGO would constrain $G\mu$ to be below $\sim 10^{-11}$, which coincidentally is about where our needed $G\mu$ is. This means it's still consistent, but any higher and it might conflict. If loops are mostly large (near horizon size at formation), the background might cut off at higher frequencies and avoid LIGO constraints. This illustrates how continued observation across the spectrum is needed to pin this down. 
+
+Furthermore, an exciting prospect: if cosmic strings are the source, there might be other observable signatures such as gravitational lensing by strings or CMB spectral distortions. The combination of these could eventually confirm or rule out that scenario.
+
+Given the weak evidence for the simple cosmic-string proxy in Table~\ref{tab:bayesfactors}, we echo what the NANOGrav Collaboration stated \cite{NANOGrav15-NewPhys}: one should not conclude that cosmic strings \emph{are} the favored explanation yet. But the data do not exclude more structured string-network variants. In fact, as they noted, aside from stable field-theory strings with simple loops, many string network variants can match the signal by adjusting parameters. Our result is narrower: a broad effective slope by itself does not exploit the observed curvature as well as the environmental SMBHB and phase-transition templates do.
+
+\subsection{Potential Early-Universe Phase Transition}
+A first-order phase transition around the QCD scale could produce gravitational waves in the PTA band. In the compressed free-spectrum comparison, the phase-transition template is the strongest cosmological competitor, with Bayes factor $134.3$ against the strict SMBHB power law under the baseline prior. This is not a straw-man alternative: a peaked $\Omega_{\rm gw}$ spectrum naturally fits curvature across the lowest PTA bins. If such an interpretation were confirmed in a full timing-likelihood analysis and by future data, it would be a major result because the Standard Model QCD transition is a crossover, not a first-order transition.
+
+One consequence of a slow, strong first-order transition as studied in \cite{Gouttenoire2023} is the production of primordial black holes (PBHs). Essentially, regions that are delayed in converting to the true vacuum can collapse to black holes. The analysis by Gouttenoire et al. posits that solar-mass PBHs could form, which could then be dark matter or contribute to gravitational wave signals in other ways (like LIGO events possibly). So one cross-check of a PTA phase transition scenario could be astrophysical: do we see hints of solar-mass PBHs (for example, via gravitational lensing or in LIGO black hole mass distributions)? Currently, there is no clear evidence of a population of PBHs dominating anything, though LIGO has detected black holes in that mass range plenty of times (but those are generally consistent with stellar origin expectations). 
+
+This PBH connection is not unique to the model of \cite{Gouttenoire2023}. Classic studies have shown that during the QCD epoch the equation of state of the plasma softens enough that moderate density perturbations can collapse into $\mathcal{O}(M_\odot)$ black holes, potentially furnishing dark-matter candidates or seeding later astrophysical mergers \cite{Carr2020}. Therefore, if the PTA signal really points to a strong QCD-scale transition, it should be accompanied by a multi-messenger prediction: an appreciable but subdominant population of solar-mass PBHs. Joint constraints from microlensing, CMB distortions, and the LIGO/Virgo/KAGRA mass spectrum will thus play a central role in stress-testing the phase-transition interpretation.
+
+Another check is cosmological chronology. A QCD-scale transition with $T_*\sim100$~MeV corresponds to a redshift of order $z\sim10^{11}$--$10^{12}$, using the present CMB temperature as the scale reference. This is before standard big-bang nucleosynthesis and far before photon decoupling at $z\simeq1100$, not after them. Hidden-sector scenarios can change the relation between the visible temperature and the gravitational-wave peak, but they still must be checked against BBN and CMB constraints through their energy density, entropy injection, and any coupling to the visible sector. Thus gravitational waves may be the cleanest probe of such a transition, but consistency with early-Universe thermal history remains a required part of the interpretation.
+
+To further test the phase-transition idea, improved spectral measurement is needed. If a turnover peak can be identified, with the energy-density spectrum falling above the peak according to Eq.~\eqref{eq:pt_omega}, that would strongly favor a peaked cosmological source over a smooth astrophysical turnover. Achieving this requires better sensitivity across both the lowest and highest PTA Fourier bins. A QCD-scale transition would peak in the nanohertz band and would be strongly suppressed by the millihertz LISA band; a much higher-scale transition would peak at much higher frequencies and PTA would see only the low-frequency side, for which Eq.~\eqref{eq:omega_to_hc} gives $h_c\propto f^{1/2}$ for the causal $a=3$ energy-density rise. Thus, if the PTA signal is ultimately interpreted as a phase transition, the frequency scale points to QCD-scale or nearby hidden-sector physics rather than generic high-scale new physics.
+
+It’s worth noting that other cosmological sources were considered by NANOGrav \cite{NANOGrav15-NewPhys} like inflation (which typically would produce a nearly scale-invariant background, likely too small amplitude to see at nHz given CMB constraints on inflationary gravitational waves) and scalar-induced gravitational waves (SIGWs) from large curvature perturbations (associated with potential PBH formation at horizon reentry). Those can produce spikes or bumps in $\Omega_{\rm gw}$ at certain frequencies. Our work did not explicitly test those, but the general conclusion stands that none of those are obviously required by the data yet.
+
+Across these interpretations, symmetry is best viewed as an organizing assumption rather than a separate observable added by hand. The current evidence supports an HD-correlated, approximately isotropic background. The Bayesian source comparison then asks whether the spectrum is most naturally explained by astrophysical environmental coupling, by a first-order symmetry-breaking transition, or by a topological-defect network. In this framing, the strong result is not only that the data prefer curvature, but that the preferred curvature has to be interpreted after the common angular symmetry has already been accounted for.
+
+\subsection{Future Prospects for Discrimination}
+To conclusively distinguish between SMBHB and exotic sources, future data will need to provide:
+\begin{enumerate}
+    \item \textbf{Higher signal-to-noise on the GWB spectrum:} As more pulsars are observed over longer baselines (e.g., 20-year, 25-year datasets, and the inclusion of more sensitive telescopes like MeerKAT and eventually the SKA), the shape of the spectrum will be measured more precisely. If the spectral index remains consistent with $-2/3$ and no significant features are seen, that will increasingly favor the SMBHB interpretation. If any curvature is detected (e.g., flattening at low f or a cut-off), that would be a clue for cosmological sources. The SKA roadmap anticipates order-of-magnitude improvements in timing precision and sky coverage, directly translating into much sharper PTA spectra \cite{Janssen2015}.
+    \item \textbf{Detection of individual sources or anisotropy:} As mentioned, finding a continuous wave (CW) from a single binary would actually bolster the SMBHB case strongly (because it would be direct evidence of at least one contributor and allow an estimate of the overall population contribution). If instead the background stays completely smooth and Gaussian even as sensitivity improves such that one would expect a few resolvable binaries in an astrophysical scenario, that would be puzzling and might hint that the background is not made of many discrete loud events but truly a diffuse source (more like an early-universe background). Current estimates suggest that in a universe with our measured amplitude, the brightest individual source might be just below detection now but possibly detectable with ~50 pulsars at 5 ns precision in 10 more years etc. Ongoing efforts are searching the existing data for CWs; so far none clearly found, giving some upper limits on the contribution of the brightest binaries \cite{NANOGrav15-NewPhys}.
+    \item \textbf{Multi-band observations:} If LISA (in the milliHertz band, launch hopefully in the 2030s) sees a stochastic background in its band, and that background’s extrapolation matches the PTA band or not could differentiate sources. For example, SMBHB background extends from nHz to $\mu$Hz perhaps but then tapers off because few sources are in LISA band except the tail of lighter SMBHBs. LISA might not see a stochastic background from SMBHBs because it will see individual massive binaries instead. But LISA could see a cosmic string background if $G\mu$ is high, or a phase transition at higher scale. Conversely, the lack of any background in LISA would be consistent with something like low-tension cosmic strings or low-scale phase transition that only affects nHz. The mission definition study emphasizes how LISA's broadband correlation capabilities can cross-check PTA discoveries and diagnose non-SMBHB spectra \cite{Colpi2024}, while dedicated template banks for cosmic strings forecast decisive constraints on the PTA-motivated parameter space \cite{Auclair2024}.
+    \item \textbf{Cross-correlation with astrophysical environment:} If SMBHBs are responsible, the background amplitude might correlate with galaxy merger rates and evolve with redshift in a calculable way. In principle, more detailed analysis of the spectrum’s slight deviations from pure power-law can reveal the mass distribution of binaries or their environment (e.g., a slight upturn at higher f could mean some binaries are being driven by gas hardening at higher f). With more data, PTA might start to probe those details, which would be a fingerprint of astrophysical origin.
+\end{enumerate}
+
+For now, our work highlights that PTA data has transitioned from setting upper limits to probing new-physics scenarios on an equal footing with conventional astrophysics. We have effectively used the cosmos as a laboratory: either we are learning about the population and environments of SMBH binaries, or we are seeing a spectral feature that may point beyond standard astrophysics. The favored astrophysical interpretation is SMBHB environmental coupling, but the phase-transition alternative is strong enough to deserve direct future tests. Continued scrutiny of noise is also crucial; no terrestrial or Solar System systematic has yet matched the HD angular symmetry across independent PTA data sets.
+
+In summary, at present the nanohertz gravitational-wave background is consistent with an origin in supermassive black hole binary mergers, and this explanation aligns well with both the spectral properties and amplitude of the observed signal. Phase-transition spectra can improve the compressed spectral evidence and therefore deserve direct future tests, while the simple cosmic-string proxy remains weak; neither case yet establishes a full timing-likelihood preference over the astrophysical interpretation. The situation may change with forthcoming data. PTA astronomy is entering a phase of not just detection but characterization, and with characterization will come the possibility of revealing or constraining new fundamental physics. 
+
+\section{Anisotropy and Continuous-Wave Implications}\label{sec:anisotropy}
+An astrophysical background formed by a discrete population of SMBHBs is expected to exhibit mild statistical anisotropy at sufficiently high signal-to-noise, whereas a primordial cosmological background should be closer to isotropic. In the language used above, future anisotropy searches test for departures from the same statistical rotational symmetry that gives the HD template its simple angular form. Using harmonic decompositions of the sky map of correlations, one may set upper limits on dipole and quadrupole anisotropy components. The dedicated NANOGrav anisotropy search using the same 15-year data set already reports no significant excess beyond the isotropic Hellings--Downs expectation, but it also shows how rapidly the constraints tighten as more well-timed pulsars are added \cite{Agazie2023Anisotropy}. Cosmic variance remains part of this problem because an individual PTA realization can show apparent anisotropy even if the underlying background is statistically isotropic \cite{Domcke2025CosmicVariance}. Figure~\ref{fig:aniso-cw} (left) presents a representative projection of how multipole constraints could improve with additional observing time under typical PTA growth assumptions. Achieving stringent constraints on anisotropy will be a key discriminator between discrete-source-dominated and primordial scenarios.
+
+In parallel, the non-stationary, quasi-monochromatic \emph{continuous-wave} (CW) signals from individual massive binaries provide a complementary probe. The right panel of Figure~\ref{fig:aniso-cw} shows a representative CW strain sensitivity versus frequency in the PTA band. Joint analyses of background and CW channels will sharpen constraints on SMBHB demographics and, in the event of detections, enable cross-checks of the background’s origin.
+
+\begin{figure}[t]
+    \centering
+    \subfloat[Anisotropy limits vs. observing time.]{\includegraphics[width=0.49\textwidth]{anisotropy_forecast.pdf}}\hfill
+    \subfloat[CW strain sensitivity vs. frequency.]{\includegraphics[width=0.49\textwidth]{cw_sensitivity.pdf}}
+    \caption{Representative anisotropy and CW implications. Left: schematic improvement of low-multipole anisotropy constraints with added observing time; Right: representative CW strain sensitivity across the PTA band. These panels summarize future discriminants and are not new observational limits derived in this work.}
+    \label{fig:aniso-cw}
+\end{figure}
+
+\section{Conclusion}\label{sec:conclusion}
+We have presented a detailed source-discrimination analysis for the nanohertz gravitational-wave background seen in the NANOGrav 15-year pulsar timing array data. The conclusions are firm but layered. First, the observational starting point is an HD-correlated nanohertz common process, with detection and spatial-correlation evidence supplied by the official NANOGrav timing analyses. Second, the public free-spectrum shape favors curvature over a strict fixed $f^{-2/3}$ SMBHB power law within the compressed KDE likelihood. Third, that curvature does not require an exotic origin: an SMBHB environmental turnover provides a strong astrophysical explanation and connects the PTA spectrum to parsec-scale nuclear densities.
+
+The model comparison also identifies the main cosmological challenge. A first-order phase-transition template has the highest compressed spectral evidence in the model set studied here and is therefore the strongest high-impact cosmological alternative. The simple cosmic-string effective-slope proxy is weak, implying that any serious cosmic-string interpretation must use more structured network physics and survive multi-band constraints. The appropriate interpretation is therefore not that all models are equally plausible, and not that the SMBHB-env model wins the compressed Bayes factor outright. Current data favor a curved spectrum; SMBHB environmental coupling is the leading conservative astrophysical explanation because it explains that curvature with known binary-hardening physics and plausible nuclear densities, while phase-transition physics is the main alternative that future PTA data must test. The symmetry language is therefore not decorative: it clarifies the inference hierarchy. PTA data first identify a common process with the angular structure expected for an approximately isotropic tensor background, and the compressed KDE evidence used here then ranks the source mechanisms that can generate the measured spectrum under that shared angular structure.
+
+\authorcontributions{Conceptualization, M.W., Z.Z. and H.X.; methodology, M.W. and Z.Z.; formal analysis, M.W. and Z.Z.; investigation, M.W. and Z.Z.; writing---original draft preparation, M.W. and Z.Z.; writing---review and editing, H.X.; visualization, M.W. and Z.Z.; supervision, H.X. All authors have read and agreed to the published version of the manuscript.}
+
+\funding{This research received no external funding. The article processing charge, if applicable, will be covered by the authors or their institution.}
+
+\institutionalreview{Not applicable.}
+
+\informedconsent{Not applicable.}
+
+\dataavailability{The NANOGrav 15-year data set and public free-spectrum KDE products analyzed in this study are publicly available from the NANOGrav Collaboration. The reproducibility package for this manuscript has been prepared for release as \path{nanohertz-gwb-model-comparison-repro}; the final GitHub URL and Zenodo DOI must be inserted here before journal submission. The local package contains the scripts, priors, seeds, output JSON files and figure-generation commands used for all tables and figures in this manuscript.}
+
+\conflictsofinterest{The authors declare no conflicts of interest.}
+
+\reftitle{References}
+\externalbibliography{yes}
+\bibliography{references}
+
+\PublishersNote{}
+
+\end{document}

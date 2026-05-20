@@ -1,0 +1,23 @@
+{
+  "manuscript": "symmetry_hk_special_issue/mdpi_formatted_full/main.tex",
+  "figure_script": "symmetry_hk_special_issue/mdpi_formatted_full/figures/make_figures.py",
+  "kde_model_script": "analysis/spectrum_kde_model_comparison.py",
+  "enterprise_pipeline": [
+    "analysis/pta_pipeline.py",
+    "analysis/smbhb_env_fit.py",
+    "analysis/smbhb_env_density.py",
+    "analysis/hd_reanalysis.py"
+  ],
+  "reported_outputs": [
+    "analysis_outputs/kde_model_comparison/model_comparison.json",
+    "analysis_outputs/kde_model_comparison/prior_sensitivity.json",
+    "analysis_outputs/hd_check/hd_summary.json",
+    "analysis_outputs/smbhb_env/sbpl_density_summary.json"
+  ],
+  "random_seeds": {
+    "kde_model_comparison": 20260521,
+    "hd_reanalysis": "deterministic for selected pulsars",
+    "figure_templates": 42
+  },
+  "public_archive_status": "GitHub repository and Zenodo DOI still need to be created before journal submission."
+}

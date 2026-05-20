@@ -1,0 +1,6 @@
+{
+  "logz": -51.53430023529428,
+  "logzerr": 0.0486922739733354,
+  "n_prior_samples": 80000,
+  "likelihood": "sum of per-frequency public HD free-spectrum KDE log densities"
+}

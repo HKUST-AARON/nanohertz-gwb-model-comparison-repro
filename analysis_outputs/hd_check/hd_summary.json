@@ -1,0 +1,8 @@
+{
+  "n_pulsars": 24,
+  "n_pairs": 273,
+  "hd_amplitude": 0.45537394393081865,
+  "hd_amplitude_unc": 0.10248709696536537,
+  "bin_width_days": 30.0,
+  "poly_order": 2
+}
