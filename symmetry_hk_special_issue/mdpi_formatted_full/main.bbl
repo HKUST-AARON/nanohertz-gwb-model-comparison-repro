@@ -50,6 +50,25 @@
 \newblock {\em Astrophys. J. Lett.} {\bf 2021}, {\em 917},~L19.
 \newblock {\url{https://doi.org/10.3847/2041-8213/ac17f4}}.
 
+\bibitem[{Reardon} et~al.(2023){Reardon}, {Zic}, {Shannon}, {Di Marco},
+  {Hobbs}, {Kapur}, {Lower}, {Mandow}, {Middleton}, {Miles}, et~al.]{PPTA2023}
+{Reardon}, D.J.; {Zic}, A.; {Shannon}, R.M.; {Di Marco}, V.; {Hobbs}, G.;
+  {Kapur}, A.; {Lower}, M.E.; {Mandow}, R.; {Middleton}, H.; {Miles}, M.T.;
+  et~al.
+\newblock {Search for an Isotropic Gravitational-wave Background with the
+  Parkes Pulsar Timing Array}.
+\newblock {\em Astrophys. J. Lett.} {\bf 2023}, {\em 951},~L6.
+\newblock {\url{https://doi.org/10.3847/2041-8213/acdd02}}.
+
+\bibitem[{Xu} et~al.(2023){Xu}, {Zhao}, {Wang}, {Liu}, {Zhu}, {Wang}, {Perera},
+  {Zhang}, {Luo}, {Lee}, et~al.]{CPTA2023}
+{Xu}, H.; {Zhao}, W.; {Wang}, Y.; {Liu}, X.; {Zhu}, W.W.; {Wang}, P.; {Perera},
+  B.B.P.; {Zhang}, J.; {Luo}, J.; {Lee}, K.J.;  et~al.
+\newblock {Searching for the nano-Hertz Stochastic Gravitational Wave
+  Background with the Chinese Pulsar Timing Array Data Release I}.
+\newblock {\em Res. Astron. Astrophys.} {\bf 2023}, {\em 23},~075024.
+\newblock {\url{https://doi.org/10.1088/1674-4527/acdfa5}}.
+
 \bibitem[{Agazie} et~al.(2023){Agazie}, {Anumarlapudi}, {Archibald},
   {Arzoumanian}, {Baker}, {Becsy}, {Blecha}, {Brazier}, {Brook},
   {Burke-Spolaor}, et~al.]{NANOGrav15-Evidence}
@@ -119,25 +138,6 @@
 \newblock {\em Astrophys. J. Lett.} {\bf 2023}, {\em 951},~L11.
 \newblock {\url{https://doi.org/10.3847/2041-8213/acdc91}}.
 
-\bibitem[{Reardon} et~al.(2023){Reardon}, {Zic}, {Shannon}, {Di Marco},
-  {Hobbs}, {Kapur}, {Lower}, {Mandow}, {Middleton}, {Miles}, et~al.]{PPTA2023}
-{Reardon}, D.J.; {Zic}, A.; {Shannon}, R.M.; {Di Marco}, V.; {Hobbs}, G.;
-  {Kapur}, A.; {Lower}, M.E.; {Mandow}, R.; {Middleton}, H.; {Miles}, M.T.;
-  et~al.
-\newblock {Search for an Isotropic Gravitational-wave Background with the
-  Parkes Pulsar Timing Array}.
-\newblock {\em Astrophys. J. Lett.} {\bf 2023}, {\em 951},~L6.
-\newblock {\url{https://doi.org/10.3847/2041-8213/acdd02}}.
-
-\bibitem[{Xu} et~al.(2023){Xu}, {Zhao}, {Wang}, {Liu}, {Zhu}, {Wang}, {Perera},
-  {Zhang}, {Luo}, {Lee}, et~al.]{CPTA2023}
-{Xu}, H.; {Zhao}, W.; {Wang}, Y.; {Liu}, X.; {Zhu}, W.W.; {Wang}, P.; {Perera},
-  B.B.P.; {Zhang}, J.; {Luo}, J.; {Lee}, K.J.;  et~al.
-\newblock {Searching for the nano-Hertz Stochastic Gravitational Wave
-  Background with the Chinese Pulsar Timing Array Data Release I}.
-\newblock {\em Res. Astron. Astrophys.} {\bf 2023}, {\em 23},~075024.
-\newblock {\url{https://doi.org/10.1088/1674-4527/acdfa5}}.
-
 \bibitem[{Johnson} et~al.(2024){Johnson}, {Meyers}, {Baker}, {Cornish},
   {Hazboun}, {Littenberg}, {Romano}, {Taylor}, {Vallisneri}, {Vigeland},
   et~al.]{NANOGrav15-Methods}
@@ -183,6 +183,17 @@
 \newblock {Cosmological backgrounds of gravitational waves}.
 \newblock {\em Class. Quantum Gravity} {\bf 2018}, {\em 35},~163001.
 \newblock {\url{https://doi.org/10.1088/1361-6382/aac608}}.
+
+\bibitem[{Afzal} et~al.(2024){Afzal}, {Agazie}, {Anumarlapudi}, {Archibald},
+  {Arzoumanian}, {Baker}, {Becsy}, {Blanco-Pillado}, {Blecha}, {Boddy},
+  et~al.]{NANOGrav15-NewPhysErratum}
+{Afzal}, A.; {Agazie}, G.; {Anumarlapudi}, A.; {Archibald}, A.M.;
+  {Arzoumanian}, Z.; {Baker}, P.T.; {Becsy}, B.; {Blanco-Pillado}, J.J.;
+  {Blecha}, L.; {Boddy}, K.K.;  et~al.
+\newblock {Erratum: ``The NANOGrav 15 yr Data Set: Search for Signals from New
+  Physics'' (2023, ApJL 951 L11)}.
+\newblock {\em Astrophys. J. Lett.} {\bf 2024}, {\em 971},~L27.
+\newblock {\url{https://doi.org/10.3847/2041-8213/ad68fc}}.
 
 \bibitem[{Agazie} et~al.(2023){Agazie}, {Alam}, {Anumarlapudi}, {Archibald},
   {Arzoumanian}, {Baker}, {Blecha}, {Bonidie}, {Brazier}, {Brook},
