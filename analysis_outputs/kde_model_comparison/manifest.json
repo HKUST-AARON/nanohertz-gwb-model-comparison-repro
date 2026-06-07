@@ -1,0 +1,11 @@
+{
+  "kde_dir": "data_sources/NANOGrav15yr_KDE-FreeSpectra_v1.1.0/ceffyl_data/30f_fs{hd}_ceffyl",
+  "seed": 20260521,
+  "samples": 160000,
+  "posterior_samples": 30000,
+  "robustness_samples": 60000,
+  "leave_one_out_samples": 40000,
+  "frequency_count": 30,
+  "grid_min": -15.1,
+  "grid_max": -0.9
+}

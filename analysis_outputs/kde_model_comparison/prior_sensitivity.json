@@ -1,0 +1,42 @@
+{
+  "smbhb_env_log10_fb_-10.0_-8.0": {
+    "delta_logz_vs_smbhb_pl": 3.567101809719702,
+    "baseline_delta_logz": 3.870641523654662,
+    "override": {
+      "log10_fb": [
+        -10.0,
+        -8.0
+      ]
+    }
+  },
+  "smbhb_env_log10_fb_-9.0_-8.3": {
+    "delta_logz_vs_smbhb_pl": 3.19590375438397,
+    "baseline_delta_logz": 3.870641523654662,
+    "override": {
+      "log10_fb": [
+        -9.0,
+        -8.3
+      ]
+    }
+  },
+  "cosmic_strings_beta_-1.2_-0.3": {
+    "delta_logz_vs_smbhb_pl": 2.602738563440319,
+    "baseline_delta_logz": 0.3896501229678293,
+    "override": {
+      "beta": [
+        -1.2,
+        -0.3
+      ]
+    }
+  },
+  "phase_transition_log10_f_peak_-10.0_-6.0": {
+    "delta_logz_vs_smbhb_pl": 4.447907697738621,
+    "baseline_delta_logz": 4.937767843886711,
+    "override": {
+      "log10_f_peak": [
+        -10.0,
+        -6.0
+      ]
+    }
+  }
+}

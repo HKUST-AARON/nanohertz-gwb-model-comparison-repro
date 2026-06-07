@@ -1,0 +1,9 @@
+{
+  "median": 144482.89157778397,
+  "minus": 121544.77126571245,
+  "plus": 455289.27226384357,
+  "log10_median": 5.159816424441297,
+  "log10_minus": 0.7992585981471576,
+  "log10_plus": 0.618169879545551,
+  "posterior_source": "analysis_outputs/kde_model_comparison/smbhb_env/posterior_samples.npz"
+}

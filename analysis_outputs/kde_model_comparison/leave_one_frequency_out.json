@@ -1,0 +1,1484 @@
+{
+  "rows": [
+    {
+      "dropped_bin": 1,
+      "dropped_frequency_hz": 1.976826457568005e-09,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.02750441940699917,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 3.643390388721997,
+          "error": 0.0627289891986456,
+          "bayes_factor_vs_smbhb_pl": 38.22120203445707
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 1.0928891219963077,
+          "error": 0.02889261244271583,
+          "bayes_factor_vs_smbhb_pl": 2.982879538343556
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": -0.19145874233546323,
+          "error": 0.03199360302591356,
+          "bayes_factor_vs_smbhb_pl": 0.8257536930725544
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 2.1391146353318717,
+          "error": 0.050719500567021694,
+          "bayes_factor_vs_smbhb_pl": 8.491915857357265
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 1.411031614077558,
+          "bayes_factor_vs_smbhb_pl": 4.100183029591137,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 1.7470057447876854,
+          "bayes_factor_vs_smbhb_pl": 5.73739769785042,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 2,
+      "dropped_frequency_hz": 3.953652915136009e-09,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.025349401201491026,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 6.113486922174033,
+          "error": 0.08470698973396402,
+          "bayes_factor_vs_smbhb_pl": 451.9117521543087
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 3.968085016659657,
+          "error": 0.05334596964877077,
+          "bayes_factor_vs_smbhb_pl": 52.883163435245216
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.3664091656730619,
+          "error": 0.04735014967621388,
+          "bayes_factor_vs_smbhb_pl": 1.4425453619619508
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 6.834842296775797,
+          "error": 0.04540081008556509,
+          "bayes_factor_vs_smbhb_pl": 929.6817253586215
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 5.7930211633920194,
+          "bayes_factor_vs_smbhb_pl": 328.0024780519441,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 6.197019205576531,
+          "bayes_factor_vs_smbhb_pl": 491.28244439693174,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 3,
+      "dropped_frequency_hz": 5.930479372704014e-09,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.022626126696745335,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 5.615763154562458,
+          "error": 0.08128133559668384,
+          "bayes_factor_vs_smbhb_pl": 274.72295529247543
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 4.098088991912412,
+          "error": 0.04343900265420919,
+          "bayes_factor_vs_smbhb_pl": 60.22508692951896
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.36237256634220927,
+          "error": 0.039836364157394104,
+          "bayes_factor_vs_smbhb_pl": 1.4367341210355076
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 4.909198006392067,
+          "error": 0.05011576127088061,
+          "bayes_factor_vs_smbhb_pl": 135.53067607467852
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.185568105744331,
+          "bayes_factor_vs_smbhb_pl": 65.7308323750776,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.583720594512066,
+          "bayes_factor_vs_smbhb_pl": 97.87788150209832,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 4,
+      "dropped_frequency_hz": 7.907305830272019e-09,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.031185170247822802,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 5.880195344668117,
+          "error": 0.08929403292709986,
+          "bayes_factor_vs_smbhb_pl": 357.8791446637858
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 4.508227154248033,
+          "error": 0.06338691645937872,
+          "bayes_factor_vs_smbhb_pl": 90.76077094924527
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.35720486555981523,
+          "error": 0.03490774702748631,
+          "bayes_factor_vs_smbhb_pl": 1.4293286600776431
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 5.310205160992325,
+          "error": 0.05116926584935379,
+          "bayes_factor_vs_smbhb_pl": 202.3917470206572
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.586944593061197,
+          "bayes_factor_vs_smbhb_pl": 98.1939488766603,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.987545832170042,
+          "bayes_factor_vs_smbhb_pl": 146.5762589849512,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 5,
+      "dropped_frequency_hz": 9.884132287840023e-09,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.017180167410952383,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 5.130987501364309,
+          "error": 0.06847496257342991,
+          "bayes_factor_vs_smbhb_pl": 169.1841051159585
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 3.4120554220880024,
+          "error": 0.03417989744856536,
+          "bayes_factor_vs_smbhb_pl": 30.327516086470425
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.36865172830338366,
+          "error": 0.048879193470700064,
+          "bayes_factor_vs_smbhb_pl": 1.4457839903394385
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 4.385242599366393,
+          "error": 0.04433847255248825,
+          "bayes_factor_vs_smbhb_pl": 80.2576913163923
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 3.620163253218024,
+          "bayes_factor_vs_smbhb_pl": 37.34366379773408,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.0126391509652635,
+          "bayes_factor_vs_smbhb_pl": 55.29260370143115,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 6,
+      "dropped_frequency_hz": 1.1860958745408028e-08,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.03183942602109435,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 5.6497001382810765,
+          "error": 0.08757063813067623,
+          "bayes_factor_vs_smbhb_pl": 284.2062304763512
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 3.711062083468015,
+          "error": 0.05929066110198751,
+          "bayes_factor_vs_smbhb_pl": 40.89721972964956
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.3932321351141752,
+          "error": 0.03499061541428106,
+          "bayes_factor_vs_smbhb_pl": 1.4817623184736837
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 4.900944899285761,
+          "error": 0.053045344333017615,
+          "bayes_factor_vs_smbhb_pl": 134.4167299700162
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.076382607950251,
+          "bayes_factor_vs_smbhb_pl": 58.931904006046466,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.473431184354482,
+          "bayes_factor_vs_smbhb_pl": 87.65697484983257,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 7,
+      "dropped_frequency_hz": 1.3837785202976033e-08,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.02297287499516915,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 5.653444531372578,
+          "error": 0.08661620371434203,
+          "bayes_factor_vs_smbhb_pl": 285.27240516518845
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 3.7749258600029165,
+          "error": 0.043057208380262495,
+          "bayes_factor_vs_smbhb_pl": 43.59427611640322
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.3910638374691686,
+          "error": 0.040510293724765896,
+          "bayes_factor_vs_smbhb_pl": 1.478552897475502
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 4.781935823536465,
+          "error": 0.056725145543615095,
+          "bayes_factor_vs_smbhb_pl": 119.33513835958017
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.003738656121868,
+          "bayes_factor_vs_smbhb_pl": 54.80265579115301,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.400169886433268,
+          "bayes_factor_vs_smbhb_pl": 81.46470723799182,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 8,
+      "dropped_frequency_hz": 1.5814611660544037e-08,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.02338206917640387,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 3.129772339366852,
+          "error": 0.053117635036791906,
+          "bayes_factor_vs_smbhb_pl": 22.868772630502487
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 2.222572165058942,
+          "error": 0.03871620320464697,
+          "bayes_factor_vs_smbhb_pl": 9.231044124755572
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.049216345362296465,
+          "error": 0.02985716276300725,
+          "bayes_factor_vs_smbhb_pl": 1.0504475856220203
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 1.7408847134433856,
+          "error": 0.036940641035238954,
+          "bayes_factor_vs_smbhb_pl": 5.702386169353583
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 1.6729682930519445,
+          "bayes_factor_vs_smbhb_pl": 5.327959293243731,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 2.0104551630808984,
+          "bayes_factor_vs_smbhb_pl": 7.466715147054559,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 9,
+      "dropped_frequency_hz": 1.7791438118112042e-08,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.028555904334345225,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 6.319082816181151,
+          "error": 0.0803030182673574,
+          "bayes_factor_vs_smbhb_pl": 555.0636635023772
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 4.1670934885517426,
+          "error": 0.05817861983781328,
+          "bayes_factor_vs_smbhb_pl": 64.52762899221545
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.4058713512092069,
+          "error": 0.03560578621473176,
+          "bayes_factor_vs_smbhb_pl": 1.5006094884434193
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 6.33255882702845,
+          "error": 0.051930331738363325,
+          "bayes_factor_vs_smbhb_pl": 562.5943351937569
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 5.344918746082101,
+          "bayes_factor_vs_smbhb_pl": 209.54085789147302,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 5.747993861389176,
+          "bayes_factor_vs_smbhb_pl": 313.56098209298534,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 10,
+      "dropped_frequency_hz": 1.9768264575680047e-08,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.02781163905022863,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 5.3161455933139905,
+          "error": 0.0937888515245691,
+          "bayes_factor_vs_smbhb_pl": 203.59761965253477
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 3.8012809734029034,
+          "error": 0.05082995722094299,
+          "bayes_factor_vs_smbhb_pl": 44.758482212307115
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.351892623526723,
+          "error": 0.04419023561854026,
+          "bayes_factor_vs_smbhb_pl": 1.421755852392779
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 4.898832932636978,
+          "error": 0.051066012903228625,
+          "bayes_factor_vs_smbhb_pl": 134.13314588475438
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.096084070341625,
+          "bayes_factor_vs_smbhb_pl": 60.10446131648489,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.493633012308933,
+          "bayes_factor_vs_smbhb_pl": 89.44581404853076,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 11,
+      "dropped_frequency_hz": 2.174509103324805e-08,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.027563380089449193,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 5.059038459731589,
+          "error": 0.08872936000283055,
+          "bayes_factor_vs_smbhb_pl": 157.43905952357753
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 3.50803168137044,
+          "error": 0.05488784187741544,
+          "bayes_factor_vs_smbhb_pl": 33.38249568679627
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.4498617657722477,
+          "error": 0.04557938015098508,
+          "bayes_factor_vs_smbhb_pl": 1.5680954060498475
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 4.153625395279022,
+          "error": 0.0428859249388947,
+          "bayes_factor_vs_smbhb_pl": 63.664390999669685
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 3.492610909597481,
+          "bayes_factor_vs_smbhb_pl": 32.87166069750533,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 3.8820470490605175,
+          "bayes_factor_vs_smbhb_pl": 48.52344334323305,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 12,
+      "dropped_frequency_hz": 2.3721917490816056e-08,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.01573318080232987,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 5.108149346592043,
+          "error": 0.1009165292602921,
+          "bayes_factor_vs_smbhb_pl": 165.36403999564698
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 3.51758777733599,
+          "error": 0.03320935274108852,
+          "bayes_factor_vs_smbhb_pl": 33.703031113554715
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.33263751064554725,
+          "error": 0.037642152042838814,
+          "bayes_factor_vs_smbhb_pl": 1.394641664075294
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 4.894084929957728,
+          "error": 0.04777939287068014,
+          "bayes_factor_vs_smbhb_pl": 133.49779087595428
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.028889850568426,
+          "bayes_factor_vs_smbhb_pl": 56.19848788452829,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.426048436283764,
+          "bayes_factor_vs_smbhb_pl": 83.60041099475413,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 13,
+      "dropped_frequency_hz": 2.569874394838406e-08,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.02051863654299696,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 6.5778946958346864,
+          "error": 0.07340412034910992,
+          "bayes_factor_vs_smbhb_pl": 719.0239705032704
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 4.120857103958315,
+          "error": 0.06625912980048886,
+          "bayes_factor_vs_smbhb_pl": 61.6120275526525
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.42697872606643017,
+          "error": 0.0416912632422199,
+          "bayes_factor_vs_smbhb_pl": 1.5326200565199293
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 6.976342677304999,
+          "error": 0.06511895981312507,
+          "bayes_factor_vs_smbhb_pl": 1070.99422395969
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 5.935016649822707,
+          "bayes_factor_vs_smbhb_pl": 378.04629052295576,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 6.339129492716339,
+          "bayes_factor_vs_smbhb_pl": 566.3031257561693,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 14,
+      "dropped_frequency_hz": 2.7675570405952065e-08,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.029797619802934716,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 6.463403932931129,
+          "error": 0.09697524240120188,
+          "bayes_factor_vs_smbhb_pl": 641.2400840727616
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 4.146693656152323,
+          "error": 0.04917131344656461,
+          "bayes_factor_vs_smbhb_pl": 63.22461202706606
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.29841160483928064,
+          "error": 0.05214936557481422,
+          "bayes_factor_vs_smbhb_pl": 1.347716400323492
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 6.472566715061397,
+          "error": 0.06255010739191465,
+          "bayes_factor_vs_smbhb_pl": 647.142627821116
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 5.469065200237871,
+          "bayes_factor_vs_smbhb_pl": 237.23831874950233,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 5.872634894976109,
+          "bayes_factor_vs_smbhb_pl": 355.1836199240908,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 15,
+      "dropped_frequency_hz": 2.965239686352007e-08,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.026736678832507944,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 6.040728716930261,
+          "error": 0.08361847605572498,
+          "bayes_factor_vs_smbhb_pl": 420.19912956473684
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 4.064529062407686,
+          "error": 0.0480664216849948,
+          "bayes_factor_vs_smbhb_pl": 58.237475846862125
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.417091328749855,
+          "error": 0.04206888010322435,
+          "bayes_factor_vs_smbhb_pl": 1.5175411017380926
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 5.765355563131948,
+          "error": 0.05737965740669204,
+          "bayes_factor_vs_smbhb_pl": 319.05246716499175
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.838415829876283,
+          "bayes_factor_vs_smbhb_pl": 126.26916137119726,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 5.239866790904927,
+          "bayes_factor_vs_smbhb_pl": 188.64497150592646,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 16,
+      "dropped_frequency_hz": 3.1629223321088075e-08,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.02269143216142245,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 5.801714968542427,
+          "error": 0.09411587728482375,
+          "bayes_factor_vs_smbhb_pl": 330.8664992671001
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 3.9486006918455985,
+          "error": 0.056568969996417744,
+          "bayes_factor_vs_smbhb_pl": 51.8627440751775
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.4889163837136792,
+          "error": 0.03684039440769786,
+          "bayes_factor_vs_smbhb_pl": 1.6305483735215907
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 4.856005132140886,
+          "error": 0.047146987657330365,
+          "bayes_factor_vs_smbhb_pl": 128.50979564636668
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.105411365820046,
+          "bayes_factor_vs_smbhb_pl": 60.66769603168869,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.501877196643669,
+          "bayes_factor_vs_smbhb_pl": 90.18626986077217,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 17,
+      "dropped_frequency_hz": 3.360604977865608e-08,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.021147545222090197,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 5.4874757942458885,
+          "error": 0.08444880323645136,
+          "bayes_factor_vs_smbhb_pl": 241.64647095824552
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 3.77874715296862,
+          "error": 0.051454786138807315,
+          "bayes_factor_vs_smbhb_pl": 43.76118131079476
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.2984801700890287,
+          "error": 0.04347046226767299,
+          "bayes_factor_vs_smbhb_pl": 1.34780881000308
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 4.3513660102085865,
+          "error": 0.039609400989823844,
+          "bayes_factor_vs_smbhb_pl": 77.58437161627025
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 3.7110759600128276,
+          "bayes_factor_vs_smbhb_pl": 40.89778724568943,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.105495104275029,
+          "bayes_factor_vs_smbhb_pl": 60.67277646353252,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 18,
+      "dropped_frequency_hz": 3.5582876236224084e-08,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.017379177050885677,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 5.488256456087484,
+          "error": 0.07050372920595094,
+          "bayes_factor_vs_smbhb_pl": 241.8351887900997
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 3.8194289731825677,
+          "error": 0.03772971893216907,
+          "bayes_factor_vs_smbhb_pl": 45.578174528613935
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.39727318966082237,
+          "error": 0.04440130611254325,
+          "bayes_factor_vs_smbhb_pl": 1.4877623158210274
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 4.254128056136345,
+          "error": 0.037655234051569,
+          "bayes_factor_vs_smbhb_pl": 70.39540957491893
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 3.6674970241509115,
+          "bayes_factor_vs_smbhb_pl": 39.153782139784646,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.0602152613681355,
+          "bayes_factor_vs_smbhb_pl": 57.98679205176631,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 19,
+      "dropped_frequency_hz": 3.755970269379209e-08,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.030609035420358192,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 5.267406011058597,
+          "error": 0.09844084177199557,
+          "bayes_factor_vs_smbhb_pl": 193.9123031145621
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 3.7643402523042226,
+          "error": 0.062454889589082574,
+          "bayes_factor_vs_smbhb_pl": 43.1352380961811
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.35150517724689934,
+          "error": 0.04985879719390383,
+          "bayes_factor_vs_smbhb_pl": 1.421205105076341
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 4.101507407380794,
+          "error": 0.05236902109254963,
+          "bayes_factor_vs_smbhb_pl": 60.43131358162936
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 3.5552314526231186,
+          "bayes_factor_vs_smbhb_pl": 34.99591892762891,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 3.9470672368820487,
+          "bayes_factor_vs_smbhb_pl": 51.78327583890515,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 20,
+      "dropped_frequency_hz": 3.95365291513601e-08,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.029478645102558085,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 5.005250556807127,
+          "error": 0.06296757983517656,
+          "bayes_factor_vs_smbhb_pl": 149.19446016324036
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 3.6468524155912334,
+          "error": 0.044438097661504354,
+          "bayes_factor_vs_smbhb_pl": 38.35375418002626
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.38745204981369596,
+          "error": 0.045325761767282584,
+          "bayes_factor_vs_smbhb_pl": 1.4732223106410944
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 3.851145218906204,
+          "error": 0.046709759510273965,
+          "bayes_factor_vs_smbhb_pl": 47.0469114041399
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 3.365845213924061,
+          "bayes_factor_vs_smbhb_pl": 28.957962631602484,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 3.754206713929804,
+          "bayes_factor_vs_smbhb_pl": 42.70033279208295,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 21,
+      "dropped_frequency_hz": 4.15133556089281e-08,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.023238024758829454,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 5.470057431719894,
+          "error": 0.07643821118396477,
+          "bayes_factor_vs_smbhb_pl": 237.4738309000706
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 3.7241602761359403,
+          "error": 0.045103095752275515,
+          "bayes_factor_vs_smbhb_pl": 41.43642297836421
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.35774668560009815,
+          "error": 0.04621177724818829,
+          "bayes_factor_vs_smbhb_pl": 1.4301033088309822
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 4.950143647439461,
+          "error": 0.04964974977419755,
+          "bayes_factor_vs_smbhb_pl": 141.1952448001734
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.116659125033422,
+          "bayes_factor_vs_smbhb_pl": 61.35392369578982,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.514324199609852,
+          "bayes_factor_vs_smbhb_pl": 91.31583388926887,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 22,
+      "dropped_frequency_hz": 4.34901820664961e-08,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.03006673689211613,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 5.43725281747988,
+          "error": 0.09090986796335973,
+          "bayes_factor_vs_smbhb_pl": 229.80998550153245
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 3.910023798176539,
+          "error": 0.03764452256381634,
+          "bayes_factor_vs_smbhb_pl": 49.90013949160636
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.4308228042912319,
+          "error": 0.04009316346288601,
+          "bayes_factor_vs_smbhb_pl": 1.5385229061451113
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 4.703054541578233,
+          "error": 0.051348774120354046,
+          "bayes_factor_vs_smbhb_pl": 110.28352410031515
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 3.987267676283075,
+          "bayes_factor_vs_smbhb_pl": 53.90739549935548,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.383173873792863,
+          "bayes_factor_vs_smbhb_pl": 80.09183179596077,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 23,
+      "dropped_frequency_hz": 4.546700852406411e-08,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.020509772606101324,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 5.591270977595336,
+          "error": 0.08019297515037574,
+          "bayes_factor_vs_smbhb_pl": 268.0761220273457
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 3.926773929711935,
+          "error": 0.04215953978484074,
+          "bayes_factor_vs_smbhb_pl": 50.7430128043827
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.42578941567665396,
+          "error": 0.03161793256746363,
+          "bayes_factor_vs_smbhb_pl": 1.530798379047827
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 4.724170922456182,
+          "error": 0.04875329871302141,
+          "bayes_factor_vs_smbhb_pl": 112.63707478241611
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.006792954278531,
+          "bayes_factor_vs_smbhb_pl": 54.97029532194901,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.402932131446171,
+          "bayes_factor_vs_smbhb_pl": 81.69004379339934,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 24,
+      "dropped_frequency_hz": 4.744383498163212e-08,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.02985680176769363,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 5.237931233251665,
+          "error": 0.10535725162883607,
+          "bayes_factor_vs_smbhb_pl": 188.28019142789853
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 3.847054107973868,
+          "error": 0.04948987424117985,
+          "bayes_factor_vs_smbhb_pl": 46.854830450713855
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.4233420141675026,
+          "error": 0.04016841511078421,
+          "bayes_factor_vs_smbhb_pl": 1.5270564816152106
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 4.202042230005915,
+          "error": 0.03758658200876324,
+          "bayes_factor_vs_smbhb_pl": 66.82265902633057
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 3.6480969202618,
+          "bayes_factor_vs_smbhb_pl": 38.401515319553326,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.04021821886333,
+          "bayes_factor_vs_smbhb_pl": 56.83874473852191,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 25,
+      "dropped_frequency_hz": 4.942066143920012e-08,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.02888879443391976,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 5.100505168035532,
+          "error": 0.05960123727991971,
+          "bayes_factor_vs_smbhb_pl": 164.10478685688565
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 3.637362268726605,
+          "error": 0.04320890731128955,
+          "bayes_factor_vs_smbhb_pl": 37.99149309435367
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.24594785192316237,
+          "error": 0.04712079268808782,
+          "bayes_factor_vs_smbhb_pl": 1.2788328831274132
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 3.6058600814145336,
+          "error": 0.03650762158217318,
+          "bayes_factor_vs_smbhb_pl": 36.81333270826833
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 3.2332212183936733,
+          "bayes_factor_vs_smbhb_pl": 25.36121956191649,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 3.6217352184172427,
+          "bayes_factor_vs_smbhb_pl": 37.402412901310804,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 26,
+      "dropped_frequency_hz": 5.139748789676812e-08,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.023212137077059204,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 5.195293583611402,
+          "error": 0.08416192177414399,
+          "bayes_factor_vs_smbhb_pl": 180.42110370160043
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 3.8084230098037963,
+          "error": 0.05850956318096349,
+          "bayes_factor_vs_smbhb_pl": 45.07929317964177
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.45639493590326197,
+          "error": 0.04896992685881552,
+          "bayes_factor_vs_smbhb_pl": 1.578373578084516
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 3.868111885021605,
+          "error": 0.04636107542743454,
+          "bayes_factor_vs_smbhb_pl": 47.85195074658131
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 3.4500893131854724,
+          "bayes_factor_vs_smbhb_pl": 31.503205834769272,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 3.838712726545701,
+          "bayes_factor_vs_smbhb_pl": 46.465621963111396,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 27,
+      "dropped_frequency_hz": 5.337431435433613e-08,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.025409544207803714,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 5.6756180306681046,
+          "error": 0.10741046390808201,
+          "bayes_factor_vs_smbhb_pl": 291.6685429581267
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 3.815178006359986,
+          "error": 0.050097019132678354,
+          "bayes_factor_vs_smbhb_pl": 45.38483445313155
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.42493411136363335,
+          "error": 0.04666330100832347,
+          "bayes_factor_vs_smbhb_pl": 1.5294896403565696
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 5.6908738041928615,
+          "error": 0.0470942640931689,
+          "bayes_factor_vs_smbhb_pl": 296.15228672213556
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.739312340271972,
+          "bayes_factor_vs_smbhb_pl": 114.35553693854153,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 5.140309192910259,
+          "bayes_factor_vs_smbhb_pl": 170.76856058763383,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 28,
+      "dropped_frequency_hz": 5.535114081190414e-08,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.023604112369904805,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 5.659868162865301,
+          "error": 0.09272760382859481,
+          "bayes_factor_vs_smbhb_pl": 287.110788197147
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 3.9662649033578035,
+          "error": 0.04050736970379271,
+          "bayes_factor_vs_smbhb_pl": 52.786997628912545
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.38646938928952324,
+          "error": 0.02882234954603477,
+          "bayes_factor_vs_smbhb_pl": 1.4717753442878896
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 5.369757452063034,
+          "error": 0.05145231575486978,
+          "bayes_factor_vs_smbhb_pl": 214.8107594786699
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.4963575424834445,
+          "bayes_factor_vs_smbhb_pl": 89.68984415062377,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.896337766147724,
+          "bayes_factor_vs_smbhb_pl": 133.79887855379084,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 29,
+      "dropped_frequency_hz": 5.732796726947214e-08,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.028836778490165055,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 5.807095884929609,
+          "error": 0.07120422902909722,
+          "bayes_factor_vs_smbhb_pl": 332.6516628355867
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 3.9217412678714965,
+          "error": 0.054503240330541276,
+          "bayes_factor_vs_smbhb_pl": 50.488281905056624
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.46897319201342924,
+          "error": 0.039021088415467975,
+          "bayes_factor_vs_smbhb_pl": 1.5983521495773316
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 5.206643609307896,
+          "error": 0.05048983957892885,
+          "bayes_factor_vs_smbhb_pl": 182.48055315825863
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.359129770816253,
+          "bayes_factor_vs_smbhb_pl": 78.18906240429745,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.757757508966677,
+          "bayes_factor_vs_smbhb_pl": 116.48441753165753,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    },
+    {
+      "dropped_bin": 30,
+      "dropped_frequency_hz": 5.9304793727040147e-08,
+      "samples_per_model": 40000,
+      "comparison": {
+        "smbhb_pl": {
+          "delta_logz_vs_smbhb_pl": 0.0,
+          "error": 0.02713666813065925,
+          "bayes_factor_vs_smbhb_pl": 1.0
+        },
+        "smbhb_pl_free": {
+          "delta_logz_vs_smbhb_pl": 5.527178994223419,
+          "error": 0.058877941327167255,
+          "bayes_factor_vs_smbhb_pl": 251.43361394112165
+        },
+        "smbhb_env": {
+          "delta_logz_vs_smbhb_pl": 3.727385316128178,
+          "error": 0.05897554317864978,
+          "bayes_factor_vs_smbhb_pl": 41.570272819136406
+        },
+        "cosmic_strings": {
+          "delta_logz_vs_smbhb_pl": 0.4232092759884054,
+          "error": 0.04043545762949522,
+          "bayes_factor_vs_smbhb_pl": 1.526853796370795
+        },
+        "phase_transition": {
+          "delta_logz_vs_smbhb_pl": 4.389766574657926,
+          "error": 0.04013687599159541,
+          "bayes_factor_vs_smbhb_pl": 80.6215976598636
+        },
+        "curved_family_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 3.7193983477099763,
+          "bayes_factor_vs_smbhb_pl": 41.239574758457024,
+          "members": [
+            "smbhb_env",
+            "cosmic_strings",
+            "phase_transition"
+          ]
+        },
+        "env_plus_phase_transition_equal_weight": {
+          "delta_logz_vs_smbhb_pl": 4.11244533760614,
+          "bayes_factor_vs_smbhb_pl": 61.0959352394997,
+          "members": [
+            "smbhb_env",
+            "phase_transition"
+          ]
+        }
+      }
+    }
+  ],
+  "minimum_delta_logz": {
+    "smbhb_env": 1.0928891219963077,
+    "cosmic_strings": -0.19145874233546323,
+    "phase_transition": 1.7408847134433856
+  },
+  "median_delta_logz": {
+    "smbhb_env": 3.811800508081891,
+    "cosmic_strings": 0.3892579436414323,
+    "phase_transition": 4.8189704778386755
+  }
+}

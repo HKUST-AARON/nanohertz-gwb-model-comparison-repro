@@ -1,0 +1,35 @@
+{
+  "title": "Data-only archive for Bayesian evidence analysis of nanohertz gravitational-wave spectra",
+  "upload_type": "dataset",
+  "description": "Data-only reproducibility archive for the Symmetry manuscript Bayesian Evidence for Angular Symmetry and Spectral Curvature in the Nanohertz Gravitational-Wave Background. This archive contains public data inputs, analysis scripts, numerical evidence outputs, posterior samples, environment files, and reproducibility metadata. It intentionally does not include the manuscript PDF, LaTeX source, or MDPI submission package.",
+  "creators": [
+    {
+      "name": "Xu, Hua",
+      "affiliation": "The Hong Kong University of Science and Technology"
+    },
+    {
+      "name": "Zhang, Weiming",
+      "affiliation": "Tsinghua University"
+    },
+    {
+      "name": "Guo, Yike",
+      "affiliation": "The Hong Kong University of Science and Technology"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "version": "v1.0.4-data-only",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro",
+      "relation": "isSupplementTo",
+      "scheme": "url",
+      "resource_type": "dataset"
+    }
+  ],
+  "keywords": [
+    "pulsar timing arrays",
+    "nanohertz gravitational-wave background",
+    "Bayesian model comparison",
+    "NANOGrav"
+  ]
+}

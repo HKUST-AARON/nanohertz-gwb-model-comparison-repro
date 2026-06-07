@@ -1,0 +1,34 @@
+{
+  "archive_scope": "data-only reproducibility archive; manuscript PDF, LaTeX source, and MDPI submission package are not included",
+  "kde_model_script": "analysis/spectrum_kde_model_comparison.py",
+  "enterprise_pipeline": [
+    "analysis/pta_pipeline.py",
+    "analysis/smbhb_env_fit.py",
+    "analysis/smbhb_env_density.py",
+    "analysis/hd_reanalysis.py"
+  ],
+  "reported_outputs": [
+    "analysis_outputs/kde_model_comparison/model_comparison.json",
+    "analysis_outputs/kde_model_comparison/prior_sensitivity.json",
+    "analysis_outputs/kde_model_comparison/kde_product_robustness.json",
+    "analysis_outputs/kde_model_comparison/leave_one_frequency_out.json",
+    "analysis_outputs/kde_model_comparison/low_bin_ablation.json",
+    "analysis_outputs/hd_check/hd_summary.json",
+    "analysis_outputs/smbhb_env/sbpl_density_summary.json"
+  ],
+  "random_seeds": {
+    "kde_model_comparison": 20260521,
+    "hd_reanalysis": "deterministic for selected pulsars",
+    "figure_templates": 42
+  },
+  "public_data_inputs": {
+    "nanograv_15yr_timing_data": "https://doi.org/10.5281/zenodo.16051178",
+    "nanograv_15yr_kde_free_spectra": "https://doi.org/10.5281/zenodo.10344086",
+    "kde_archive": "NANOGrav15yr_KDE-FreeSpectra_v1.1.0"
+  },
+  "github_repository": "https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro",
+  "github_release": "https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/releases/tag/v1.0.4-data-only",
+  "zenodo_concept_doi": "10.5281/zenodo.20319210",
+  "zenodo_concept_url": "https://doi.org/10.5281/zenodo.20319210",
+  "public_archive_status": "Prepared as v1.0.4-data-only. GitHub release and Zenodo DOI contain only data, scripts, and reproducibility metadata."
+}
