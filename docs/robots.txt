@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hkust-aaron.github.io/nanohertz-gwb-model-comparison-repro/sitemap.xml

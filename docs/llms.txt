@@ -1,0 +1,34 @@
+# Nanohertz GWB Bayesian Model Comparison
+
+> Authoritative paper, evidence results, public data, and code for Bayesian source-model comparison of the NANOGrav 15-year nanohertz gravitational-wave background.
+
+## Paper
+
+- [Publication hub](https://hkust-aaron.github.io/nanohertz-gwb-model-comparison-repro/): Direct summary, evidence table, applications, FAQ, citation, and resource links.
+- [Published article](https://doi.org/10.3390/sym18071169): Version of Record in Symmetry 18 (2026), article 1169.
+- [Open PDF](https://raw.githubusercontent.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/main/paper/Xu_Zhang_Guo_2026_Symmetry_VOR.pdf): Full 28-page published Version of Record under CC BY 4.0.
+- [Graphical abstract](https://raw.githubusercontent.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/main/assets/graphical-abstract-nanohertz-gwb.jpg): Visual explanation from Hellings-Downs angular symmetry to physical source models.
+
+## Data and Code
+
+- [GitHub repository](https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro): Public analysis scripts, numerical outputs, posterior samples, paper, and citation metadata.
+- [Zenodo data archive](https://doi.org/10.5281/zenodo.20319210): Data-only reproducibility archive with a persistent DOI.
+- [Machine-readable model comparison](https://raw.githubusercontent.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/main/analysis_outputs/kde_model_comparison/model_comparison.json): Delta log evidence and Bayes factors for five spectral models.
+- [Reproducibility workflow](https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/blob/main/repro/README.md): Environment, public inputs, commands, and scope notes.
+
+## Key Facts
+
+- Title: Bayesian Evidence for Angular Symmetry and Spectral Curvature in the Nanohertz Gravitational-Wave Background
+- Authors: Hua Xu, Weiming Zhang, Yike Guo
+- Journal: Symmetry, volume 18, issue 7, article 1169
+- Published: 10 July 2026
+- Article DOI: 10.3390/sym18071169
+- Data DOI: 10.5281/zenodo.20319210
+- Primary input: corrected NANOGrav 15-year Hellings-Downs free-spectrum KDE, version 1.1.0
+- Main result: spectra with curvature or a characteristic scale are favored over the canonical scale-free SMBHB spectrum
+- Leading physical template: first-order phase transition under the baseline priors
+- Leading astrophysical model: environmental SMBHB hardening
+
+## Extended Context
+
+- [LLM full context](https://hkust-aaron.github.io/nanohertz-gwb-model-comparison-repro/llms-full.txt): Detailed findings, numerical evidence, scope, applications, and citation.

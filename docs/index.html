@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bayesian Evidence for the Nanohertz Gravitational-Wave Background</title>
+  <meta name="description" content="Open paper, results, data, and code for Bayesian source-model comparison of the NANOGrav 15-year nanohertz gravitational-wave background.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://hkust-aaron.github.io/nanohertz-gwb-model-comparison-repro/">
+  <link rel="alternate" type="text/plain" href="https://hkust-aaron.github.io/nanohertz-gwb-model-comparison-repro/llms.txt" title="LLM-readable site index">
+  <link rel="icon" href="https://raw.githubusercontent.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/main/assets/graphical-abstract-nanohertz-gwb.jpg">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Nanohertz GWB Model Comparison">
+  <meta property="og:title" content="Bayesian Evidence for Angular Symmetry and Spectral Curvature in the Nanohertz Gravitational-Wave Background">
+  <meta property="og:description" content="A Bayesian comparison of five source spectra using the public NANOGrav 15-year HD free-spectrum products.">
+  <meta property="og:url" content="https://hkust-aaron.github.io/nanohertz-gwb-model-comparison-repro/">
+  <meta property="og:image" content="https://raw.githubusercontent.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/main/assets/graphical-abstract-nanohertz-gwb.jpg">
+  <meta property="article:published_time" content="2026-07-10">
+  <meta property="article:modified_time" content="2026-07-15">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="citation_title" content="Bayesian Evidence for Angular Symmetry and Spectral Curvature in the Nanohertz Gravitational-Wave Background">
+  <meta name="citation_author" content="Hua Xu">
+  <meta name="citation_author" content="Weiming Zhang">
+  <meta name="citation_author" content="Yike Guo">
+  <meta name="citation_publication_date" content="2026/07/10">
+  <meta name="citation_journal_title" content="Symmetry">
+  <meta name="citation_volume" content="18">
+  <meta name="citation_issue" content="7">
+  <meta name="citation_firstpage" content="1169">
+  <meta name="citation_doi" content="10.3390/sym18071169">
+  <meta name="citation_pdf_url" content="https://raw.githubusercontent.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/main/paper/Xu_Zhang_Guo_2026_Symmetry_VOR.pdf">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ScholarlyArticle",
+        "@id": "https://doi.org/10.3390/sym18071169",
+        "headline": "Bayesian Evidence for Angular Symmetry and Spectral Curvature in the Nanohertz Gravitational-Wave Background",
+        "name": "Bayesian Evidence for Angular Symmetry and Spectral Curvature in the Nanohertz Gravitational-Wave Background",
+        "description": "Bayesian evidence from the public NANOGrav 15-year Hellings-Downs free-spectrum products favors spectra with curvature or a characteristic scale over the canonical scale-free supermassive black hole binary spectrum.",
+        "abstract": "Pulsar timing arrays have detected a nanohertz signal with the Hellings-Downs angular correlation. This work fixes the tensor angular-symmetry class and compares five physical spectral hypotheses using Bayesian evidence from the NANOGrav 15-year free-spectrum products.",
+        "url": "https://www.mdpi.com/2073-8994/18/7/1169",
+        "mainEntityOfPage": "https://hkust-aaron.github.io/nanohertz-gwb-model-comparison-repro/",
+        "sameAs": [
+          "https://doi.org/10.3390/sym18071169",
+          "https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro"
+        ],
+        "identifier": {
+          "@type": "PropertyValue",
+          "propertyID": "DOI",
+          "value": "10.3390/sym18071169"
+        },
+        "datePublished": "2026-07-10",
+        "dateModified": "2026-07-15",
+        "inLanguage": "en",
+        "isAccessibleForFree": true,
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Hua Xu",
+            "sameAs": "https://orcid.org/0009-0001-4243-7943",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "The Hong Kong University of Science and Technology"
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "Weiming Zhang",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "Tsinghua University"
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "Yike Guo",
+            "sameAs": "https://orcid.org/0009-0005-8401-282X",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "The Hong Kong University of Science and Technology"
+            }
+          }
+        ],
+        "publisher": {
+          "@type": "Organization",
+          "name": "MDPI"
+        },
+        "isPartOf": {
+          "@type": "PublicationIssue",
+          "issueNumber": "7",
+          "isPartOf": {
+            "@type": "PublicationVolume",
+            "volumeNumber": "18",
+            "isPartOf": {
+              "@type": "Periodical",
+              "name": "Symmetry",
+              "issn": "2073-8994"
+            }
+          }
+        },
+        "pagination": "1169",
+        "image": {
+          "@type": "ImageObject",
+          "contentUrl": "https://raw.githubusercontent.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/main/assets/graphical-abstract-nanohertz-gwb.jpg",
+          "width": 2752,
+          "height": 1536,
+          "caption": "Decoding the nanohertz gravitational-wave background from angular symmetry to physical source"
+        },
+        "associatedMedia": {
+          "@type": "MediaObject",
+          "contentUrl": "https://raw.githubusercontent.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/main/paper/Xu_Zhang_Guo_2026_Symmetry_VOR.pdf",
+          "encodingFormat": "application/pdf"
+        },
+        "about": [
+          "nanohertz gravitational-wave background",
+          "pulsar timing arrays",
+          "Hellings-Downs correlation",
+          "Bayesian model comparison",
+          "supermassive black hole binaries",
+          "first-order phase transitions",
+          "cosmic strings",
+          "LISA"
+        ],
+        "keywords": "nanohertz gravitational-wave background, pulsar timing arrays, NANOGrav 15-year data set, Hellings-Downs correlation, angular symmetry, spectral curvature, Bayesian evidence, supermassive black hole binaries, phase transitions, cosmic strings, LISA",
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".answer-summary", ".key-findings"]
+        },
+        "isBasedOn": {
+          "@id": "https://doi.org/10.5281/zenodo.20319210"
+        }
+      },
+      {
+        "@type": "Dataset",
+        "@id": "https://doi.org/10.5281/zenodo.20319210",
+        "name": "Data-only archive for Bayesian evidence analysis of nanohertz gravitational-wave spectra",
+        "description": "Public inputs, Bayesian evidence outputs, posterior samples, analysis scripts, and reproducibility metadata associated with the Symmetry article.",
+        "url": "https://doi.org/10.5281/zenodo.20319210",
+        "sameAs": "https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": [
+          {"@type": "Person", "name": "Hua Xu"},
+          {"@type": "Person", "name": "Weiming Zhang"},
+          {"@type": "Person", "name": "Yike Guo"}
+        ],
+        "distribution": {
+          "@type": "DataDownload",
+          "encodingFormat": "application/zip",
+          "contentUrl": "https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/releases/download/v1.0.5-data-only/nanohertz-gwb-model-comparison-data-v1.0.5.zip"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://hkust-aaron.github.io/nanohertz-gwb-model-comparison-repro/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the main conclusion of the paper?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The public NANOGrav 15-year HD free-spectrum evidence favors spectra with physical curvature or a characteristic scale over the canonical scale-free SMBHB spectrum."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which physical source model has the largest Bayesian evidence?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Within the tested physical templates, the first-order phase-transition model has the largest compressed spectral evidence. Environmental SMBHB hardening is the leading astrophysical interpretation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What public data does the analysis use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The primary comparison uses the corrected version 1.1.0 public KDE representation of the NANOGrav 15-year Hellings-Downs-correlated free spectrum."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where are the paper, data, and code available?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Version of Record and code are available in the public GitHub repository, and the data-only reproducibility archive is preserved on Zenodo under DOI 10.5281/zenodo.20319210."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #15212a;
+      --muted: #53636d;
+      --line: #ccd7dc;
+      --teal: #0f6d70;
+      --blue: #164d7a;
+      --amber: #b76c16;
+      --red: #a73734;
+      --paper: #ffffff;
+      --wash: #f3f7f7;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      letter-spacing: 0;
+    }
+
+    a { color: var(--blue); }
+    a:hover { color: var(--teal); }
+
+    .site-header {
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .nav {
+      width: min(1120px, calc(100% - 40px));
+      min-height: 64px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .site-name {
+      color: var(--ink);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    main {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .paper-header {
+      padding: 64px 0 42px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .kicker {
+      margin: 0 0 12px;
+      color: var(--teal);
+      font-size: 14px;
+      font-weight: 750;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 940px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 46px;
+      line-height: 1.13;
+      letter-spacing: 0;
+    }
+
+    .authors {
+      margin: 22px 0 6px;
+      font-size: 19px;
+      font-weight: 650;
+    }
+
+    .authors a { text-decoration-thickness: 1px; }
+
+    .publication {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .action {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 8px 14px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      color: var(--ink);
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .action.primary {
+      border-color: var(--teal);
+      background: var(--teal);
+      color: #fff;
+    }
+
+    .visual-summary {
+      margin: 36px 0 0;
+    }
+
+    .visual-summary img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--line);
+    }
+
+    .visual-summary figcaption {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    section {
+      padding: 46px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 30px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 28px 0 8px;
+      font-size: 19px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    .answer-summary {
+      max-width: 920px;
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.65;
+    }
+
+    .evidence-table {
+      width: 100%;
+      margin-top: 24px;
+      border-collapse: collapse;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .evidence-table th,
+    .evidence-table td {
+      padding: 13px 12px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+    }
+
+    .evidence-table th {
+      background: var(--wash);
+      font-size: 14px;
+    }
+
+    .evidence-table td:nth-child(2),
+    .evidence-table td:nth-child(3),
+    .evidence-table th:nth-child(2),
+    .evidence-table th:nth-child(3) { text-align: right; }
+
+    .key-findings {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+      margin-top: 30px;
+    }
+
+    .finding {
+      padding-top: 15px;
+      border-top: 4px solid var(--teal);
+    }
+
+    .finding:nth-child(2) { border-color: var(--amber); }
+    .finding:nth-child(3) { border-color: var(--red); }
+    .finding h3 { margin-top: 0; }
+    .finding p { margin-bottom: 0; }
+
+    .use-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px 36px;
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .scope-note {
+      margin-top: 28px;
+      padding: 18px 20px;
+      border-left: 4px solid var(--blue);
+      background: var(--wash);
+    }
+
+    .faq details {
+      padding: 16px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .faq details:last-child { border-bottom: 1px solid var(--line); }
+
+    .faq summary {
+      cursor: pointer;
+      font-weight: 750;
+    }
+
+    .faq p { max-width: 880px; }
+
+    pre {
+      overflow-x: auto;
+      padding: 18px;
+      border: 1px solid var(--line);
+      background: var(--wash);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    footer {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 28px 0 50px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 760px) {
+      body { font-size: 16px; }
+      .nav { align-items: flex-start; flex-direction: column; padding: 14px 0; gap: 8px; }
+      .nav-links { gap: 12px; }
+      .paper-header { padding-top: 42px; }
+      h1 { font-size: 34px; }
+      .answer-summary { font-size: 18px; }
+      .key-findings, .use-list { grid-template-columns: 1fr; }
+      .evidence-table { font-size: 14px; }
+      .evidence-table th, .evidence-table td { padding: 10px 7px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Publication resources">
+      <a class="site-name" href="#top">Nanohertz GWB Model Comparison</a>
+      <div class="nav-links">
+        <a href="#findings">Findings</a>
+        <a href="#applications">Applications</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro">GitHub</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <article>
+      <header class="paper-header">
+        <p class="kicker">Open Access Article · Symmetry 18 (2026), 1169</p>
+        <h1>Bayesian Evidence for Angular Symmetry and Spectral Curvature in the Nanohertz Gravitational-Wave Background</h1>
+        <p class="authors">
+          <a href="https://orcid.org/0009-0001-4243-7943">Hua Xu</a>,
+          Weiming Zhang, and
+          <a href="https://orcid.org/0009-0005-8401-282X">Yike Guo</a>
+        </p>
+        <p class="publication">Published 10 July 2026 · DOI: 10.3390/sym18071169 · CC BY 4.0</p>
+        <div class="actions">
+          <a class="action primary" href="https://raw.githubusercontent.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/main/paper/Xu_Zhang_Guo_2026_Symmetry_VOR.pdf">Open PDF</a>
+          <a class="action" href="https://doi.org/10.3390/sym18071169">Publisher DOI</a>
+          <a class="action" href="https://doi.org/10.5281/zenodo.20319210">Data archive</a>
+          <a class="action" href="https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro">Code and outputs</a>
+        </div>
+
+        <figure class="visual-summary">
+          <img src="https://raw.githubusercontent.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/main/assets/graphical-abstract-nanohertz-gwb.jpg" width="2752" height="1536" alt="Graphical abstract showing Hellings-Downs angular symmetry, Bayesian evidence for spectral curvature, environmental SMBHB hardening, and an early-Universe phase transition">
+          <figcaption>Graphical abstract: angular symmetry fixes the signal class; spectral curvature distinguishes physical source scenarios.</figcaption>
+        </figure>
+      </header>
+
+      <section aria-labelledby="answer-heading">
+        <h2 id="answer-heading">What does this paper show?</h2>
+        <p class="answer-summary">The public NANOGrav 15-year Hellings-Downs free-spectrum evidence favors spectra with physical curvature or a characteristic scale over the canonical scale-free supermassive black hole binary spectrum. Among the tested physical templates, a first-order phase transition has the largest compressed spectral evidence, while environmental SMBHB hardening is the leading astrophysical interpretation.</p>
+      </section>
+
+      <section id="findings" aria-labelledby="findings-heading">
+        <h2 id="findings-heading">Key Bayesian evidence results</h2>
+        <p>The canonical gravitational-wave-driven SMBHB power law is the reference model. Values are computed from the corrected public NANOGrav 15-year HD free-spectrum KDE under the baseline priors.</p>
+        <table class="evidence-table">
+          <thead>
+            <tr><th>Model</th><th>Delta ln Z</th><th>Bayes factor</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Free-slope power law</td><td>5.73</td><td>306.70</td></tr>
+            <tr><td>First-order phase transition</td><td>4.94</td><td>139.46</td></tr>
+            <tr><td>Environmental SMBHB turnover</td><td>3.87</td><td>47.97</td></tr>
+            <tr><td>Effective cosmic-string spectrum</td><td>0.39</td><td>1.48</td></tr>
+            <tr><td>Canonical SMBHB power law</td><td>0.00</td><td>1.00</td></tr>
+          </tbody>
+        </table>
+
+        <div class="key-findings">
+          <div class="finding">
+            <h3>Angular symmetry</h3>
+            <p>The Hellings-Downs correlation fixes the tensor angular-correlation class of the isotropic stochastic background.</p>
+          </div>
+          <div class="finding">
+            <h3>Spectral curvature</h3>
+            <p>The evidence favors a free slope or a physical spectrum carrying a bend, peak, or characteristic scale.</p>
+          </div>
+          <div class="finding">
+            <h3>Multi-band continuation</h3>
+            <p>The LISA forecast separates a PTA-selected QCD-scale phase transition from an unchanged broad cosmic-string extrapolation.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="applications" aria-labelledby="applications-heading">
+        <h2 id="applications-heading">What can researchers use this work for?</h2>
+        <ul class="use-list">
+          <li>Classify astrophysical and cosmological origins of a Hellings-Downs-correlated PTA signal.</li>
+          <li>Connect a low-frequency SMBHB turnover to parsec-scale nuclear stellar environments.</li>
+          <li>Compare first-order phase-transition and effective cosmic-string spectra in one evidence framework.</li>
+          <li>Test PTA-to-LISA spectral consistency and identify models requiring an inter-band break.</li>
+          <li>Benchmark prior sensitivity, low-bin ablations, leave-one-frequency-out stability, and alternative KDE products.</li>
+          <li>Reuse machine-readable evidence tables, posterior samples, scripts, and public inputs.</li>
+        </ul>
+        <p class="scope-note"><strong>Scope:</strong> the published evidence values use public frequency-by-frequency KDE products. The repository also contains a direct timing-likelihood extension, but its exploratory outputs are not the evidence values reported in the paper.</p>
+      </section>
+
+      <section class="faq" id="faq" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">Frequently asked questions</h2>
+        <details open>
+          <summary>What is the main conclusion?</summary>
+          <p>Current public NANOGrav spectral evidence favors non-canonical structure over the strict scale-free SMBHB prediction. The result directs source interpretation toward environmental binary evolution or a spectrum with an early-Universe characteristic scale.</p>
+        </details>
+        <details>
+          <summary>Which physical model is preferred?</summary>
+          <p>The first-order phase-transition template has the largest compressed evidence among the tested physical templates. Environmental SMBHB hardening is the strongest astrophysical model. This ranking is conditional on the tested models, public KDE compression, and stated priors.</p>
+        </details>
+        <details>
+          <summary>Does the analysis prove an early-Universe phase transition?</summary>
+          <p>No. It shows that the tested phase-transition template explains the compressed spectrum better than the canonical scale-free SMBHB model under the baseline priors. Model ranking is not a unique source identification.</p>
+        </details>
+        <details>
+          <summary>Where are the paper, data, and code?</summary>
+          <p>The public GitHub repository contains the Version of Record, graphical abstract, scripts, and numerical outputs. The data-only archive is preserved on Zenodo at DOI 10.5281/zenodo.20319210.</p>
+        </details>
+        <details>
+          <summary>How should this work be cited?</summary>
+          <p>Cite Hua Xu, Weiming Zhang, and Yike Guo, “Bayesian Evidence for Angular Symmetry and Spectral Curvature in the Nanohertz Gravitational-Wave Background,” <em>Symmetry</em> 18 (2026), 1169, DOI 10.3390/sym18071169.</p>
+        </details>
+      </section>
+
+      <section aria-labelledby="citation-heading">
+        <h2 id="citation-heading">Citation</h2>
+        <pre>@article{xu2026bayesian,
+  author  = {Xu, Hua and Zhang, Weiming and Guo, Yike},
+  title   = {Bayesian Evidence for Angular Symmetry and Spectral Curvature in the Nanohertz Gravitational-Wave Background},
+  journal = {Symmetry},
+  year    = {2026},
+  volume  = {18},
+  number  = {7},
+  pages   = {1169},
+  doi     = {10.3390/sym18071169}
+}</pre>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    Published by MDPI in <em>Symmetry</em>. Article content is available under CC BY 4.0. Site metadata last updated 15 July 2026.
+  </footer>
+</body>
+</html>

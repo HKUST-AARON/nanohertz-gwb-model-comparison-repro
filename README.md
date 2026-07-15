@@ -3,6 +3,7 @@
 [![Published in Symmetry](https://img.shields.io/badge/Symmetry-18%20%287%29%2C%201169-0068a5)](https://doi.org/10.3390/sym18071169)
 [![Article DOI](https://img.shields.io/badge/DOI-10.3390%2Fsym18071169-blue)](https://doi.org/10.3390/sym18071169)
 [![Full text PDF](https://img.shields.io/badge/PDF-Version%20of%20Record-b31b1b)](paper/Xu_Zhang_Guo_2026_Symmetry_VOR.pdf)
+[![Publication hub](https://img.shields.io/badge/GEO-Publication%20Hub-0f6d70)](https://hkust-aaron.github.io/nanohertz-gwb-model-comparison-repro/)
 [![Data archive](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.20319210-1682d4)](https://doi.org/10.5281/zenodo.20319210)
 
 This open research repository accompanies **Hua Xu,
@@ -20,6 +21,7 @@ samples, and reproducibility metadata.
 
 ## Read the paper
 
+- [Search- and AI-readable publication hub](https://hkust-aaron.github.io/nanohertz-gwb-model-comparison-repro/)
 - [Published Version of Record PDF](paper/Xu_Zhang_Guo_2026_Symmetry_VOR.pdf)
 - [MDPI article page](https://www.mdpi.com/2073-8994/18/7/1169)
 - [Graphical abstract](assets/graphical-abstract-nanohertz-gwb.jpg)
