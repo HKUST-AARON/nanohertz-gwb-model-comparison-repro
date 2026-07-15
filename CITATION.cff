@@ -3,6 +3,9 @@ message: "Please cite the published Symmetry article when using this repository.
 title: "Research companion for Bayesian evidence analysis of nanohertz gravitational-wave spectra"
 type: dataset
 license: CC-BY-4.0
+version: 1.0.5
+date-released: 2026-06-29
+abstract: "Data-only reproducibility archive containing public NANOGrav inputs, analysis scripts, Bayesian evidence outputs, posterior samples, and environment metadata for the associated Symmetry article."
 authors:
   - family-names: Xu
     given-names: Hua
@@ -25,9 +28,14 @@ keywords:
   - Bayesian model comparison
   - NANOGrav 15-year data set
   - supermassive black hole binaries
+  - environmental hardening
   - first-order phase transition
+  - QCD phase transition
   - cosmic strings
+  - spectral curvature
+  - Bayesian evidence
   - LISA forecast
+  - multi-band gravitational waves
 preferred-citation:
   type: article
   authors:

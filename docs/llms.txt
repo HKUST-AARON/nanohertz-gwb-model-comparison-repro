@@ -6,8 +6,13 @@
 
 - [Publication hub](https://hkust-aaron.github.io/nanohertz-gwb-model-comparison-repro/): Direct summary, evidence table, applications, FAQ, citation, and resource links.
 - [Published article](https://doi.org/10.3390/sym18071169): Version of Record in Symmetry 18 (2026), article 1169.
+- [OpenAlex record](https://openalex.org/W7167924336): Open scholarly graph record for the article.
+- [Semantic Scholar record](https://www.semanticscholar.org/paper/56225036fbd4d9a05f81c574e4f144a595306aa3): Semantic Scholar article record.
 - [Open PDF](https://raw.githubusercontent.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/main/paper/Xu_Zhang_Guo_2026_Symmetry_VOR.pdf): Full 28-page published Version of Record under CC BY 4.0.
 - [Graphical abstract](https://raw.githubusercontent.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/main/assets/graphical-abstract-nanohertz-gwb.jpg): Visual explanation from Hellings-Downs angular symmetry to physical source models.
+- [BibTeX citation](https://raw.githubusercontent.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/main/CITATION.bib): Canonical BibTeX record.
+- [RIS citation](https://raw.githubusercontent.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/main/CITATION.ris): Canonical RIS record.
+- [CSL-JSON citation](https://raw.githubusercontent.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/main/CITATION.json): Canonical CSL-JSON record.
 
 ## Data and Code
 
@@ -25,6 +30,7 @@
 - Published: 10 July 2026
 - Article DOI: 10.3390/sym18071169
 - Data DOI: 10.5281/zenodo.20319210
+- Article-cited archive DOI: 10.5281/zenodo.20581821
 - License: Creative Commons Attribution 4.0 International (CC BY 4.0)
 - Primary input: corrected NANOGrav 15-year Hellings-Downs free-spectrum KDE, version 1.1.0
 - Main result: spectra with curvature or a characteristic scale are favored over the canonical scale-free SMBHB spectrum

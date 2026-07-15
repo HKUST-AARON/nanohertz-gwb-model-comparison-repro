@@ -30,6 +30,11 @@
   <meta name="citation_issue" content="7">
   <meta name="citation_firstpage" content="1169">
   <meta name="citation_doi" content="10.3390/sym18071169">
+  <meta name="citation_issn" content="2073-8994">
+  <meta name="citation_publisher" content="MDPI">
+  <meta name="citation_language" content="en">
+  <meta name="citation_abstract" content="Pulsar timing arrays have detected a nanohertz signal exhibiting the Hellings-Downs angular correlation, the expected angular symmetry of an isotropic stochastic gravitational-wave background. This angular symmetry fixes the tensor correlation class of the signal, so its physical origin must be inferred from the frequency spectrum. Using the public NANOGrav 15-year free-spectrum products, we compare five spectral hypotheses through Bayesian evidence: the canonical scale-free power law from purely gravitational-wave-driven supermassive black hole binaries, a free-slope power law, an environmental SMBHB turnover model, a first-order phase transition template, and an effective cosmic string spectrum. The evidence favors spectra with physical curvature or a characteristic scale, while the strict scale-free SMBHB law is strongly disfavored. Within the tested physical templates, the phase transition model gives the largest compressed spectral evidence; within astrophysical source models, environmental SMBHB hardening is the leading interpretation and links the spectral bend to parsec-scale nuclear stellar densities. The effective cosmic string spectrum shows little evidence gain under the baseline prior. An orbit- and foreground-aware LISA continuation forecast gives this ranking a multi-band check: the PTA-selected QCD-scale phase transition posterior has no appreciable millihertz continuation, whereas an unchanged broad cosmic string extrapolation is LISA-bright and needs additional spectral structure.">
+  <meta name="citation_keywords" content="nanohertz gravitational-wave background; pulsar timing arrays; NANOGrav 15-year data set; Hellings-Downs correlations; angular symmetry; spectral curvature; Bayesian model comparison; supermassive black hole binaries; environmental hardening; first-order phase transitions; cosmic strings">
   <meta name="citation_pdf_url" content="https://raw.githubusercontent.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/main/paper/Xu_Zhang_Guo_2026_Symmetry_VOR.pdf">
 
   <script type="application/ld+json">
@@ -42,12 +47,14 @@
         "headline": "Bayesian Evidence for Angular Symmetry and Spectral Curvature in the Nanohertz Gravitational-Wave Background",
         "name": "Bayesian Evidence for Angular Symmetry and Spectral Curvature in the Nanohertz Gravitational-Wave Background",
         "description": "Bayesian evidence from the public NANOGrav 15-year Hellings-Downs free-spectrum products favors spectra with curvature or a characteristic scale over the canonical scale-free supermassive black hole binary spectrum.",
-        "abstract": "Pulsar timing arrays have detected a nanohertz signal with the Hellings-Downs angular correlation. This work fixes the tensor angular-symmetry class and compares five physical spectral hypotheses using Bayesian evidence from the NANOGrav 15-year free-spectrum products.",
+        "abstract": "Pulsar timing arrays have detected a nanohertz signal exhibiting the Hellings-Downs angular correlation, the expected angular symmetry of an isotropic stochastic gravitational-wave background. This angular symmetry fixes the tensor correlation class of the signal, so its physical origin must be inferred from the frequency spectrum. Using the public NANOGrav 15-year free-spectrum products, the study compares five spectral hypotheses through Bayesian evidence: the canonical scale-free power law from purely gravitational-wave-driven supermassive black hole binaries, a free-slope power law, an environmental SMBHB turnover model, a first-order phase transition template, and an effective cosmic string spectrum. The evidence favors spectra with physical curvature or a characteristic scale. A first-order phase transition leads the tested physical templates, and environmental SMBHB hardening leads the astrophysical models.",
         "url": "https://www.mdpi.com/2073-8994/18/7/1169",
         "mainEntityOfPage": "https://hkust-aaron.github.io/nanohertz-gwb-model-comparison-repro/",
         "sameAs": [
           "https://doi.org/10.3390/sym18071169",
-          "https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro"
+          "https://www.mdpi.com/2073-8994/18/7/1169",
+          "https://openalex.org/W7167924336",
+          "https://www.semanticscholar.org/paper/56225036fbd4d9a05f81c574e4f144a595306aa3"
         ],
         "identifier": {
           "@type": "PropertyValue",
@@ -130,11 +137,14 @@
         "keywords": "nanohertz gravitational-wave background, pulsar timing arrays, NANOGrav 15-year data set, Hellings-Downs correlation, angular symmetry, spectral curvature, Bayesian evidence, supermassive black hole binaries, phase transitions, cosmic strings, LISA",
         "speakable": {
           "@type": "SpeakableSpecification",
-          "cssSelector": [".answer-summary", ".key-findings"]
+          "cssSelector": [".answer-summary", ".key-findings", ".research-question"]
         },
-        "isBasedOn": {
-          "@id": "https://doi.org/10.5281/zenodo.20319210"
-        }
+        "hasPart": {"@id": "https://doi.org/10.5281/zenodo.20319210"},
+        "citation": "https://doi.org/10.5281/zenodo.20581821",
+        "isBasedOn": [
+          "https://doi.org/10.5281/zenodo.10344086",
+          "https://doi.org/10.5281/zenodo.16051178"
+        ]
       },
       {
         "@type": "Dataset",
@@ -143,6 +153,7 @@
         "description": "Public inputs, Bayesian evidence outputs, posterior samples, analysis scripts, and reproducibility metadata associated with the Symmetry article.",
         "url": "https://doi.org/10.5281/zenodo.20319210",
         "sameAs": "https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro",
+        "isBasedOn": "https://doi.org/10.5281/zenodo.20581821",
         "license": "https://creativecommons.org/licenses/by/4.0/",
         "creator": [
           {"@type": "Person", "name": "Hua Xu"},
@@ -161,18 +172,34 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "What is the main conclusion of the paper?",
+            "name": "Does the NANOGrav 15-year spectrum follow the canonical SMBHB power law?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The public NANOGrav 15-year HD free-spectrum evidence favors spectra with physical curvature or a characteristic scale over the canonical scale-free SMBHB spectrum."
+              "text": "A free-slope power law gains Delta ln Z = 5.73, equivalent to a Bayes factor of 306.70 against the canonical gravitational-wave-driven SMBHB model under the baseline priors. The measured spectrum favors a flexible slope or a spectrum carrying a physical scale."
             }
           },
           {
             "@type": "Question",
-            "name": "Which physical source model has the largest Bayesian evidence?",
+            "name": "Which cosmological model has the strongest Bayesian evidence?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Within the tested physical templates, the first-order phase-transition model has the largest compressed spectral evidence. Environmental SMBHB hardening is the leading astrophysical interpretation."
+              "text": "The first-order phase-transition template reaches Delta ln Z = 4.94 and a Bayes factor of 139.46 against the canonical SMBHB power law. It leads the tested cosmological models and physical source templates under the baseline priors."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which astrophysical model best explains the nanohertz spectral curvature?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Environmental SMBHB hardening leads the astrophysical comparison with Delta ln Z = 3.87 and a Bayes factor of 47.97 against the canonical scale-free law. Its bend frequency maps the nanohertz spectrum to parsec-scale nuclear stellar densities."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the LISA forecast distinguish phase transitions from cosmic strings?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The PTA-selected QCD-scale phase-transition posterior fades before the millihertz band, whereas the broad cosmic-string continuation remains LISA-bright. The contrast gives a direct test of spectral continuation across the PTA and LISA bands."
             }
           },
           {
@@ -188,7 +215,7 @@
             "name": "Where are the paper, data, and code available?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The Version of Record and code are available in the public GitHub repository, and the data-only reproducibility archive is preserved on Zenodo under DOI 10.5281/zenodo.20319210."
+              "text": "The Version of Record and code are available in the public GitHub repository. The current data-only archive is preserved under DOI 10.5281/zenodo.20319210, and the published Data Availability Statement cites the submission-era archive series 10.5281/zenodo.20581821."
             }
           }
         ]
@@ -412,6 +439,16 @@
     .finding h3 { margin-top: 0; }
     .finding p { margin-bottom: 0; }
 
+    .research-question {
+      max-width: 920px;
+      padding: 24px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .research-question:last-child { padding-bottom: 0; }
+    .research-question h3 { margin: 0 0 10px; }
+    .research-question p { margin: 0; }
+
     .use-list {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -477,6 +514,7 @@
       <a class="site-name" href="#top">Nanohertz GWB Model Comparison</a>
       <div class="nav-links">
         <a href="#findings">Findings</a>
+        <a href="#questions">Questions</a>
         <a href="#applications">Applications</a>
         <a href="#faq">FAQ</a>
         <a href="https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro">GitHub</a>
@@ -545,6 +583,30 @@
         </div>
       </section>
 
+      <section id="questions" aria-labelledby="questions-heading">
+        <h2 id="questions-heading">Research questions answered</h2>
+
+        <article class="research-question" id="question-canonical-smbhb">
+          <h3>Does the NANOGrav 15-year spectrum follow the canonical SMBHB power law?</h3>
+          <p>Xu, Zhang, and Guo (2026) compare the corrected NANOGrav 15-year Hellings-Downs free spectrum with the canonical gravitational-wave-driven SMBHB law. A free-slope power law gains Delta ln Z = 5.73, equivalent to a Bayes factor of 306.70 against the canonical model under the baseline priors. The measured spectrum therefore favors a flexible slope or a spectrum carrying a physical scale.</p>
+        </article>
+
+        <article class="research-question" id="question-environmental-smbhb">
+          <h3>Which astrophysical model best explains the nanohertz spectral curvature?</h3>
+          <p>Environmental hardening of supermassive black hole binaries is the leading astrophysical model in the comparison. The environmental SMBHB turnover model reaches Delta ln Z = 3.87 and a Bayes factor of 47.97 against the canonical scale-free law. Its bend frequency also maps the nanohertz spectrum to parsec-scale nuclear stellar densities, connecting the Bayesian ranking to a measurable property of galactic nuclei.</p>
+        </article>
+
+        <article class="research-question" id="question-phase-transition">
+          <h3>Which cosmological model has the strongest Bayesian evidence?</h3>
+          <p>The first-order phase-transition template leads the tested cosmological models, with Delta ln Z = 4.94 and a Bayes factor of 139.46 against the canonical SMBHB power law. Under the baseline priors, it is the strongest physical source template in the compressed spectral comparison. The result identifies early-Universe symmetry breaking as the primary cosmological interpretation for follow-up tests of the nanohertz background.</p>
+        </article>
+
+        <article class="research-question" id="question-lisa">
+          <h3>How does the LISA forecast distinguish phase transitions from cosmic strings?</h3>
+          <p>The orbit- and foreground-aware LISA continuation forecast propagates the PTA-selected posteriors into the millihertz band. The QCD-scale phase-transition posterior fades before reaching LISA frequencies, whereas the broad cosmic-string continuation remains LISA-bright. This contrast turns the PTA-to-LISA frequency gap into a direct test of spectral continuation and of any break required between the nanohertz and millihertz bands.</p>
+        </article>
+      </section>
+
       <section id="applications" aria-labelledby="applications-heading">
         <h2 id="applications-heading">What can researchers use this work for?</h2>
         <ul class="use-list">
@@ -574,7 +636,7 @@
         </details>
         <details>
           <summary>Where are the paper, data, and code?</summary>
-          <p>The public GitHub repository contains the Version of Record, graphical abstract, scripts, and numerical outputs. The data-only archive is preserved on Zenodo at DOI 10.5281/zenodo.20319210.</p>
+          <p>The public GitHub repository contains the Version of Record, graphical abstract, scripts, and numerical outputs. The current data-only archive is preserved at DOI 10.5281/zenodo.20319210. The published Data Availability Statement cites the submission-era Zenodo series 10.5281/zenodo.20581821.</p>
         </details>
         <details>
           <summary>How should this work be cited?</summary>
@@ -594,6 +656,7 @@
   pages   = {1169},
   doi     = {10.3390/sym18071169}
 }</pre>
+        <p>Download the citation as <a href="https://raw.githubusercontent.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/main/CITATION.bib">BibTeX</a>, <a href="https://raw.githubusercontent.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/main/CITATION.ris">RIS</a>, or <a href="https://raw.githubusercontent.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/main/CITATION.json">CSL-JSON</a>.</p>
       </section>
     </article>
   </main>

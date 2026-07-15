@@ -25,6 +25,8 @@ samples, and reproducibility metadata.
 - [Publication summary and resources](https://hkust-aaron.github.io/nanohertz-gwb-model-comparison-repro/)
 - [Published Version of Record PDF](paper/Xu_Zhang_Guo_2026_Symmetry_VOR.pdf)
 - [MDPI article page](https://www.mdpi.com/2073-8994/18/7/1169)
+- [OpenAlex record](https://openalex.org/W7167924336)
+- [Semantic Scholar record](https://www.semanticscholar.org/paper/56225036fbd4d9a05f81c574e4f144a595306aa3)
 - [Graphical abstract](assets/graphical-abstract-nanohertz-gwb.jpg)
 - [PDF provenance, checksum, and license](paper/README.md)
 
@@ -62,6 +64,16 @@ the reference model.
 Machine-readable values are in
 [`analysis_outputs/kde_model_comparison/model_comparison.json`](analysis_outputs/kde_model_comparison/model_comparison.json).
 
+## Research questions addressed
+
+- [Does the NANOGrav 15-year spectrum follow the canonical SMBHB power law?](https://hkust-aaron.github.io/nanohertz-gwb-model-comparison-repro/#question-canonical-smbhb)
+- [Which astrophysical model best explains the nanohertz spectral curvature?](https://hkust-aaron.github.io/nanohertz-gwb-model-comparison-repro/#question-environmental-smbhb)
+- [Which cosmological model has the strongest Bayesian evidence?](https://hkust-aaron.github.io/nanohertz-gwb-model-comparison-repro/#question-phase-transition)
+- [How does the LISA forecast distinguish phase transitions from cosmic strings?](https://hkust-aaron.github.io/nanohertz-gwb-model-comparison-repro/#question-lisa)
+
+The publication hub provides a quantitative answer to each question using the
+reported log-evidence differences and Bayes factors.
+
 ## Research applications
 
 - **PTA source classification:** compare astrophysical and cosmological
@@ -93,12 +105,16 @@ symmetry breaking, cosmic strings, and LISA multi-band forecasts.
   <https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro>
 - Latest data-only GitHub release:
   <https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/releases/tag/v1.0.5-data-only>
-- Zenodo all-versions DOI for the data-only archive:
+- Current Zenodo all-versions DOI for the data-only archive:
   <https://doi.org/10.5281/zenodo.20319210>
+- Zenodo archive series cited in the published Data Availability Statement:
+  <https://doi.org/10.5281/zenodo.20581821>
 
 The GitHub repository contains the paper and visual summary. The tagged
 GitHub release and Zenodo DOI provide focused data packages for reproducing the
-analysis.
+analysis. The published article identifies the submission-era Zenodo series;
+the current data-only series packages the final public inputs, scripts,
+numerical outputs, and posterior samples.
 
 ## Environment
 
@@ -160,6 +176,9 @@ Please cite the published article when using this archive:
 ```
 
 GitHub also exposes the same citation through [`CITATION.cff`](CITATION.cff).
+Citation downloads are available as [BibTeX](CITATION.bib), [RIS](CITATION.ris),
+and [CSL-JSON](CITATION.json). Research software metadata is available in
+[`codemeta.json`](codemeta.json).
 
 ## License
 

@@ -1,0 +1,63 @@
+{
+  "@context": "https://w3id.org/codemeta/3.1",
+  "@type": "SoftwareSourceCode",
+  "name": "Nanohertz GWB Model Comparison Reproducibility Archive",
+  "description": "Python and shell workflows that reproduce Bayesian evidence comparisons of five nanohertz gravitational-wave background spectral models using the public NANOGrav 15-year Hellings-Downs free-spectrum products.",
+  "identifier": "https://doi.org/10.5281/zenodo.20319210",
+  "codeRepository": "https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro",
+  "relatedLink": [
+    "https://doi.org/10.5281/zenodo.20319210",
+    "https://doi.org/10.5281/zenodo.20581821",
+    "https://hkust-aaron.github.io/nanohertz-gwb-model-comparison-repro/"
+  ],
+  "downloadUrl": "https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/releases/download/v1.0.5-data-only/nanohertz-gwb-model-comparison-data-v1.0.5.zip",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "version": "1.0.5",
+  "dateCreated": "2026-06-07",
+  "datePublished": "2026-06-29",
+  "dateModified": "2026-07-15",
+  "programmingLanguage": ["Python", "Shell"],
+  "runtimePlatform": "Python 3.11",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Hua",
+      "familyName": "Xu",
+      "@id": "https://orcid.org/0009-0001-4243-7943",
+      "affiliation": "The Hong Kong University of Science and Technology"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Weiming",
+      "familyName": "Zhang",
+      "affiliation": "Tsinghua University"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Yike",
+      "familyName": "Guo",
+      "@id": "https://orcid.org/0009-0005-8401-282X",
+      "affiliation": "The Hong Kong University of Science and Technology"
+    }
+  ],
+  "keywords": [
+    "nanohertz gravitational-wave background",
+    "pulsar timing arrays",
+    "NANOGrav 15-year data set",
+    "Hellings-Downs correlation",
+    "Bayesian evidence",
+    "spectral curvature",
+    "supermassive black hole binaries",
+    "environmental hardening",
+    "first-order phase transition",
+    "cosmic strings",
+    "LISA"
+  ],
+  "referencePublication": {
+    "@type": "ScholarlyArticle",
+    "@id": "https://doi.org/10.3390/sym18071169",
+    "name": "Bayesian Evidence for Angular Symmetry and Spectral Curvature in the Nanohertz Gravitational-Wave Background",
+    "datePublished": "2026-07-10",
+    "isPartOf": "Symmetry 18 (7), 1169"
+  }
+}

@@ -32,6 +32,12 @@
       "relation": "isSupplementTo",
       "scheme": "doi",
       "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.5281/zenodo.20581821",
+      "relation": "isNewVersionOf",
+      "scheme": "doi",
+      "resource_type": "software"
     }
   ],
   "keywords": [
@@ -39,10 +45,15 @@
     "nanohertz gravitational-wave background",
     "Hellings-Downs correlation",
     "Bayesian model comparison",
+    "Bayesian evidence",
+    "spectral curvature",
     "NANOGrav 15-year data set",
     "supermassive black hole binaries",
+    "environmental hardening",
     "first-order phase transition",
+    "QCD phase transition",
     "cosmic strings",
-    "LISA forecast"
+    "LISA forecast",
+    "multi-band gravitational waves"
   ]
 }

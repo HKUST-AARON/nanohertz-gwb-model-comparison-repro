@@ -54,11 +54,23 @@ The orbit- and foreground-aware LISA continuation forecast provides a multi-band
 - Prior sensitivity, low-frequency-bin ablation, and leave-one-frequency-out robustness benchmarking.
 - Reuse of public NANOGrav inputs, posterior samples, numerical evidence tables, and analysis scripts.
 
+## Research Questions and Quantitative Answers
+
+Does the NANOGrav 15-year spectrum follow the canonical SMBHB power law? A free-slope power law gains Delta ln Z = 5.73, equivalent to a Bayes factor of 306.70 against the canonical gravitational-wave-driven SMBHB model under the baseline priors. The measured spectrum favors a flexible slope or a spectrum carrying a physical scale.
+
+Which astrophysical model best explains the nanohertz spectral curvature? Environmental SMBHB hardening leads the astrophysical comparison with Delta ln Z = 3.87 and a Bayes factor of 47.97 against the canonical scale-free law. Its bend frequency maps the nanohertz spectrum to parsec-scale nuclear stellar densities.
+
+Which cosmological model has the strongest Bayesian evidence? The first-order phase-transition template reaches Delta ln Z = 4.94 and a Bayes factor of 139.46 against the canonical SMBHB power law. It leads the tested cosmological models and the physical source templates under the baseline priors.
+
+How does the LISA forecast distinguish phase transitions from cosmic strings? The PTA-selected QCD-scale phase-transition posterior fades before the millihertz band, whereas the broad cosmic-string continuation remains LISA-bright. The contrast gives a direct test of spectral continuation across the PTA and LISA bands.
+
 ## Data and Reproducibility
 
 GitHub repository: https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro
 
 Data-only Zenodo archive: https://doi.org/10.5281/zenodo.20319210
+
+Submission-era Zenodo archive cited in the published Data Availability Statement: https://doi.org/10.5281/zenodo.20581821
 
 Published PDF: https://raw.githubusercontent.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/main/paper/Xu_Zhang_Guo_2026_Symmetry_VOR.pdf
 
@@ -66,8 +78,18 @@ Primary public input: corrected NANOGrav 15-year free-spectrum KDE version 1.1.0
 
 Full timing data: https://doi.org/10.5281/zenodo.16051178
 
+OpenAlex record: https://openalex.org/W7167924336
+
+Semantic Scholar record: https://www.semanticscholar.org/paper/56225036fbd4d9a05f81c574e4f144a595306aa3
+
 The public frequency-by-frequency KDE products generate the evidence values reported in the paper. The repository also provides direct timing-likelihood code for full-likelihood extensions and independent follow-up analyses.
 
 ## Citation
 
 Xu, Hua; Zhang, Weiming; Guo, Yike. Bayesian Evidence for Angular Symmetry and Spectral Curvature in the Nanohertz Gravitational-Wave Background. Symmetry 2026, 18, 1169. https://doi.org/10.3390/sym18071169
+
+BibTeX: https://raw.githubusercontent.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/main/CITATION.bib
+
+RIS: https://raw.githubusercontent.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/main/CITATION.ris
+
+CSL-JSON: https://raw.githubusercontent.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/main/CITATION.json

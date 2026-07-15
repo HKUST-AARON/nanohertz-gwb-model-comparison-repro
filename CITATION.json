@@ -1,0 +1,22 @@
+[
+  {
+    "id": "xu2026bayesian",
+    "type": "article-journal",
+    "title": "Bayesian Evidence for Angular Symmetry and Spectral Curvature in the Nanohertz Gravitational-Wave Background",
+    "author": [
+      {"family": "Xu", "given": "Hua", "ORCID": "https://orcid.org/0009-0001-4243-7943"},
+      {"family": "Zhang", "given": "Weiming"},
+      {"family": "Guo", "given": "Yike", "ORCID": "https://orcid.org/0009-0005-8401-282X"}
+    ],
+    "container-title": "Symmetry",
+    "volume": "18",
+    "issue": "7",
+    "page": "1169",
+    "issued": {"date-parts": [[2026, 7, 10]]},
+    "DOI": "10.3390/sym18071169",
+    "URL": "https://doi.org/10.3390/sym18071169",
+    "ISSN": "2073-8994",
+    "language": "en",
+    "keyword": "nanohertz gravitational-wave background; pulsar timing arrays; NANOGrav 15-year data set; Hellings-Downs correlations; angular symmetry; spectral curvature; Bayesian model comparison; supermassive black hole binaries; environmental hardening; first-order phase transitions; cosmic strings"
+  }
+]
