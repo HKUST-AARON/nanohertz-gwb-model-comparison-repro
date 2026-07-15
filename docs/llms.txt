@@ -15,7 +15,7 @@
 - [CC BY 4.0 license](https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/blob/main/LICENSE): Reuse terms for repository-authored materials.
 - [Zenodo data archive](https://doi.org/10.5281/zenodo.20319210): Data-only reproducibility archive with a persistent DOI.
 - [Machine-readable model comparison](https://raw.githubusercontent.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/main/analysis_outputs/kde_model_comparison/model_comparison.json): Delta log evidence and Bayes factors for five spectral models.
-- [Reproducibility workflow](https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/blob/main/repro/README.md): Environment, public inputs, commands, and scope notes.
+- [Reproducibility workflow](https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/blob/main/repro/README.md): Environment, public inputs, commands, and method details.
 
 ## Key Facts
 

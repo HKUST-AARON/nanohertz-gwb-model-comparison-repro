@@ -16,7 +16,7 @@ License: Creative Commons Attribution 4.0 International (CC BY 4.0), https://cre
 
 ## Direct Answer
 
-The public NANOGrav 15-year Hellings-Downs free-spectrum evidence favors spectra with physical curvature or a characteristic scale over the canonical scale-free supermassive black hole binary spectrum. Among the tested physical templates, a first-order phase transition has the largest compressed spectral evidence, while environmental SMBHB hardening is the leading astrophysical interpretation.
+The public NANOGrav 15-year Hellings-Downs free-spectrum evidence favors spectra with physical curvature or a characteristic scale over the canonical scale-free supermassive black hole binary spectrum. A first-order phase transition leads the tested physical templates, and environmental SMBHB hardening leads the astrophysical models.
 
 ## Scientific Question
 
@@ -36,13 +36,13 @@ Machine-readable source: https://raw.githubusercontent.com/HKUST-AARON/nanohertz
 
 ## Interpretation
 
-The data favor non-canonical spectral structure. The free-slope power law gives the largest evidence gain overall, showing that the canonical fixed slope is not supported by the compressed spectrum. Among physical templates, the phase-transition model has the largest compressed evidence. Among astrophysical models, environmental SMBHB hardening is the leading interpretation and connects the spectral bend to parsec-scale nuclear stellar densities. The effective cosmic-string spectrum gains little evidence under the baseline prior.
+The evidence selects non-canonical spectral structure. The free-slope power law gives the largest evidence gain overall and places first in the full ranking. The phase-transition model leads the physical templates. Environmental SMBHB hardening leads the astrophysical models and connects the spectral bend to parsec-scale nuclear stellar densities. The effective cosmic-string spectrum stays close to the canonical baseline.
 
-The ranking is conditional on the tested model set, prior choices, and public frequency-by-frequency KDE compression. The result is a quantitative model comparison, not a unique proof of one physical source.
+The comparison ranks five source hypotheses using the stated priors and public frequency-by-frequency KDE representation. The numerical evidence separates the leading astrophysical and cosmological interpretations.
 
 ## LISA Continuation
 
-The orbit- and foreground-aware LISA continuation forecast provides a multi-band consistency test. The PTA-selected QCD-scale phase-transition posterior has no appreciable millihertz continuation, whereas an unchanged broad cosmic-string extrapolation is LISA-bright and therefore requires additional spectral structure if it is to remain compatible across bands.
+The orbit- and foreground-aware LISA continuation forecast provides a multi-band consistency test. The PTA-selected QCD-scale phase-transition posterior fades before the millihertz band. The broad cosmic-string continuation remains LISA-bright, giving a direct test of spectral breaks across the PTA and LISA bands.
 
 ## Research Applications
 
@@ -66,7 +66,7 @@ Primary public input: corrected NANOGrav 15-year free-spectrum KDE version 1.1.0
 
 Full timing data: https://doi.org/10.5281/zenodo.16051178
 
-The evidence values reported in the paper use public frequency-by-frequency KDE products. Direct timing-likelihood code is included as an extension, but exploratory timing-likelihood outputs are not the published evidence values.
+The public frequency-by-frequency KDE products generate the evidence values reported in the paper. The repository also provides direct timing-likelihood code for full-likelihood extensions and independent follow-up analyses.
 
 ## Citation
 

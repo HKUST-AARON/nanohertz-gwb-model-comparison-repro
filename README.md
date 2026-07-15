@@ -38,13 +38,12 @@ symmetry class of the nanohertz gravitational-wave background, then uses the
 frequency spectrum to test its physical origin. Bayesian evidence from the
 public NANOGrav 15-year HD free-spectrum products favors spectra with curvature
 or a characteristic scale over the canonical scale-free supermassive black
-hole binary (SMBHB) spectrum. Among the tested physical templates, a
-first-order phase transition has the largest compressed spectral evidence,
-while environmental SMBHB hardening is the leading astrophysical explanation.
-The effective cosmic-string template provides little evidence gain under the
-baseline prior. An orbit- and foreground-aware LISA continuation forecast then
-tests whether the PTA-selected spectra should remain visible at millihertz
-frequencies.
+hole binary (SMBHB) spectrum. A first-order phase transition leads the tested
+physical templates, and environmental SMBHB hardening leads the astrophysical
+models. The effective cosmic-string template stays close to the canonical
+baseline. An orbit- and foreground-aware LISA continuation forecast maps the
+PTA-selected spectra into the millihertz band and identifies their distinct
+multi-band signatures.
 
 ## Key Bayesian evidence results
 
@@ -97,8 +96,9 @@ symmetry breaking, cosmic strings, and LISA multi-band forecasts.
 - Zenodo all-versions DOI for the data-only archive:
   <https://doi.org/10.5281/zenodo.20319210>
 
-The GitHub repository contains the paper and visual summary. The tagged GitHub
-release and Zenodo record remain data-only archives for reproducible analysis.
+The GitHub repository contains the paper and visual summary. The tagged
+GitHub release and Zenodo DOI provide focused data packages for reproducing the
+analysis.
 
 ## Environment
 
@@ -138,10 +138,9 @@ This regenerates:
 - `analysis_outputs/smbhb_env/sbpl_density_summary.json`
 - `analysis_outputs/smbhb_env/sbpl_density_samples.npz`
 
-The published evidence tables use these public-KDE outputs. The direct
-timing-likelihood pipeline is included as an extension, but its exploratory
-outputs should not be interpreted as the evidence values reported in the
-article.
+The public-KDE outputs generate the evidence tables reported in the article.
+The repository also provides a direct timing-likelihood pipeline for
+full-likelihood extensions and independent follow-up analyses.
 
 ## Citation
 
@@ -164,13 +163,11 @@ GitHub also exposes the same citation through [`CITATION.cff`](CITATION.cff).
 
 ## License
 
-Unless otherwise noted, original materials in this repository are licensed
-under the [Creative Commons Attribution 4.0 International License](LICENSE).
-This includes the repository-authored analysis code, documentation, figures,
-metadata, and generated outputs. The published article and graphical abstract
-are distributed under the same CC BY 4.0 license by MDPI.
+The [Creative Commons Attribution 4.0 International License](LICENSE) covers
+the repository-authored analysis code, documentation, figures, metadata, and
+generated outputs. MDPI distributes the published article and graphical
+abstract under the same license.
 
-When reusing these materials, cite the published article and indicate whether
-changes were made. Third-party inputs and software dependencies retain their
-original terms; in particular, the bundled NANOGrav data product remains
-subject to the license and attribution terms of its source archive.
+You may reuse these materials with citation of the published article and a note
+describing any changes. The NANOGrav input and software dependencies carry
+their source licenses and attribution terms.
