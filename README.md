@@ -1,17 +1,80 @@
-# Data-only reproducibility archive
+# Bayesian evidence for the nanohertz gravitational-wave background
 
-This repository contains the public data inputs, numerical outputs, and scripts
-needed to reproduce the Bayesian model-comparison tables reported in the
-Symmetry manuscript. The manuscript PDF, LaTeX source, and MDPI submission
-package are intentionally not included.
+[![Published in Symmetry](https://img.shields.io/badge/Symmetry-18%20%287%29%2C%201169-0068a5)](https://doi.org/10.3390/sym18071169)
+[![Article DOI](https://img.shields.io/badge/DOI-10.3390%2Fsym18071169-blue)](https://doi.org/10.3390/sym18071169)
+[![Data archive](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.20319210-1682d4)](https://doi.org/10.5281/zenodo.20319210)
+
+This data-only repository is the reproducibility companion to **Hua Xu,
+Weiming Zhang, and Yike Guo, "Bayesian Evidence for Angular Symmetry and
+Spectral Curvature in the Nanohertz Gravitational-Wave Background," Symmetry
+18 (2026), 1169**. The article is available at
+<https://doi.org/10.3390/sym18071169> and belongs to the Special Issue
+[Symmetry in Gravitational Physics and Black Holes](https://www.mdpi.com/journal/symmetry/special_issues/460H8ZKJ84).
+
+The repository contains public NANOGrav inputs, analysis scripts, numerical
+evidence outputs, posterior samples, and reproducibility metadata. The article
+PDF, LaTeX source, and MDPI production files are intentionally not included.
+
+## What does the paper find?
+
+The paper uses the Hellings-Downs angular correlation to fix the tensor
+symmetry class of the nanohertz gravitational-wave background, then uses the
+frequency spectrum to test its physical origin. Bayesian evidence from the
+public NANOGrav 15-year HD free-spectrum products favors spectra with curvature
+or a characteristic scale over the canonical scale-free supermassive black
+hole binary (SMBHB) spectrum. Among the tested physical templates, a
+first-order phase transition has the largest compressed spectral evidence,
+while environmental SMBHB hardening is the leading astrophysical explanation.
+The effective cosmic-string template provides little evidence gain under the
+baseline prior. An orbit- and foreground-aware LISA continuation forecast then
+tests whether the PTA-selected spectra should remain visible at millihertz
+frequencies.
+
+## Key Bayesian evidence results
+
+The values below are computed from the public NANOGrav 15-year HD
+free-spectrum KDE under the baseline priors. The canonical SMBHB power law is
+the reference model.
+
+| Spectral model | Delta ln Z | Bayes factor vs. canonical SMBHB |
+|---|---:|---:|
+| Free-slope power law | 5.73 | 306.70 |
+| First-order phase transition | 4.94 | 139.46 |
+| Environmental SMBHB turnover | 3.87 | 47.97 |
+| Effective cosmic-string spectrum | 0.39 | 1.48 |
+| Canonical SMBHB power law | 0.00 | 1.00 |
+
+Machine-readable values are in
+[`analysis_outputs/kde_model_comparison/model_comparison.json`](analysis_outputs/kde_model_comparison/model_comparison.json).
+
+## Research applications
+
+- **PTA source classification:** compare astrophysical and cosmological
+  explanations after a Hellings-Downs-correlated signal has been identified.
+- **SMBHB environmental inference:** connect a low-frequency turnover to
+  parsec-scale stellar environments and nuclear stellar density.
+- **Early-Universe tests:** evaluate first-order phase-transition and effective
+  cosmic-string spectra with a common Bayesian evidence framework.
+- **PTA-LISA consistency tests:** propagate PTA posteriors into an orbit- and
+  foreground-aware millihertz forecast to identify spectra requiring a break
+  between the PTA and LISA bands.
+- **Reproducibility benchmarking:** test prior sensitivity, leave-one-frequency-
+  out stability, low-frequency-bin ablations, and alternative public KDE
+  products.
+
+These materials are relevant to pulsar timing arrays, the NANOGrav 15-year data
+set, stochastic gravitational-wave backgrounds, Hellings-Downs correlations,
+Bayesian model comparison, supermassive black hole binaries, early-Universe
+symmetry breaking, cosmic strings, and LISA multi-band forecasts.
 
 ## Public archive
 
+- Published article: <https://doi.org/10.3390/sym18071169>
 - GitHub repository:
   <https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro>
-- GitHub release:
-  <https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/releases/tag/v1.0.4-data-only>
-- Zenodo all-versions DOI:
+- Latest data-only GitHub release:
+  <https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/releases/tag/v1.0.5-data-only>
+- Zenodo all-versions DOI for the data-only archive:
   <https://doi.org/10.5281/zenodo.20319210>
 
 ## Environment
@@ -28,16 +91,14 @@ interpreter, set `PYTHON=/path/to/python` before invoking the script.
 
 ## Public data products
 
-- Full NANOGrav 15-year timing data:
-  Zenodo DOI `10.5281/zenodo.16051178`
-- Public HD free-spectrum KDE:
+- Full NANOGrav 15-year timing data: Zenodo DOI
+  [`10.5281/zenodo.16051178`](https://doi.org/10.5281/zenodo.16051178)
+- Corrected NANOGrav 15-year free-spectrum KDE, version 1.1.0: Zenodo DOI
+  [`10.5281/zenodo.10344086`](https://doi.org/10.5281/zenodo.10344086)
+- HD free-spectrum input used by the primary analysis:
   `data_sources/NANOGrav15yr_KDE-FreeSpectra_v1.1.0/ceffyl_data/30f_fs{hd}_ceffyl`
 
-The KDE input is the corrected NANOGrav `NANOGrav15yr_KDE-FreeSpectra_v1.1.0`
-Zenodo archive (DOI: `10.5281/zenodo.10344086`). The timing-data release is
-available from NANOGrav/Zenodo.
-
-## Reproduce reported analysis outputs
+## Reproduce the reported analysis
 
 ```bash
 bash repro/run_kde_model_comparison.sh
@@ -54,26 +115,26 @@ This regenerates:
 - `analysis_outputs/smbhb_env/sbpl_density_summary.json`
 - `analysis_outputs/smbhb_env/sbpl_density_samples.npz`
 
-The manuscript tables are populated from those JSON files.
+The published evidence tables use these public-KDE outputs. The direct
+timing-likelihood pipeline is included as an extension, but its exploratory
+outputs should not be interpreted as the evidence values reported in the
+article.
 
-## Direct timing-likelihood extension
+## Citation
 
-The reported manuscript evidences are the public-KDE values above. The direct
-enterprise pipeline is included as the timing-residual extension of the same
-source models, and a two-pulsar smoke test has already been archived at
-`analysis_outputs/test_run_small/smbhb_pl`.
+Please cite the published article when using this archive:
 
-Run the smoke test:
-
-```bash
-bash repro/run_enterprise_smoke.sh
+```bibtex
+@article{xu2026bayesian,
+  author  = {Xu, Hua and Zhang, Weiming and Guo, Yike},
+  title   = {Bayesian Evidence for Angular Symmetry and Spectral Curvature in the Nanohertz Gravitational-Wave Background},
+  journal = {Symmetry},
+  year    = {2026},
+  volume  = {18},
+  number  = {7},
+  pages   = {1169},
+  doi     = {10.3390/sym18071169}
+}
 ```
 
-Run the production PL/SBPL analysis:
-
-```bash
-bash repro/run_enterprise_production.sh
-```
-
-Production outputs should be deposited with the public GitHub release and
-Zenodo archive before they are cited as full timing-likelihood evidences.
+GitHub also exposes the same citation through [`CITATION.cff`](CITATION.cff).

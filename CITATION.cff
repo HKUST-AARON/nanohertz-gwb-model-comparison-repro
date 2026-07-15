@@ -1,0 +1,50 @@
+cff-version: 1.2.0
+message: "Please cite the published Symmetry article when using this archive."
+title: "Data-only archive for Bayesian evidence analysis of nanohertz gravitational-wave spectra"
+type: dataset
+authors:
+  - family-names: Xu
+    given-names: Hua
+    orcid: "https://orcid.org/0009-0001-4243-7943"
+    affiliation: "The Hong Kong University of Science and Technology"
+  - family-names: Zhang
+    given-names: Weiming
+    affiliation: "Tsinghua University"
+  - family-names: Guo
+    given-names: Yike
+    orcid: "https://orcid.org/0009-0005-8401-282X"
+    affiliation: "The Hong Kong University of Science and Technology"
+version: "v1.0.5-data-only"
+date-released: 2026-06-29
+doi: "10.5281/zenodo.20319210"
+repository-code: "https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro"
+url: "https://doi.org/10.5281/zenodo.20319210"
+keywords:
+  - pulsar timing arrays
+  - nanohertz gravitational-wave background
+  - Hellings-Downs correlation
+  - Bayesian model comparison
+  - NANOGrav 15-year data set
+  - supermassive black hole binaries
+  - first-order phase transition
+  - cosmic strings
+  - LISA forecast
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Xu
+      given-names: Hua
+      orcid: "https://orcid.org/0009-0001-4243-7943"
+    - family-names: Zhang
+      given-names: Weiming
+    - family-names: Guo
+      given-names: Yike
+      orcid: "https://orcid.org/0009-0005-8401-282X"
+  title: "Bayesian Evidence for Angular Symmetry and Spectral Curvature in the Nanohertz Gravitational-Wave Background"
+  journal: Symmetry
+  year: 2026
+  volume: 18
+  issue: 7
+  start: 1169
+  doi: "10.3390/sym18071169"
+  url: "https://www.mdpi.com/2073-8994/18/7/1169"

@@ -1,16 +1,18 @@
-# Data-only reproducibility archive
+# Reproducibility workflow
 
 This repository contains the public data inputs, numerical outputs, and scripts
 needed to reproduce the Bayesian model-comparison tables reported in the
-Symmetry manuscript. The manuscript PDF, LaTeX source, and MDPI submission
-package are intentionally not included.
+published Symmetry article (DOI: `10.3390/sym18071169`). The article PDF,
+LaTeX source, and MDPI production files are intentionally not included.
 
 ## Public archive
 
 - GitHub repository:
   <https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro>
-- GitHub release:
-  <https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/releases/tag/v1.0.4-data-only>
+- Published article:
+  <https://doi.org/10.3390/sym18071169>
+- Latest data-only GitHub release:
+  <https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/releases/tag/v1.0.5-data-only>
 - Zenodo all-versions DOI:
   <https://doi.org/10.5281/zenodo.20319210>
 
@@ -54,11 +56,11 @@ This regenerates:
 - `analysis_outputs/smbhb_env/sbpl_density_summary.json`
 - `analysis_outputs/smbhb_env/sbpl_density_samples.npz`
 
-The manuscript tables are populated from those JSON files.
+The published article tables are populated from those JSON files.
 
 ## Direct timing-likelihood extension
 
-The reported manuscript evidences are the public-KDE values above. The direct
+The evidence values reported in the article are the public-KDE values above. The direct
 enterprise pipeline is included as the timing-residual extension of the same
 source models, and a two-pulsar smoke test has already been archived at
 `analysis_outputs/test_run_small/smbhb_pl`.

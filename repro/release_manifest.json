@@ -1,5 +1,15 @@
 {
-  "archive_scope": "data-only reproducibility archive; manuscript PDF, LaTeX source, and MDPI submission package are not included",
+  "archive_scope": "data-only reproducibility archive; article PDF, LaTeX source, and MDPI production files are not included",
+  "published_article": {
+    "title": "Bayesian Evidence for Angular Symmetry and Spectral Curvature in the Nanohertz Gravitational-Wave Background",
+    "journal": "Symmetry",
+    "volume": "18",
+    "issue": "7",
+    "article_number": "1169",
+    "publication_date": "2026-07-10",
+    "doi": "10.3390/sym18071169",
+    "url": "https://www.mdpi.com/2073-8994/18/7/1169"
+  },
   "kde_model_script": "analysis/spectrum_kde_model_comparison.py",
   "enterprise_pipeline": [
     "analysis/pta_pipeline.py",
@@ -27,8 +37,8 @@
     "kde_archive": "NANOGrav15yr_KDE-FreeSpectra_v1.1.0"
   },
   "github_repository": "https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro",
-  "github_release": "https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/releases/tag/v1.0.4-data-only",
+  "github_release": "https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/releases/tag/v1.0.5-data-only",
   "zenodo_concept_doi": "10.5281/zenodo.20319210",
   "zenodo_concept_url": "https://doi.org/10.5281/zenodo.20319210",
-  "public_archive_status": "Prepared as v1.0.4-data-only. GitHub release and Zenodo DOI contain only data, scripts, and reproducibility metadata."
+  "public_archive_status": "GitHub release v1.0.5-data-only and the Zenodo archive contain only public inputs, analysis scripts, numerical outputs, and reproducibility metadata."
 }

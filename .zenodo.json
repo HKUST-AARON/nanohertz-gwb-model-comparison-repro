@@ -1,11 +1,12 @@
 {
   "title": "Data-only archive for Bayesian evidence analysis of nanohertz gravitational-wave spectra",
   "upload_type": "dataset",
-  "description": "Data-only reproducibility archive for the Symmetry manuscript Bayesian Evidence for Angular Symmetry and Spectral Curvature in the Nanohertz Gravitational-Wave Background. This archive contains public data inputs, analysis scripts, numerical evidence outputs, posterior samples, environment files, and reproducibility metadata. It intentionally does not include the manuscript PDF, LaTeX source, or MDPI submission package.",
+  "description": "Data-only reproducibility archive for Xu, Zhang, and Guo, Bayesian Evidence for Angular Symmetry and Spectral Curvature in the Nanohertz Gravitational-Wave Background, Symmetry 18 (2026), 1169, doi:10.3390/sym18071169. This archive contains public NANOGrav inputs, analysis scripts, numerical Bayesian evidence outputs, posterior samples, environment files, and reproducibility metadata. It intentionally does not include the article PDF, LaTeX source, or MDPI production files.",
   "creators": [
     {
       "name": "Xu, Hua",
-      "affiliation": "The Hong Kong University of Science and Technology"
+      "affiliation": "The Hong Kong University of Science and Technology",
+      "orcid": "0009-0001-4243-7943"
     },
     {
       "name": "Zhang, Weiming",
@@ -13,23 +14,35 @@
     },
     {
       "name": "Guo, Yike",
-      "affiliation": "The Hong Kong University of Science and Technology"
+      "affiliation": "The Hong Kong University of Science and Technology",
+      "orcid": "0009-0005-8401-282X"
     }
   ],
   "license": "cc-by-4.0",
-  "version": "v1.0.4-data-only",
+  "version": "v1.0.5-data-only",
   "related_identifiers": [
     {
       "identifier": "https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro",
       "relation": "isSupplementTo",
       "scheme": "url",
       "resource_type": "dataset"
+    },
+    {
+      "identifier": "10.3390/sym18071169",
+      "relation": "isSupplementTo",
+      "scheme": "doi",
+      "resource_type": "publication-article"
     }
   ],
   "keywords": [
     "pulsar timing arrays",
     "nanohertz gravitational-wave background",
+    "Hellings-Downs correlation",
     "Bayesian model comparison",
-    "NANOGrav"
+    "NANOGrav 15-year data set",
+    "supermassive black hole binaries",
+    "first-order phase transition",
+    "cosmic strings",
+    "LISA forecast"
   ]
 }
