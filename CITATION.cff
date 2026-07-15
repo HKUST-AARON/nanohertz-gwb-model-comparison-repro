@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-message: "Please cite the published Symmetry article when using this archive."
-title: "Data-only archive for Bayesian evidence analysis of nanohertz gravitational-wave spectra"
+message: "Please cite the published Symmetry article when using this repository."
+title: "Research companion for Bayesian evidence analysis of nanohertz gravitational-wave spectra"
 type: dataset
 authors:
   - family-names: Xu
@@ -14,8 +14,6 @@ authors:
     given-names: Yike
     orcid: "https://orcid.org/0009-0005-8401-282X"
     affiliation: "The Hong Kong University of Science and Technology"
-version: "v1.0.5-data-only"
-date-released: 2026-06-29
 doi: "10.5281/zenodo.20319210"
 repository-code: "https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro"
 url: "https://doi.org/10.5281/zenodo.20319210"

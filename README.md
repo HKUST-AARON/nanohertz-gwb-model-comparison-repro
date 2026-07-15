@@ -2,18 +2,31 @@
 
 [![Published in Symmetry](https://img.shields.io/badge/Symmetry-18%20%287%29%2C%201169-0068a5)](https://doi.org/10.3390/sym18071169)
 [![Article DOI](https://img.shields.io/badge/DOI-10.3390%2Fsym18071169-blue)](https://doi.org/10.3390/sym18071169)
+[![Full text PDF](https://img.shields.io/badge/PDF-Version%20of%20Record-b31b1b)](paper/Xu_Zhang_Guo_2026_Symmetry_VOR.pdf)
 [![Data archive](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.20319210-1682d4)](https://doi.org/10.5281/zenodo.20319210)
 
-This data-only repository is the reproducibility companion to **Hua Xu,
+This open research repository accompanies **Hua Xu,
 Weiming Zhang, and Yike Guo, "Bayesian Evidence for Angular Symmetry and
 Spectral Curvature in the Nanohertz Gravitational-Wave Background," Symmetry
 18 (2026), 1169**. The article is available at
 <https://doi.org/10.3390/sym18071169> and belongs to the Special Issue
 [Symmetry in Gravitational Physics and Black Holes](https://www.mdpi.com/journal/symmetry/special_issues/460H8ZKJ84).
 
-The repository contains public NANOGrav inputs, analysis scripts, numerical
-evidence outputs, posterior samples, and reproducibility metadata. The article
-PDF, LaTeX source, and MDPI production files are intentionally not included.
+The repository provides the published Version of Record, a graphical abstract,
+public NANOGrav inputs, analysis scripts, numerical evidence outputs, posterior
+samples, and reproducibility metadata.
+
+[![Graphical abstract: Decoding the Nanohertz GWB from symmetry to source](assets/graphical-abstract-nanohertz-gwb.jpg)](assets/graphical-abstract-nanohertz-gwb.jpg)
+
+## Read the paper
+
+- [Published Version of Record PDF](paper/Xu_Zhang_Guo_2026_Symmetry_VOR.pdf)
+- [MDPI article page](https://www.mdpi.com/2073-8994/18/7/1169)
+- [Graphical abstract](assets/graphical-abstract-nanohertz-gwb.jpg)
+- [PDF provenance, checksum, and license](paper/README.md)
+
+The article was published on 10 July 2026 and is distributed under the
+[Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/).
 
 ## What does the paper find?
 
@@ -67,15 +80,22 @@ set, stochastic gravitational-wave backgrounds, Hellings-Downs correlations,
 Bayesian model comparison, supermassive black hole binaries, early-Universe
 symmetry breaking, cosmic strings, and LISA multi-band forecasts.
 
-## Public archive
+## Public resources
 
 - Published article: <https://doi.org/10.3390/sym18071169>
+- Version of Record PDF:
+  [`paper/Xu_Zhang_Guo_2026_Symmetry_VOR.pdf`](paper/Xu_Zhang_Guo_2026_Symmetry_VOR.pdf)
+- Graphical abstract:
+  [`assets/graphical-abstract-nanohertz-gwb.jpg`](assets/graphical-abstract-nanohertz-gwb.jpg)
 - GitHub repository:
   <https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro>
 - Latest data-only GitHub release:
   <https://github.com/HKUST-AARON/nanohertz-gwb-model-comparison-repro/releases/tag/v1.0.5-data-only>
 - Zenodo all-versions DOI for the data-only archive:
   <https://doi.org/10.5281/zenodo.20319210>
+
+The GitHub repository contains the paper and visual summary. The tagged GitHub
+release and Zenodo record remain data-only archives for reproducible analysis.
 
 ## Environment
 

@@ -1,7 +1,7 @@
 {
   "title": "Data-only archive for Bayesian evidence analysis of nanohertz gravitational-wave spectra",
   "upload_type": "dataset",
-  "description": "Data-only reproducibility archive for Xu, Zhang, and Guo, Bayesian Evidence for Angular Symmetry and Spectral Curvature in the Nanohertz Gravitational-Wave Background, Symmetry 18 (2026), 1169, doi:10.3390/sym18071169. This archive contains public NANOGrav inputs, analysis scripts, numerical Bayesian evidence outputs, posterior samples, environment files, and reproducibility metadata. It intentionally does not include the article PDF, LaTeX source, or MDPI production files.",
+  "description": "Data-only reproducibility archive for Xu, Zhang, and Guo, Bayesian Evidence for Angular Symmetry and Spectral Curvature in the Nanohertz Gravitational-Wave Background, Symmetry 18 (2026), 1169, doi:10.3390/sym18071169. This archive contains public NANOGrav inputs, analysis scripts, numerical Bayesian evidence outputs, posterior samples, environment files, and reproducibility metadata. The published Version of Record and graphical abstract are openly available from the associated GitHub repository.",
   "creators": [
     {
       "name": "Xu, Hua",

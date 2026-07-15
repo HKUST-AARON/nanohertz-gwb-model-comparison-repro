@@ -2,8 +2,9 @@
 
 This repository contains the public data inputs, numerical outputs, and scripts
 needed to reproduce the Bayesian model-comparison tables reported in the
-published Symmetry article (DOI: `10.3390/sym18071169`). The article PDF,
-LaTeX source, and MDPI production files are intentionally not included.
+published Symmetry article (DOI: `10.3390/sym18071169`). The published Version
+of Record is available separately at
+[`paper/Xu_Zhang_Guo_2026_Symmetry_VOR.pdf`](../paper/Xu_Zhang_Guo_2026_Symmetry_VOR.pdf).
 
 ## Public archive
 
