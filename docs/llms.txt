@@ -33,4 +33,4 @@
 
 ## Extended Context
 
-- [LLM full context](https://hkust-aaron.github.io/nanohertz-gwb-model-comparison-repro/llms-full.txt): Detailed findings, numerical evidence, scope, applications, and citation.
+- [Full publication context](https://hkust-aaron.github.io/nanohertz-gwb-model-comparison-repro/llms-full.txt): Detailed findings, numerical evidence, scope, applications, and citation.
