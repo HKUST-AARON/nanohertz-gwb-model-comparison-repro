@@ -2,6 +2,7 @@ cff-version: 1.2.0
 message: "Please cite the published Symmetry article when using this repository."
 title: "Research companion for Bayesian evidence analysis of nanohertz gravitational-wave spectra"
 type: dataset
+license: CC-BY-4.0
 authors:
   - family-names: Xu
     given-names: Hua

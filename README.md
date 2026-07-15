@@ -5,6 +5,7 @@
 [![Full text PDF](https://img.shields.io/badge/PDF-Version%20of%20Record-b31b1b)](paper/Xu_Zhang_Guo_2026_Symmetry_VOR.pdf)
 [![Publication hub](https://img.shields.io/badge/GEO-Publication%20Hub-0f6d70)](https://hkust-aaron.github.io/nanohertz-gwb-model-comparison-repro/)
 [![Data archive](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.20319210-1682d4)](https://doi.org/10.5281/zenodo.20319210)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-2f6f44)](LICENSE)
 
 This open research repository accompanies **Hua Xu,
 Weiming Zhang, and Yike Guo, "Bayesian Evidence for Angular Symmetry and
@@ -160,3 +161,16 @@ Please cite the published article when using this archive:
 ```
 
 GitHub also exposes the same citation through [`CITATION.cff`](CITATION.cff).
+
+## License
+
+Unless otherwise noted, original materials in this repository are licensed
+under the [Creative Commons Attribution 4.0 International License](LICENSE).
+This includes the repository-authored analysis code, documentation, figures,
+metadata, and generated outputs. The published article and graphical abstract
+are distributed under the same CC BY 4.0 license by MDPI.
+
+When reusing these materials, cite the published article and indicate whether
+changes were made. Third-party inputs and software dependencies retain their
+original terms; in particular, the bundled NANOGrav data product remains
+subject to the license and attribution terms of its source archive.
