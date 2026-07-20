@@ -1,4 +1,6 @@
-# Nanohertz GWB Bayesian Model Comparison: Full Context
+# Bayesian Evidence for Angular Symmetry and Spectral Curvature in the Nanohertz Gravitational-Wave Background
+
+> Full research context, quantitative evidence, data, code, and citation information for the published article.
 
 ## Canonical Identity
 

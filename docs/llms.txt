@@ -1,4 +1,4 @@
-# Nanohertz GWB Bayesian Model Comparison
+# Bayesian Evidence for Angular Symmetry and Spectral Curvature in the Nanohertz Gravitational-Wave Background
 
 > Authoritative paper, evidence results, public data, and code for Bayesian source-model comparison of the NANOGrav 15-year nanohertz gravitational-wave background.
 

@@ -1,4 +1,4 @@
-# Bayesian evidence for the nanohertz gravitational-wave background
+# Bayesian Evidence for Angular Symmetry and Spectral Curvature in the Nanohertz Gravitational-Wave Background
 
 [![Article DOI](https://img.shields.io/badge/DOI-10.3390%2Fsym18071169-blue)](https://doi.org/10.3390/sym18071169)
 [![Read the article](https://img.shields.io/badge/Read-Article%20PDF-b31b1b)](paper/Xu_Zhang_Guo_2026_Symmetry_VOR.pdf)
